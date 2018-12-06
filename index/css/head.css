@@ -1,0 +1,164 @@
+/* 初始化格式 */
+html,
+body,
+ul,
+ol,
+li,
+p,
+a {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: "PingFangSC-Thin";
+}
+/* 设置所有内外边距为0 */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/* 设置模块宽度和超出隐藏 */
+header,
+nav,
+section,
+footer {
+	width: 100%;
+	overflow: hidden
+}
+/* 设置body */
+body {
+	width: 100%;
+	overflow: hidden;
+}
+/* 设置头 */
+.header {
+	min-width:1200px;
+	height: 80px;
+	background: #FEFEFE;
+	margin: 0 auto;
+}
+.logoer {
+	width: 114px;
+	height: 58px;
+	margin: 0px 0px 0px 40px;
+}
+
+.logo2 {
+	width: 92px;
+	height: 32px;
+	margin: 26px 0px 0px 40px;
+	float: left;
+}
+
+.wenzi {
+	margin: 30px 0px 0px 21px;
+	float: left;
+}
+
+.header-1 {
+	left: 224px;
+	top: 20px;
+	position: relative;
+}
+
+.header-2 {
+	line-height: 40px;
+	float: left;
+	height: 40px;
+	width: 80px;
+	background-color: #F8F8F8;
+	color: #CF680A;
+	margin: 0px 2px 0px 0px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.header-3 {
+	line-height: 40px;
+	float: left;
+	height: 40px;
+	width: 285px;
+	background-color: #F8F8F8;
+	color: #CF680A;
+	border: none;
+}
+
+.header-4 {
+	height: 40px;
+	background-color: #F8F8F8;
+	color: #CF680A;
+}
+
+.header-5 {
+	line-height: 80px;
+	width: 332px;
+	float: right;
+	margin: 0px 40px 0px 0px;
+	position: relative;
+}
+
+#a2 {
+	margin: 28.5px 8px 0px 0px;
+}
+
+#a3 {
+	margin: 28px 8px 0px 0px;
+}
+
+#a4 {
+	margin: 27.5px 8px 0px 0px;
+}
+
+.header-5>li {
+	color: #333333;
+	font-size: 14px;
+	text-align: center;
+}
+
+.header-5>li:hover {
+	color: #000000;
+	font-weight: bold;
+}
+
+.header-5>b {
+	margin: 0px 14px 0px 14px;
+	height: 28px;
+	border-left: 2px solid #DDDDDD;
+	float: left;
+	top: 25px;
+	position: relative;
+}
+
+.header2 {
+	width: 100%;
+	height: 61px;
+	background: #1E1E1E;
+	overflow: hidden
+}
+
+.header2>div {
+	text-align: center;
+	width: 700px;
+	height: 60px;
+	margin: 0 AUTO;
+}
+
+.header2>div>span>a {
+	text-align: center;
+	color: #FEFEFE;
+	margin: 19.5px 0px 0px 75px;
+	font-family: "PingFangSC-Thin";
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	letter-spacing: 2px;
+	font-size: 16px;
+}
+
+.header2_1>span>a:hover {
+	color: #FEFEFE;
+	font-weight: bold;
+}
+
+.banner {
+	width: 100%;
+	height: 420px
+}
