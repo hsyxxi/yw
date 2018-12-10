@@ -1,4 +1,83 @@
-.body1{width:100%;height:4461px;}
-.body2{width:1180px;height:448px;margin:80px 121.5px 80px 121.5px;border:1px solid red;}
-.body3{width:258.938px;}
-.body4{text-align:left;border-bottom:1px solid #ddd;}
+/* 初始化格式 */
+html,
+body,
+ul,
+ol,
+li,
+p,
+a,
+div{
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: "PingFangSC-Thin";
+}
+
+/* 设置所有内外边距为0 */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/* 设置模块宽度和超出隐藏 */
+section{
+	width: 100%;
+	overflow: hidden
+}
+
+/* 设置body */
+body {
+	width: 100%;
+}
+
+.body1 {
+    width: 100%;
+    height: 4461px;
+}
+
+.body2 {
+    width: 1180px;
+    height: 448px;
+    margin: 80px 121.5px 80px 121.5px;
+    border: 1px solid red;
+}
+
+.body3 {
+	height:46px;
+	text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.body4{
+    color:gray;
+	font-size:14px;
+}
+.body4>h2{
+    float:left;
+    height:46px;
+	margin-right:40px;
+	font-weight:600;
+	line-height:46px;
+	font-size:26px;
+	color:#000;
+    letter-spacing:2px;
+}
+
+.body4>span{
+    text-align: center;
+}
+
+.body4>span>a{
+    color:gray;
+	margin:0 auto;
+	text-decoration:none;
+	line-height:46px;
+}
+
+.tjLink{
+    height:46px;
+	text-align:center;
+	border:1px solid rgb(221,221,221);
+	border-bottom-color:transparent;
+	margin-left:20px;
+}
