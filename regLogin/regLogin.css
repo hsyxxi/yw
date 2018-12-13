@@ -18,13 +18,14 @@ html,body{
     width:360px;
 	height:653px;
 	margin:0 auto;
-	margin-top:73px;
+	margin-top:97px;
 }
 
 .imgLogo{
    width:288px;
    height:116px;
    padding:0px 36px 50px 36px;
+   cursor:pointer;
 }
 
 .resLog{
@@ -42,13 +43,18 @@ html,body{
 
 .resLogText{
   width:300px;
-  height:330px;
+  height:393px;
   margin:60px 30px 30px 30px;
+}
+
+.phoneLog{
+  width:300px;
+  height:393px;
 }
 
 .resLogtitle{
   border-bottom:2px solid rgb(238, 238, 238);
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 .resLogtitle1{
@@ -57,18 +63,93 @@ html,body{
   font-size:17px;
   font-weight:700;
   border-bottom:3px solid #000;
-  margin:0px 69px 0px 38px;
+  margin:0px 66px 0px 38px;
+  cursor:pointer;
+  text-decoration:none;
 }
 
 .resLogtitle2{
   font-size:17px;
+  text-decoration:none;
+  cursor:pointer;
+  color:rgb(51, 51, 51);
 }
 
-.uname,.upwd{
+.uname,.upwd,.phone{
   border:none;
   width:300px;
   line-height:28px;
   border-bottom:2px solid rgb(221, 221, 221);
+  outline:none;
+  cursor:text;
+}
+
+.verCode{
+  border:none;
+  background-color:rgb(248, 248, 248);
+  width:150px;
+  height:50px;
+  margin:35px 0px 0px 10px;
+}
+
+.logSubmit>input{
+  width:300px;
+  height:44px;
+  color:#fff;
+  font-size:16px;
+  background-color:rgb(207, 104, 10);
+  border:none;
+  cursor:pointer;
+}
+
+.resPhoneMsg{
+  width:130px;
+  height:40px;
+  color:#fff;
+  font-size:13.33px;
+  background-color:rgb(207, 104, 10);
+  border:none;
+  cursor:pointer;
+  margin-left:5px;
+}
+
+.resLogPhone{
+  width:300px;
+  height:44px;
+  color:#fff;
+  font-size:16px;
+  background-color:rgb(207, 104, 10);
+  border:none;
+  cursor:pointer;
+  margin-top:35px;
+}
+
+.uname:focus{
+  border-bottom:2px solid rgb(207, 104, 10); 
+}
+
+.phone:focus{
+  border-bottom:2px solid rgb(207, 104, 10); 
+}
+
+.upwd:focus{
+  border-bottom:2px solid rgb(207, 104, 10); 
+}
+
+.uname::-webkit-input-placeholder{
+  color:rgb(221, 221, 221);
+}
+
+.phone::-webkit-input-placeholder{
+  color:rgb(221, 221, 221);
+}
+
+ .upwd::-webkit-input-placeholder{
+  color:rgb(221, 221, 221);
+}
+
+.verCode::-webkit-input-placeholder{
+  font-size:16px;
 }
 
 .upwd{
@@ -76,7 +157,7 @@ html,body{
 }
 
 .forgetUpwd{
-  padding:20px 0px;
+  padding:19px 0px;
   text-align:right;
 }
 
@@ -84,15 +165,7 @@ html,body{
   color:rgb(102, 102, 102);
   text-decoration:none;
   font-size:12px;
-}
-
-.logSubmit>input{
-  width:300px;
-  height:46px;
-  color:#fff;
-  font-size:16px;
-  background-color:rgb(207, 104, 10);
-  border:none;
+  cursor:pointer;
 }
 
 .resLink{
@@ -103,13 +176,38 @@ html,body{
   text-align:center;
   font-size:12px;
   font-size:#000;
+  cursor:text;
 }
 
 .resLink>div>a{
   color:rgb(207, 104, 10);
   text-decoration:none;
+  cursor:pointer;
 }
 
+.wechatAndweibo{
+  width:300px;
+  height:100px;
+  text-align:bottom;
+}
 
+.wechatAndweiboLogo{
+  margin-top:80px;
+  text-align:center;
+}
 
+.wechatAndweiboLogo>a>img{
+  width:37px;
+  height:37px;
+  margin:0px 15px;
+  opacity:0.6;
+  cursor:pointer;
+}
 
+.loginAll{
+  display:none;
+}
+
+.loginAll:target{
+  display:block;
+}

@@ -23,39 +23,49 @@
 					  </div>
             <!-- 登陆注册框 -->
 						<div class='resLog'>
-						  <a href="">
+						  <a href="https://www.ywart.com/">
 							  <img src="./regLogin/closeInput.svg" alt="" class='closeInput'>
 							</a>
-							<table></table>
+							<table></table>				
+              <!-- 账号登陆框 -->
 							<div class='resLogText'>
 							  <div class='resLogtitle'>
-								  <span class='resLogtitle1'>账号登录</span>
-                  <span class='resLogtitle2'>手机号登录</span>
+								  <span><a href="#accountLog" class='resLogtitle1'>账号登录</a></span>
+                  <span><a href="#phoneLog" class='resLogtitle2'>手机号登录</a></span>
 								</div>
-								<input type="text" placeholder='请输入手机或邮箱' class='uname'>
-								<input type="passwoord" placeholder='请输入密码' class='upwd'>
-								<div class='forgetUpwd'>
-								  <a href="">忘记密码</a>
+                <!-- 账号登陆 -->
+                <div id='accountLog' class='loginAll'>
+								  <input type="text" placeholder='请输入手机或邮箱' class='uname'>
+								  <input type="passwoord" placeholder='请输入密码' class='upwd'>
+								  <div class='forgetUpwd'>
+								    <a href="">忘记密码</a>
+								  </div>
+								  <div class='logSubmit'>
+								    <input type="submit" value='登录'>
+							    </div>
+								  <div class='resLink'>
+								    <div>还没有账号？<a href="">请注册</a></div>
+								  </div>
+								  <!-- 微信微博logo -->
+							    <div class='wechatAndweibo'>
+                    <div class='wechatAndweiboLogo'>
+								      <a href="">
+									      <img src="./regLogin/weiBo.svg" alt="">
+									    </a>
+								      <a href="">
+									      <img src="./regLogin/weChat.svg" alt="">
+								    	</a>
+								  </div>
+							  </div>
 								</div>
-								<div class='logSubmit'>
-								  <input type="submit" value='登录'>
+                <!-- 手机号登陆 -->
+                <div id='phoneLog' class='loginAll'>
+								  <input type="text" placeholder='请输入手机号' class='phone'>
+								  <input type="text" placeholder='短信验证码' class='verCode'>
+                  <input type="button" value='获取短信验证码' class='resPhoneMsg'>
+									<input type="submit" value='一键登录' class='resLogPhone'>
 								</div>
-								<div class='resLink'>
-								  <div>还没有账号？<a href="">请注册</a></div>
-								</div>
-							</div>
-							<div>
-                <div>
-								  <a href="">
-									  <img src="" alt="">
-									</a>
-								</div>
-								<div>
-								  <a href="">
-									  <img src="" alt="">
-									</a>
-								</div>
-							</div>
+							</div>             
 						</div>
 					<div>					  
 				</div>
