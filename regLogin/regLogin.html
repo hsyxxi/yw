@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./reset.css" rel="stylesheet" type="text/css" /> 
+    <link href="./regLogin.css" rel="stylesheet" type="text/css" />	
+  </head>
+    <body>
+      <!-- 背景图 -->
+      <div id='bgImgPic' class='bg'>
+        <div class='bgstyle'>
+				  <!-- 登陆框 -->
+					<table></table>
+				  <div class='resLogDiv'>
+            <!-- LOGO -->
+				    <div>
+					    <div>
+						    <img src="./logoAndText.svg" alt="" class='imgLogo'>
+						  </div>
+					  </div>
+            <!-- 登陆注册框 -->
+						<div class='resLog'>
+						  <a href="https://www.ywart.com/">
+							  <img src="./closeInput.svg" alt="" class='closeInput'>
+							</a>											
+							<table></table>
+
+              <div class='actionBox'>
+							  <!-- 账号登陆框 -->
+							  <div id='resLogText'>
+							    <div class='resLogtitle'>
+								  <span><a href="#" id='resLogtitle1'>账号登录</a></span>
+                  <span><a href="#" id='resLogtitle2'>手机号登录</a></span>
+								  </div>
+							  	<div>
+                  <!-- 账号登陆 -->							  
+                  <div id='accountLog'>
+									<div id='input1'>
+									  <p id='inputMsg1'>请输入手机或邮箱</p>
+								    <input type="text" placeholder="请输入手机或邮箱" id='phone1'>									  
+									</div>
+									<div id='input2'>
+									  <p id='inputMsg2'>请输入密码</p>
+								    <input type="password" placeholder='请输入密码' id='upwd'>
+									</div>
+								  <div class='forgetUpwd'>
+								    <a href="#" id='forgetLink'>忘记密码</a>
+								  </div>
+								  <div class='logSubmit'>
+								    <input type="submit" value='登录' onclick="post_Msg()">
+							    </div>
+								  <div class='resLink'>
+								    <div>还没有账号？<a href="#" id='pleaseRes'>请注册</a></div>
+								  </div>
+								  <!-- 微信微博logo -->
+							    <div class='wechatAndweibo'>
+                    <div class='wechatAndweiboLogo'>
+								      <a href="">
+									      <img src="./weiBo.svg" alt="">
+									    </a>
+								      <a href="">
+									      <img src="./weChat.svg" alt="">
+								    	</a>
+										</div>
+								  </div>
+							    </div>
+                  <!-- 手机短信登陆 -->
+                  <div id='phoneLog'>
+									<div id='input3'>
+									  <p id='inputMsg3'>请输入手机号</p>
+								    <input type="text" placeholder='请输入手机号' class='textphone' id="phone2">
+									</div>
+								  <input type="text" placeholder='短信验证码' class='verCode'>
+                  <input type="button" value='获取短信验证码' class='resPhoneMsg'>
+									<input type="submit" value='一键登录' class='resLogPhone'>
+								  </div>
+								  </div>
+							  </div> 
+                <!-- 忘记密码框 -->
+							  <div id='forgetUpwdDiv'>
+								  <div id='input4'>
+									  <p id='inputMsg4'>请输入手机号或邮箱</p>
+							      <input type="text" placeholder='请输入手机号或邮箱' id='phone3' >
+									</div>
+								  <div class='getCode'>
+								    <input type="text" placeholder='请输入验证码' class='msgCode'>
+									  <span class='forVerCode'>验证码</span>								
+								  </div>
+								  <div>
+								    <input type="submit" value='下一步' class='nextStep'>
+								  </div>
+								  <div id='returnLog'>
+								    <a href="#">返回登录</a>
+								  </div>
+							  </div>
+								<!-- 请注册框 -->
+								<div id='resDiv'>
+								  <div id="input5">
+									  <p id='inputMsg5'>请输入手机号或邮箱</p>
+								    <input type="text" placeholder='请输入手机号或邮箱' id='phone4'>
+									</div>
+								  <div class='getCode'>
+								    <input type="text" placeholder='请输入验证码' class='msgCode'>
+									  <span class='forVerCode'>验证码</span>								
+								  </div>
+									<div id='input6'>
+									  <p id='inputMsg6'>请输入6-16位密码</p>
+									  <input type="text" placeholder='请输入6-16位密码' id='phone5'>
+                  </div>
+								  <div>
+								    <input type="submit" value='注册' class='nextStep' id='loginUser' onclick="resUserId()">
+								  </div>
+								  <div class='haveId'>
+									  已有账号？<a href="#" id='pleaseLog'>请登录</a>
+								  </div>
+							  </div>
+							</div>
+
+
+						</div>
+					<div>					  
+				</div>
+			</div>
+			<script type="text/javascript" src="regLogin.js"></script>
+
+</body>
+</html>

@@ -5,20 +5,22 @@ html,body{
 .bg{
     width:100%;
     height:100%;
-    background: url("loginbg1.jpg") no-repeat right;
-	background-size:cover;
 }
 .bgstyle{
     background: rgba(0,0,0,0.5);
     width:100%;
     height:100%;
+	position:fixed;
 }
 
 .resLogDiv{
     width:360px;
 	height:653px;
-	margin:0 auto;
-	margin-top:97px;
+    position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-180px;
+	margin-top:-300px;    
 }
 
 .imgLogo{
@@ -39,49 +41,107 @@ html,body{
   height:20px;
   float:right;
   margin:4px 4px 0px 0px;
+  cursor:default;
 }
 
-.resLogText{
+.actionBox{
   width:300px;
   height:393px;
-  margin:60px 30px 30px 30px;
+  margin:30px 30px 30px 30px;
 }
 
-.phoneLog{
+#resLogText{
   width:300px;
   height:393px;
+  padding-top:30px;
 }
 
 .resLogtitle{
   border-bottom:2px solid rgb(238, 238, 238);
-  margin-bottom:28px;
 }
 
-.resLogtitle1{
-  height:68px;
+#input1{
+  height:57px;
+  width:300px;
+  position:relative;
+}
+
+#input2{
+  height:70px;
+  width:300px;
+  position:relative;
+}
+
+#input3{
+  height:57px;
+  width:300px;
+  position:relative;
+}
+
+#input4{
+  height:50px;
+  width:300px;
+  position:relative;
+}
+
+#input5{
+  height:50px;
+  width:300px;
+  position:relative;
+}
+
+#input6{
+  height:32px;
+  width:300px;
+  position:relative;
+}
+
+.resLogtitle>span{
+  margin-bottom:3px;
+  display:inline-block;
+}
+
+#resLogtitle1{
   color:rgb(51, 51, 51);
   font-size:17px;
-  font-weight:700;
+  font-weight:bold;
   border-bottom:3px solid #000;
   margin:0px 66px 0px 38px;
   cursor:pointer;
   text-decoration:none;
+  
 }
 
-.resLogtitle2{
+#resLogtitle2{
   font-size:17px;
   text-decoration:none;
   cursor:pointer;
   color:rgb(51, 51, 51);
 }
 
-.uname,.upwd,.phone{
+#phoneLog{
+  display:none;
+}
+
+#phone1,#phone2,#phone3,#phone4,#phone5,#upwd,.textphone{
   border:none;
   width:300px;
-  line-height:28px;
+  height:28px;
   border-bottom:2px solid rgb(221, 221, 221);
   outline:none;
   cursor:text;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+}
+
+#inputMsg1,#inputMsg2,#inputMsg3,#inputMsg4,#inputMsg5,#inputMsg6{
+  margin:0;
+  position:absolute;
+  top:8px;
+  font-size:16px;
+  transition:all 1s; 
+  color:rgba(255,255,255,0);
 }
 
 .verCode{
@@ -90,6 +150,7 @@ html,body{
   width:150px;
   height:50px;
   margin:35px 0px 0px 10px;
+  outline:none;
 }
 
 .logSubmit>input{
@@ -100,6 +161,7 @@ html,body{
   background-color:rgb(207, 104, 10);
   border:none;
   cursor:pointer;
+  outline:none;
 }
 
 .resPhoneMsg{
@@ -111,6 +173,7 @@ html,body{
   border:none;
   cursor:pointer;
   margin-left:5px;
+  outline:none;
 }
 
 .resLogPhone{
@@ -122,29 +185,23 @@ html,body{
   border:none;
   cursor:pointer;
   margin-top:35px;
+  outline:none;
 }
 
-.uname:focus{
+.textphone:focus{
   border-bottom:2px solid rgb(207, 104, 10); 
 }
 
-.phone:focus{
-  border-bottom:2px solid rgb(207, 104, 10); 
+#phone1::-webkit-input-placeholder{
+  color:rgb(221, 221, 221);
+  font-size:14px;
 }
 
-.upwd:focus{
-  border-bottom:2px solid rgb(207, 104, 10); 
-}
-
-.uname::-webkit-input-placeholder{
+.textphone::-webkit-input-placeholder{
   color:rgb(221, 221, 221);
 }
 
-.phone::-webkit-input-placeholder{
-  color:rgb(221, 221, 221);
-}
-
- .upwd::-webkit-input-placeholder{
+#upwd::-webkit-input-placeholder{
   color:rgb(221, 221, 221);
 }
 
@@ -152,12 +209,12 @@ html,body{
   font-size:16px;
 }
 
-.upwd{
+#upwd{
   margin-top:40px;
 }
 
 .forgetUpwd{
-  padding:19px 0px;
+  padding:17px 0px;
   text-align:right;
 }
 
@@ -192,7 +249,7 @@ html,body{
 }
 
 .wechatAndweiboLogo{
-  margin-top:80px;
+  margin-top:70px;
   text-align:center;
 }
 
@@ -204,10 +261,88 @@ html,body{
   cursor:pointer;
 }
 
-.loginAll{
+#forgetUpwdDiv{
+  width:300px;
+  height:393px;
   display:none;
+  padding-top:10px;
 }
 
-.loginAll:target{
-  display:block;
+.getCode{
+  margin:20px 0px 36px 0px;
+  background:#fff;
 }
+
+.msgCode{
+  font-size:16px;
+  border:none;
+  background-color:rgb(248, 248, 248);
+  width:150px;
+  height:40px;
+  outline:none;
+  padding:2px 0px 0px 10px;
+  display:inline-block;
+}
+
+.forVerCode{
+  height:40px;
+  width:130px;
+  margin-left:5px;
+}
+
+.nextStep{
+  width:300px;
+  height:44px;
+  color:#fff;
+  font-size:16px;
+  background-color:rgb(207, 104, 10);
+  border:none;
+  cursor:pointer;
+  outline:none;
+  margin-top:2px;
+}
+
+#returnLog{
+  cursor:pointer;
+  width:300px;
+  margin:25px 0px;
+  text-align:center;
+}
+
+#returnLog>a{
+  color:#000;
+  font-size:12px;
+  text-decoration:none;
+}
+
+#loginUser{
+  margin-top:40px;
+}
+
+.haveId{
+  font-size:12px;
+  cursor:pointer;
+  width:300px;
+  margin:10px 0px;
+  text-align:center;
+}
+
+#pleaseLog{
+  color:#CF680A;
+  text-decoration:none;
+}
+
+#resDiv{
+  display:none;
+  padding-top:10px;
+}
+
+
+
+
+
+
+
+
+
+

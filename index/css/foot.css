@@ -1,0 +1,25 @@
+.foot{
+	width:100%;
+	height:520.375px;
+	padding: 70px 0px 10px 0px;
+	background-color: #34353d;
+	position: relative;
+}
+.footDiv{
+	width:1180px;
+	height:520.375px;
+	position: absolute;
+	left:0px;
+	right: 0px;
+	margin: auto;
+}
+.footLogo{
+	width: 100%;
+	height: 73.375px; 
+	margin-bottom: 70px;
+	background-color: pink;
+}
+.footLogo>img{
+	width: 112px;
+    height: 69.375px;
+}
