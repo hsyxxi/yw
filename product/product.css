@@ -1,0 +1,625 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.productNav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.headLeft{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-top:8px;
+}
+.headLeft>button{
+    width: 70px;
+    height: 30px;
+    background-color: #f8f8f8;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    padding-left: 15px;
+    border-radius: 15px;
+    margin:0px 22px 0px 33px;
+    line-height: 30px;
+    border: none;
+    position: relative;
+}
+.headLeft>button>div{
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    border-top: solid 2px #000;
+    border-left: solid 2px #000;
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 9px;
+}
+.headUl{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+.headUl>li:nth-child(n+2):before{
+    content:"›";
+    padding: 0px 4px;
+}
+.headRight{
+    width: 200px;
+    height: 34px;  
+    margin-top:8px;
+}
+.headRight>img{
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+}
+.productBody{
+    width: 100%;
+}
+.productBodyTitle{
+    text-align: center;
+    margin: 25px 0px 35px 0px;
+}
+.productBodyTitle>div{
+    width: 105px;
+    font-size: 20px;
+    line-height: 44px;
+    cursor: pointer;
+    border-radius: 22px;
+    display: inline-block;
+}
+.productBodyTitle>div:nth-child(1){
+    font-weight: bold;
+}
+.productBodyPart{
+    width: 1330px;
+    height: 617px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.productBodyPic{
+    width: 853px;
+    height: 617px;
+}
+.productBodyPicBig{
+    width: 853px;
+    height: 465px;  
+    position: relative;
+}
+.productBodyPicBig>img{
+    height: 458px;
+    width:auto ;
+    position: absolute;
+    top:3.5px;
+    left:0px;
+    right:0px;
+    margin: auto;
+    filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.5));
+}
+.productBodyPicSmall{
+    width: 104px;
+    height: 104px;
+    overflow: hidden;
+    display: block;
+    margin: 20px 0px 10px 15px;
+}
+.productBodyPicSmall>img{
+    width: 104px;
+    height: 104px;
+}
+.productBodyText{
+    width: 480px;
+    height:617px;
+    margin-left:90px; 
+}
+.productBodyTextTitle{
+    width: 390px;
+    height: 48px;
+    border-bottom:1px solid #ddd; 
+    float: right;
+}
+.productPriceTitle1{
+    border-bottom: solid 4px #000;
+    display: inline-block;
+    height: 34px;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.productPriceTitle2{
+    float:right;
+    display: inline-block;
+    height: 34px;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.productBodyTextDiv{
+    width: 390px;
+    height: 426px;
+}
+.price{
+    padding:20px 0 10px 0;
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    float:left;
+}
+.priceInfo{
+    width: 390px;
+    height: 46px;
+    float:right;
+    border-top: 1px solid #ddd; 
+    font-size: 14px;
+    line-height: 46px;
+    margin-top: 0px;
+}
+.priceInfo>div{
+    float: left;
+}
+.yc,.zb{
+    color: #333;
+    margin-right: 20px;
+    line-height: 46px;
+}
+.priceInfo>div>span>img{
+width: 14px;
+height: 14px;
+vertical-align: middle;
+margin-top: -2px;
+display: inline-block;
+}
+.prdChoice{
+    float: left;
+    width: 390px;
+    height: 46px;
+    border-top: 1px solid #ddd; 
+}
+#btnChoice,#btnNo,#toggle{
+    float: left;
+    font-size: 15px;
+    color: #333333;
+    line-height: 46px;
+    cursor: pointer;
+}
+#btnNo{
+    float: right;
+    margin-right:10px;
+}
+#toggle{
+    font-size: 21px;
+    color: #000;
+    float: right;
+}
+.choice{
+    width: 390px;
+    height: 120px;
+    margin: 0px 5px;
+    float: left;
+}
+.choice>div{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    background-position: 15px 15px;
+    background-size: 45px 45px;
+    overflow: hidden;
+}
+.choice2{
+    background:url(./img/border1.png) no-repeat;
+}
+.choice3{
+    background:url(./img/border2.png) no-repeat;
+}
+.choice4{
+    background:url(./img/border3.png) no-repeat;
+}
+.choice5{
+    background:url(./img/border4.png) no-repeat;
+}
+.choice6{
+    background:url(./img/border5.png) no-repeat;
+}
+.choice7{
+    background:url(./img/border6.png) no-repeat;
+}
+.choice8{
+    background:url(./img/border7.png) no-repeat;
+}
+.choice9{
+    background:url(./img/border8.png) no-repeat;
+}
+.cardBoard{
+    width: 100%;
+    height: 43px;
+    padding: 8px 0 8px 3px;
+    border-top: 1px dashed #ddd;
+    float: left;
+}
+.cardBoard>div{
+    width: 72px;
+    height: 34px;
+    border: solid 2px #CF680A;
+    position: relative;
+}
+.cardBoard>div>div{
+    width: 66px;
+    height: 30px;
+    border: solid 1px #ddd;
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    margin: auto;
+}
+.cardBoardP{
+    line-height: 30px;
+    font-size: 13px;
+    color:#666;
+    text-align: center;
+}    
+.inCar{
+    width: 390px;
+    height: 78px;
+    border-top:1px solid #ddd; 
+    padding-top: 20px;
+    color: #666;
+    font-size: 14px;
+    float: left;
+}
+.inCar>button{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1f1f1f;
+    border: none;
+}
+.inCar>div{
+    width: 100%;
+    height: 20px;
+    margin-top: 18px;
+}
+.artMsg{
+    width: 100%;
+    height: 552px;
+    margin: 39px 0px 60px 0px;
+    background-color: #f8f8f8;  
+}
+.artPic,.artPic>img{
+   width: 100%;
+   height: 140px;
+}
+.artPic{
+    position: relative;
+}
+.artPic>img{
+   width: 140px;
+   position: absolute;
+   top:15px;
+   right:0px;
+   left:0px;
+   bottom:0px;
+   margin: auto;
+}
+.artist{
+   width: 100%;
+   height: 25px;
+   
+}
+.artist>div{
+   text-align: center;
+   margin-top: 20px;
+}
+.artist>div>img{
+   width: 20px;
+   height: 20px;
+}
+.picNumber>div{
+   line-height: 20px;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+.picNumber>div>a{
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+.picNumber>div>a>span{
+    color: #000;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.artistAll>a{
+    width: 100%;
+    height:20px ;
+    margin-top: 19px;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+.picMsg{
+    height: 150px;
+    width: 100%;   
+}
+.picMsg>table{
+    width: 1164px;
+    height: 150px;
+    color: #333;
+    font-size: 16px;
+    margin: 0 auto;
+    padding-left:84px; 
+    margin-top:30px; 
+    border-top: 1px dashed #979797;
+}
+.picMsg>tr>td{
+    width: 360px;
+    height: 53px;
+}
+.artAbout{
+    width: 100%;
+    height: 945px;
+}
+.artPicMsg>div{
+    width: 1200px;
+    height: 945px;
+    margin: 0 auto;
+}
+.MsgTitle{
+    width: 100%;
+    height: 37px;
+}
+.MsgTitle>p{
+    height: 37px;
+    line-height: 37px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    margin: 0 auto;
+}
+.picText{
+    width: 1008px;
+    height: 72px;
+    padding: 96px 96px 70px 96px;
+    position: relative;
+}
+.picText>div>p{
+    font-size: 18px;
+    line-height: 36px;
+    font-family: serif;
+    font-style: italic;
+}
+.leftQuotes,.rightQuotes{
+    width: 70px;
+    height: 242px;
+    
+    font-family:Arial !important;
+    font-size: 210px;
+    color: #eeee;
+}
+.leftQuotes{
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+.rightQuotes{
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.picCommentary1,.picCommentary2{
+    width: 1008px;
+    height: 300px;
+    margin: 0px 96px 70px 96px;
+}
+.commentary1,.commentary3{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+.commentary1>img{
+    width: 300px;
+    height: auto;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+}
+.commentary3>img{
+    width: 500px;
+    height: auto;
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+.commentary2,.commentary4{
+    width: 608px;
+    height: 300px;
+    float: right;
+}
+.commentary2>p,.commentary4>p{
+    width: 608px;
+    color: #666;
+    font-size: 14px;
+    line-height: 30px;;
+    letter-spacing: 0.4px;
+}
+.commentary4>p{
+    float: left;
+}
+.commentsDiv{
+    width: 100%;
+    height: 295px;
+    margin-top: 75px;
+}
+.comments{
+    width: 1008px;
+    height: 195px;
+    padding: 60px 96px 40px 96px;
+    margin: 0 auto;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.comments{
+    font-size: 18px;
+    position: relative;
+}
+#commentsText{
+    width: 995px;
+    height: 54px;
+    padding: 10px 6px 6px 10px;
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+    border: none;
+}
+#commentsText::-webkit-input-placeholder{
+    color:#666;
+    font-size:14px;
+}
+.commentsSend{
+    width: 100px;
+    height: 27px;
+    border: none;
+    background-color: #CF680A;
+    color:#fff;
+    position: absolute;
+    bottom:40px;
+    right:96px;
+}
+.tips{
+    width: 100%;
+    height: 68px;
+    position: relative;
+}
+.tipsTitle{
+    width: 1008px;
+    height: 22px;
+    border: none;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    margin:auto;
+}
+.tipsTitle>img{
+    width: auto;
+    height: 16px;
+}
+.toggleBottom,.toggleTop{
+    width: auto;
+    height: 16px;
+    position: absolute;
+    top:5px;
+    right:0px;
+}
+.toggleTop{
+    display: none;
+}
+.maybeULike{
+    width: 100%;
+    height: 997px;
+    padding-bottom:100px;
+    margin: 230px 0px 0px 0px;
+    position: relative;
+    background-color: #f8f8f8;
+}
+.maybeULikeDiv{
+    width: 1180px;
+    height: 997px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    left: 0px;
+    bottom:0px;
+    margin: auto;
+    position: relative;
+}
+.maybeULikeTitle{
+    width: 100%;
+    height: 35px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+.maybeULikeTitle>p{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+.maybeULikePic{
+    width: 100%;
+    height: 900px;
+    padding-top: 35px;
+    position: absolute;
+    top:100px;   
+}
+.maybeULikePicDiv{
+    height: 400px;
+    width: 280px;
+    float: left;
+    margin:0px 20px 20px 0px;
+}
+.maybeULikePicDiv:hover{
+    filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.5));
+}
+.maybeULikeImg{
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+}
+.maybeULikeImg>a>img{
+    width: 280px;
+    height:auto;
+}
+.maybeULikeMsg{
+    width: 240px;
+    height: 90px;
+    padding: 30px 20px 0px 20px;
+    background-color: #fff;
+    color: #666;
+    font-size: 12px;
+    line-height: 18px;
+}
+.likePrice{
+    font-weight: bold;
+    color: #000;
+}
+.lastPic{
+    margin-right: 0px;
+}

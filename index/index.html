@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="./css/body.css">
 	<link rel="stylesheet" href="./css/foot.css">
 </head>
+
 <body>
 	<!-- 这是头部的开始 -->
 	<header>
@@ -23,67 +24,75 @@
 				<b>— 原创艺术品电商</b>
 			</span>
 			<div class="header-1">
-				<a class="header-2">作品 ▼</a>
+				<select name="" class="header-2">
+					<option value="">作品</option>
+					<option value="">艺术家</option>
+				</select>
 				<input class="header-3" placeholder="  搜索感兴趣的关键字">
 				<a class="header-4" href="">
-					<img src="./head-img/sc.png" alt="">
+					<img src="./head-img/sc.svg" alt="">
 				</a>
 			</div>
 			<div>
-			<ul class="header-5">
-				  <li>				  
-					  <a>
-						  <img src="./head-img/app.png" id="a2">
-					  </a>
-				  </li>
-				  <li>下载APP</li>
-				<b></b>
-				  <li>
-					  <a><img src="./head-img/login.png" id="a3"></a>
-				  </li>
-			  	<li>登录 / 注册</li>
-				<b></b>
-				  <li>
-				   	<a><img src="./head-img/car.png" id="a4"></a>
-				  </li>
-			    <li>购物车</li>
+				<ul class="header-5">
+					<li>
+						<a>
+							<img src="./head-img/app.png" id="a2">
+						</a>
+					</li>
+					<li>下载APP</li>
+					<b></b>
+					<li>
+						<a><img src="./head-img/login.png" id="a3"></a>
+					</li>
+					<li>登录 / 注册</li>
+					<b></b>
+					<li>
+						<a><img src="./head-img/car.png" id="a4"></a>
+					</li>
+					<li>购物车</li>
 				</ul>
-				</div>
+			</div>
 		</div>
 	</header>
 
 	<!--导航开始-->
 	<nav>
 		<div class="header2">
-			<div class="header2_1">
-				<div>
-					<a href="" class="indexTitle">首页</a>
-				</div>
-				<div>
-					<a href="">原创艺术</a>
-				</div>
-				<div>
-					<a href="">造艺</a>
-				</div>
-				<div>
-					<a href="">藏艺术</a>
-				</div>
-				<div>
-					<a href="">艺居生活</a>
-				</div>
-			</div>
+			<ul class="header2_1">
+				<li><a class="indexTitle" href="">首页</a></li>
+				<li><a href="">原创艺术</a></li>
+				<li><a href="">造艺</a></li>
+				<li><a href="">藏艺术</a></li>
+				<li><a href="">艺居生活</a></li>
+			</ul>
 		</div>
 	</nav>
-	
+
 	<!--主体部分-->
 	<section>
 		<!-- 轮播图 -->
 		<div class="banner">
-			<span>
-				<a href="">
-					<img src="./banner-img/banner1.png" alt="">
-				</a>
-			</span>
+            <ul class="bannerDiv">
+					<li><a href=""><img id="show" src="./banner-img/banner1.png" alt=""></a></li>
+					<li><a href=""><img src="./banner-img/banner2.jpg" alt=""></a></li>
+					<li><a href=""><img src="./banner-img/banner3.jpg" alt=""></a></li>
+					<li><a href=""><img src="./banner-img/banner4.jpg" alt=""></a></li>
+					<li><a href=""><img src="./banner-img/banner5.jpg" alt=""></a></li>
+					<li><a href=""><img src="./banner-img/banner6.jpg" alt=""></a></li>
+					<li><a href=""><img src="./banner-img/banner7.jpg" alt=""></a></li>
+					<li><a href=""><img src="./banner-img/banner8.jpg" alt=""></a></li>
+			</ul>
+			<ul class="bannerDot">
+				<li><span id="active"></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+			</ul>
 		</div>
 
 		<!-- 主体框 -->
@@ -91,67 +100,77 @@
 
 			<!--推荐框-->
 			<div class="body2">
-			  <div class="body3">
-				  <!--头部长条框-->
+				<div class="body3">
+					<!--头部长条框-->
 					<div class="body4">
 						<h2>推荐 / CATEGORY</h2>
 						<span><a href="">更多</a></span>
 						<div id="tjLinkDiv">
-					    <div id="tjLink1">油画</div>
-						  <div id="tjLink2">版画</div>
-					    <div id="tjLink3">水墨</div>
-						  <div id="tjLink4">水彩</div>
+                            <ul>
+								<li><span id="tjLink1">水彩</span></li>
+								<li><span id="tjLink2">水墨</span></li>
+								<li><span id="tjLink3">版画</span></li>
+								<li><span id="tjLink4">油画</span></li>
+							</ul>
 						</div>
 					</div>
-          <!-- 推荐图片部分 -->
-          <div>
-				    <div class="tjDiv">
-					    <img src="./body-img/tj1.jpg" alt="" class="tjImg">
-              <div class="tjText">
-						    <h3>马建卫</h3>
-							  <a href="">作品黄色2号，2018<br>布面丙烯 150x92cm</a>
-							  <p>￥32,350</p>
-						  </div>
-					  </div>
-				  	<div class="tjDiv">
-					    <img src="./body-img/tj2.jpg" alt="" class="tjImg">
-						  <div class="tjText">
-							  <h3>张晖</h3>
-							  <a href="">有远山的风景，2016<br>布面丙烯 200x150cm</a>
-							  <p>￥32,350</p>
-						  </div>
-					  </div>
-					  <div class="tjDiv">
-					    <img src="./body-img/tj3.jpg" alt="" class="tjImg">
-						  <div class="tjText">
-							  <h3>李白</h3>
-							  <a href="">山，2011<br>纸本丙烯 80x55cm</a>
-						  	<p>￥2,860</p>
-						  </div>
-				  	</div>
-					  <div class="tjDiv1">
-					    <img src="./body-img/tj4.jpg" alt="" class="tjImg">
-						  <div class="tjText">
-							  <h3>石开元</h3>
-							  <a href="">名字我回去告诉你，2017<br>纸本油画 110x70cm</a>
-							  <p>￥9,350</p>
-						  </div>
-				  	</div>
+					<!-- 推荐图片部分 -->
+					<div>
+						<div class="tjDiv">
+							<div>
+								<img src="./body-img/tj1.jpg" alt="" class="tjImg">
+							</div>
+							<div class="tjText">
+								<h3>马建卫</h3>
+								<a href="">作品黄色2号，2018<br>布面丙烯 150x92cm</a>
+								<p>￥32,350</p>
+							</div>
+						</div>
+						<div class="tjDiv">
+							<div>
+								<img src="./body-img/tj2.jpg" alt="" class="tjImg">
+							</div>
+							<div class="tjText">
+								<h3>张晖</h3>
+								<a href="">有远山的风景，2016<br>布面丙烯 200x150cm</a>
+								<p>￥32,350</p>
+							</div>
+						</div>
+						<div class="tjDiv">
+							<div>
+								<img src="./body-img/tj3.jpg" alt="" class="tjImg">
+							</div>
+							<div class="tjText">
+								<h3>李白</h3>
+								<a href="">山，2011<br>纸本丙烯 80x55cm</a>
+								<p>￥2,860</p>
+							</div>
+						</div>
+						<div class="tjDiv1">
+							<div>
+								<img src="./body-img/tj4.jpg" alt="" class="tjImg">
+							</div>
+							<div class="tjText">
+								<h3>石开元</h3>
+								<a href="">名字我回去告诉你，2017<br>纸本油画 110x70cm</a>
+								<p>￥9,350</p>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>		
-			
-      <!-- 最新上架 -->
+			</div>
+
+			<!-- 最新上架 -->
 			<div class="tjNew">
-			  <div class="tjNewDiv">
-				  <div class="tjNewTitle">
-				    <h2>最新上架 / NEW</h2>				    
-				    <span class="tjChange">
-						  <img src="" alt="">换一换
+				<div class="tjNewDiv">
+					<div class="tjNewTitle">
+						<h2>最新上架 / NEW</h2>
+						<span class="tjChange">
+							<img src="" alt="">换一换
 						</span>
 					</div>
-          <div>
-					  <div><img src="./new-img/new1.jpg" alt="" class="newImgBig"></div>
+					<div>
+						<div><img src="./new-img/new1.jpg" alt="" class="newImgBig"></div>
 						<div><img src="./new-img/new2.jpg" alt="" class="newImgBig"></div>
 						<div><img src="./new-img/new3.jpg" alt="" class="newImgSmall"></div>
 						<div><img src="./new-img/new4.jpg" alt="" class="newImgSmall"></div>
@@ -162,151 +181,151 @@
 						<div><img src="./new-img/new9.jpg" alt="" class="newImgSmall2"></div>
 						<div><img src="./new-img/new10.jpg" alt="" class="newImgSmall3"></div>
 					</div>
-			  </div>
+				</div>
 			</div>
 
-      <!-- 搜索框 -->
+			<!-- 搜索框 -->
 			<div class="searchDiv">
 				<div class="searchBox">
-          <p>现在，去探索全新的艺术世界</p>
+					<p>现在，去探索全新的艺术世界</p>
 					<div>
-				    <select name="selectKind" id="selectKind">   
-              <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;类别</option>   
-              <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;油画</option>   
-              <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;版画</option>   
-              <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;水墨</option>   
-              <option value="5">&nbsp;&nbsp;&nbsp;&nbsp;水彩(粉)</option>  
-						  <option value="6">&nbsp;&nbsp;&nbsp;&nbsp;雕塑</option>  
-					  	<option value="7">&nbsp;&nbsp;&nbsp;&nbsp;摄影</option>
-						  <option value="8">&nbsp;&nbsp;&nbsp;&nbsp;其他</option>						          
-            </select>   
-				   	<select name="selectPrice" id="selectPrice">   
-              <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;价格</option>   
-              <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;￥2,000以下</option>   
-              <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥2,000 - ￥8,000</option>   
-              <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥8,000 - ￥15,000</option>   
-              <option value="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥15,000 - ￥30,000</option>  
-						  <option value="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥30,000以上</option>  				          
-            </select>
-					  <select name="selectSize" id="selectSize">   
-              <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;尺寸</option>   
-              <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;50cm以下</option>   
-              <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;50cm ~ 100cm</option>   
-              <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;100cm ~ 150cm</option>   
-              <option value="5">&nbsp;&nbsp;&nbsp;&nbsp;150cm ~ 200cm</option>  
-						  <option value="6">&nbsp;&nbsp;&nbsp;&nbsp;200cm以上</option>  				          
-            </select>
-					  <select name="selectStyle" id="selectStyle">   
-              <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;风格</option>   
-              <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;抽象</option>   
-              <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;具象</option>   
-              <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;观念</option>   
-              <option value="5">&nbsp;&nbsp;&nbsp;&nbsp;卡通</option>  
-						  <option value="6">&nbsp;&nbsp;&nbsp;&nbsp;传统国画</option>  
-						  <option value="7">&nbsp;&nbsp;&nbsp;&nbsp;实验水墨</option>
-						  <option value="8">&nbsp;&nbsp;&nbsp;&nbsp;其他</option>
+						<select name="selectKind" id="selectKind">
+							<option value="1">&nbsp;&nbsp;&nbsp;&nbsp;类别</option>
+							<option value="2">&nbsp;&nbsp;&nbsp;&nbsp;油画</option>
+							<option value="3">&nbsp;&nbsp;&nbsp;&nbsp;版画</option>
+							<option value="4">&nbsp;&nbsp;&nbsp;&nbsp;水墨</option>
+							<option value="5">&nbsp;&nbsp;&nbsp;&nbsp;水彩(粉)</option>
+							<option value="6">&nbsp;&nbsp;&nbsp;&nbsp;雕塑</option>
+							<option value="7">&nbsp;&nbsp;&nbsp;&nbsp;摄影</option>
+							<option value="8">&nbsp;&nbsp;&nbsp;&nbsp;其他</option>
+						</select>
+						<select name="selectPrice" id="selectPrice">
+							<option value="1">&nbsp;&nbsp;&nbsp;&nbsp;价格</option>
+							<option value="2">&nbsp;&nbsp;&nbsp;&nbsp;￥2,000以下</option>
+							<option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥2,000 - ￥8,000</option>
+							<option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥8,000 - ￥15,000</option>
+							<option value="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥15,000 - ￥30,000</option>
+							<option value="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥30,000以上</option>
+						</select>
+						<select name="selectSize" id="selectSize">
+							<option value="1">&nbsp;&nbsp;&nbsp;&nbsp;尺寸</option>
+							<option value="2">&nbsp;&nbsp;&nbsp;&nbsp;50cm以下</option>
+							<option value="3">&nbsp;&nbsp;&nbsp;&nbsp;50cm ~ 100cm</option>
+							<option value="4">&nbsp;&nbsp;&nbsp;&nbsp;100cm ~ 150cm</option>
+							<option value="5">&nbsp;&nbsp;&nbsp;&nbsp;150cm ~ 200cm</option>
+							<option value="6">&nbsp;&nbsp;&nbsp;&nbsp;200cm以上</option>
+						</select>
+						<select name="selectStyle" id="selectStyle">
+							<option value="1">&nbsp;&nbsp;&nbsp;&nbsp;风格</option>
+							<option value="2">&nbsp;&nbsp;&nbsp;&nbsp;抽象</option>
+							<option value="3">&nbsp;&nbsp;&nbsp;&nbsp;具象</option>
+							<option value="4">&nbsp;&nbsp;&nbsp;&nbsp;观念</option>
+							<option value="5">&nbsp;&nbsp;&nbsp;&nbsp;卡通</option>
+							<option value="6">&nbsp;&nbsp;&nbsp;&nbsp;传统国画</option>
+							<option value="7">&nbsp;&nbsp;&nbsp;&nbsp;实验水墨</option>
+							<option value="8">&nbsp;&nbsp;&nbsp;&nbsp;其他</option>
 						</select>
 					</div>
 					<div class="searchGo">
-					  <p>前往</p>
+						<p>前往</p>
 						<a href="">原创艺术</a>
 						<p>利用更强大的筛选引擎挑选作品 ›</p>
 					</div>
-        </div>
-        <div class="startText">  
-				  <div>
-					  <p>开始</p>
-					  <p class="startTextP">GO</p>
+				</div>
+				<div class="startText">
+					<div>
+						<p>开始</p>
+						<p class="startTextP">GO</p>
 					</div>
 				</div>
 			</div>
-      
+
 			<!-- 专题 -->
 			<div class="specialTitle">
 				<div class="specialLeft">
-				  <div></div>
+					<div></div>
 				</div>
 				<span>专题 / special</span>
 				<div class="specialRight">
-				  <div></div>
+					<div></div>
 				</div>
 			</div>
-      <div class="specialBody">
-			  <div class="specialBodyDiv specialBodyDiv1">
+			<div class="specialBody">
+				<div class="specialBodyDiv specialBodyDiv1">
 					<div>
-					  <h2>身体OR心灵，总有一个要在路上</h2>
-					  <p>当看过了山和大海，穿过了人山人海，不管是停下脚步还是继续前行，都会对曾经看过的风景见过的人，有种放不下忘不了的情感，而这种旅行情结，或许可以靠画作来治愈。</p>
+						<h2>身体OR心灵，总有一个要在路上</h2>
+						<p>当看过了山和大海，穿过了人山人海，不管是停下脚步还是继续前行，都会对曾经看过的风景见过的人，有种放不下忘不了的情感，而这种旅行情结，或许可以靠画作来治愈。</p>
 					</div>
 				</div>
 				<div class="specialBodyDiv specialBodyDiv2">
 					<div>
-					  <h2>红唇入画·性感不只裸露</h2>
-					  <p>选择一幅“红唇”，让艺术给你一个爱的么么哒。</p>
+						<h2>红唇入画·性感不只裸露</h2>
+						<p>选择一幅“红唇”，让艺术给你一个爱的么么哒。</p>
 					</div>
 				</div>
 				<div class="specialBodyDiv specialBodyDiv3">
 					<div>
-					  <h2>一见钟情</h2>
-					  <p>喂，我一见你就挺钟情的一见钟情要多久？答案是30秒。目光所及，赏心悦目，心生欢喜，然后便希望时时刻刻拥有在身边。</p>
+						<h2>一见钟情</h2>
+						<p>喂，我一见你就挺钟情的一见钟情要多久？答案是30秒。目光所及，赏心悦目，心生欢喜，然后便希望时时刻刻拥有在身边。</p>
 					</div>
 				</div>
 				<div class="specialBodyDiv specialBodyDiv4">
 					<div>
-					  <h2>城·事<br>一座城一个故事</h2>
-					  <p>每个人的记忆，或多或少都与一座城有关。万青在歌里唱到，住在我心里孤独的孤独的海怪，深海的光、停滞的海浪、站在能看到灯火的桥，描述的正是海滨之城。</p>
+						<h2>城·事<br>一座城一个故事</h2>
+						<p>每个人的记忆，或多或少都与一座城有关。万青在歌里唱到，住在我心里孤独的孤独的海怪，深海的光、停滞的海浪、站在能看到灯火的桥，描述的正是海滨之城。</p>
 					</div>
 				</div>
 				<div class="specialBodyDiv specialBodyDiv5">
 					<div>
-					  <h2>这些作品都叫<br>《无题》</h2>
-					  <p>很多艺术家，都有那么几件作品叫「无题」灵感来了，由心而作，这种纯粹的艺术感觉没有条条框框去束缚，也许就差这么一个机会把它带回家，给它一个专属ID</p>
+						<h2>这些作品都叫<br>《无题》</h2>
+						<p>很多艺术家，都有那么几件作品叫「无题」灵感来了，由心而作，这种纯粹的艺术感觉没有条条框框去束缚，也许就差这么一个机会把它带回家，给它一个专属ID</p>
 					</div>
-				</div>
-			</div>
-  
-	    <!-- 艺术家 -->
-			<div class="artist">
-			  <div class="artistDiv">
-			    <div class="artistTitle">
-				    <h2>艺术家 / ARTIST</h2>
-				    <a href="">作品征集全面开放</a>
-					</div>	
-					<div class="artistBody">
-				    <div class="artistLeft">
-						  <h3>宿哲：青春时代</h3>
-							<p>宿哲的作品采用的是写实主义手法，但表现出来的气质却不是传统写实作品可以等同的，他的作品似乎也预示了写实绘画的崭新前景。</p>
-						</div>
-						<div class="artistRight">
-						  <p>更多艺术家</p>
-						</div>
-				  </div>
 				</div>
 			</div>
 
-      <!-- 艺视野 -->
+			<!-- 艺术家 -->
+			<div class="artist">
+				<div class="artistDiv">
+					<div class="artistTitle">
+						<h2>艺术家 / ARTIST</h2>
+						<a href="">作品征集全面开放</a>
+					</div>
+					<div class="artistBody">
+						<div class="artistLeft">
+							<h3>宿哲：青春时代</h3>
+							<p>宿哲的作品采用的是写实主义手法，但表现出来的气质却不是传统写实作品可以等同的，他的作品似乎也预示了写实绘画的崭新前景。</p>
+						</div>
+						<div class="artistRight">
+							<p>更多艺术家</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 艺视野 -->
 			<div class="insight">
-			  <div class="insightDiv">
-				  <div class="insightTitle">
-					  <h3>艺视野 / INSIGHT</h3>
+				<div class="insightDiv">
+					<div class="insightTitle">
+						<h3>艺视野 / INSIGHT</h3>
 						<a href="">更多</a>
 					</div>
 					<div class="insightBody">
-					  <div class="insightBody1">
-						  <div class="insightBodyDiv1">
-							  <a href=""></a>
+						<div class="insightBody1">
+							<div class="insightBodyDiv1">
+								<a href=""></a>
 							</div>
 							<div class="insightBodyDiv2">
-							  <p class="insightBodyDiv2P1">艺网 | 携手顶级专业艺术机构开创合作新模式</p>
+								<p class="insightBodyDiv2P1">艺网 | 携手顶级专业艺术机构开创合作新模式</p>
 								<div></div>
 								<p class="insightBodyDiv2P2">全球领先艺术电商艺网（YWART.COM）倾力打造最高水准的原创艺术品消费平台。艺网网络科技旗下高端新版块“藏艺术”分享会近日亮相京城艺术地标798。著名当代艺术策展人、艺网创始人朱彤介绍，藏艺术致力于“吸引更多圈外藏家”，打破收藏级艺术品的固有圈层，开启“线上交易+收藏”的艺术互联网模式。</p>
 							</div>
 						</div>
 						<div class="insightBody2">
-						  <div class="insightBodyDiv3">
-							  <a href=""></a>
+							<div class="insightBodyDiv3">
+								<a href=""></a>
 							</div>
 							<div class="insightBodyDiv4">
-							  <p class="insightBodyDiv2P1">UNBOUNDED 意大利曼特尼亚美术馆中国当代艺术展</p>
+								<p class="insightBodyDiv2P1">UNBOUNDED 意大利曼特尼亚美术馆中国当代艺术展</p>
 								<div></div>
 								<p class="insightBodyDiv2P2">意大利时间3月29日下午六点，“无界——中国当代艺术展”在意大利的曼特尼亚美术馆揭开序幕。此次展览的主题“无界”可以被理解为“无穷大”或者“无边界”，它既是一次中国当代艺术和文艺复兴绘画之间的对话，也是一次让世界再次感知中国当代艺术魅力的契机。</p>
 							</div>
@@ -315,51 +334,51 @@
 				</div>
 			</div>
 
-      <!-- 为什么选择艺网 -->
-      <div class="whyUs">
-			  <div class="whyUsDIv">
-				  <div class="whyUsTitle">
-					  <span>为什么选择艺网 / WHY US</span>
-					</div>	
+			<!-- 为什么选择艺网 -->
+			<div class="whyUs">
+				<div class="whyUsDIv">
+					<div class="whyUsTitle">
+						<span>为什么选择艺网 / WHY US</span>
+					</div>
 					<div class="whyUsPic">
 						<div class="whyUsPic1">
-						  <div>
-						    <img src="./whyus-img/1.svg" alt="">
+							<div>
+								<img src="./whyus-img/1.svg" alt="">
 								<div>
-								  <span>保真销售</span>
+									<span>保真销售</span>
 								</div>
 								<p>艺网出售作品均为艺术家原创作品</p>
 								<p>绝无仿画及伪作</p>
 							</div>
 						</div>
 						<div class="whyUsPic2">
-						  <div>
-						    <img src="./whyus-img/2.svg" alt="">
+							<div>
+								<img src="./whyus-img/2.svg" alt="">
 								<div>
-								  <span>合作代理</span>
+									<span>合作代理</span>
 								</div>
 								<p>艺网出售的作品均为线上下合作代理</p>
 								<p>拥有唯一销售权</p>
 							</div>
 						</div>
 						<div class="whyUsPic3">
-						  <div>
-						    <img src="./whyus-img/3.svg" alt="">
+							<div>
+								<img src="./whyus-img/3.svg" alt="">
 								<div>
-							    <span>专业定价</span>
+									<span>专业定价</span>
 								</div>
 								<p>艺网汇聚艺术圈拥有话语权的专家团</p>
 								<p>队为上线作品进行专业定价</p>
 							</div>
 						</div>
 					</div>
-          <div class="artYouWant">
-					  <div class="artYouWantPic">
-					    <img src="./whyus-img/4.jpg" alt="">
+					<div class="artYouWant">
+						<div class="artYouWantPic">
+							<img src="./whyus-img/4.jpg" alt="">
 						</div>
 						<div class="artYouWantText">
-						  <div class="artYouWantTitle">
-							  <span>YWART.COM | ARTYOUWANT</span>
+							<div class="artYouWantTitle">
+								<span>YWART.COM | ARTYOUWANT</span>
 							</div>
 							<div class="artYouWantLine"></div>
 							<p>艺网倾力打造的当代原创艺术品电商交易服务平台。旨在推动艺术品消费大众化，依托于专业团队，在全国范围内持续挖掘优秀艺术品，将大量经过严格筛选的高质量原创艺术品通过线上艺术品电商平台带给大众，结合线下的体验空间，形成一整套专业、可信赖的艺术消费服务。</p>
@@ -371,15 +390,15 @@
 				</div>
 			</div>
 
-      <!-- 合作伙伴 -->
+			<!-- 合作伙伴 -->
 			<div class="asFeaturedIn">
-			  <div class="asFeaturedInDiv">
-				  <div class="asFeaturedInTitle">
-					  <span>合作伙伴 / AS FEATURED IN</span>
+				<div class="asFeaturedInDiv">
+					<div class="asFeaturedInTitle">
+						<span>合作伙伴 / AS FEATURED IN</span>
 					</div>
 					<div class="asFeaturedInLogo">
-          	<ul>
-						  <li class="asFeaturedInLogo1"><img src="./asFeaturedIn-img/logoGTJT.png" alt=""></li>
+						<ul>
+							<li class="asFeaturedInLogo1"><img src="./asFeaturedIn-img/logoGTJT.png" alt=""></li>
 							<li class="asFeaturedInLogo2"><img src="./asFeaturedIn-img/logoJTL.png" alt=""></li>
 							<li class="asFeaturedInLogo3"><a href=""><img src="./asFeaturedIn-img/fangtianxia.png" alt=""></a></li>
 							<li class="asFeaturedInLogo4"><img src="./asFeaturedIn-img/logoTC.png" alt=""></li>
@@ -393,19 +412,106 @@
 		</div>
 	</section>
 
-  <!--尾部-->
+	<!--尾部-->
 	<footer>
-	  <div class="foot">
-		  <div class="footDiv">
-			  <div class="footLogo">
-				  <img src="./foot-img/footLogo.svg" alt="">
+		<div class="foot">
+			<div class="footDiv">
+				<div class="footLogo">
+					<img src="./foot-img/footLogo.svg" alt="">
+					<div class="footLogo1">
+						<div>
+							<img class="footLogoWb" src="./foot-img/weibo.svg" alt="">
+							<img class="footLogoWx" src="./foot-img/weixin.svg" alt="">
+						</div>
+						<p class="footLogoTelLogo"><img src="./foot-img/tel.svg" alt="">400-605-7033</p>
+					</div>
 				</div>
 				<div class="footLink">
-				  
+					<table>
+						<thead>
+							<tr class="footTitle">
+								<td>YWART.COM</td>
+								<td>了解我们</td>
+								<td>支持与帮助</td>
+								<td>合作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#">精选</a></td>
+								<td><a href="#">关于我们</a></td>
+								<td><a href="#">如何购买</a></td>
+								<td><a href="#">作品征集</a></td>
+							</tr>
+							<tr>
+								<td><a href="#">原创艺术</a></td>
+								<td><a href="#">工作机会</a></td>
+								<td><a href="#">物流说明</a></td>
+								<td><a href="#">合作伙伴入驻</a></td>
+							</tr>
+							<tr>
+								<td><a href="#">造艺</a></td>
+								<td><a href="#">网站地图</a></td>
+								<td><a href="#">联系我们</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="#">藏艺术</a></td>
+							</tr>
+							<tr>
+								<td><a href="#">艺居生活</a></td>
+							</tr>
+							<tr>
+								<td><a href="#">我的珍藏</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="downCode" id="ios">
+						<img id="codeIos" src="./foot-img/iosDownQRcode.png" alt="">
+						<p>扫一扫，下载APP11</p>
+					</div>
+					<div class="downCode" id="android">
+						<img id="codeAndroid" src="./foot-img/AndroidDownQRcode.png" alt="">
+						<p>扫一扫，下载APP22</p>
+					</div>
+					<span class="footDownDark">
+						<img id="footDownDarkIos" src="./foot-img/iosDowndark.png" alt="">
+						<img id="footDownDarkAnd" src="./foot-img/AndroidDowndark.png" alt="">
+					</span>
+				</div>
+				<div class="friendLinkDiv">
+					<div class="CopyRight">
+						<p>京ICP备16003461号 Copyright © 2015-2018 艺网YWART.COM 版权所有</p>
+					</div>
+					<ul class="friendLink">
+						<li>友情链接</li>
+						<li><a href="">上海论坛</a></li>
+						<li><a href="">中华丹青网</a></li>
+						<li><a href="">书法交易网</a></li>
+						<li><a href="">艺术资讯</a></li>
+						<li><a href="">中华收藏网</a></li>
+						<li><a href="">主题酒店设计</a></li>
+						<li><a href="">室内设计</a></li>
+						<li><a href="">艺缘网</a></li>
+						<li><a href="">中国华人书画网</a></li>
+						<li><a href="">买购网</a></li>
+						<li><a href="">字画批发</a></li>
+						<li><a href="">中国书画百强网</a></li>
+						<li><a href="">集雅斋字画网</a></li>
+						<li><a href="">画美世界</a></li>
+						<li><a href="">淘宝网</a></li>
+						<li><a href="">雅风书画网</a></li>
+						<li><a href="">艺术品收藏</a></li>
+						<li><a href="">广州玻璃钢雕塑</a></li>
+						<li><a href="">国际快递查询</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="./js/index.js">
+	<script src="js/jquery-1.11.3.js"></script>
+	</script>
 </body>
 
 </html>

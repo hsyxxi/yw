@@ -1,18 +1,10 @@
 /* 初始化格式 */
-html,
-body,
-ul,
-ol,
-li,
-p,
-a,
-div{
-	float: left;
+html,ul,ol,li
+{
 	list-style: none;
-	margin: 0;
-	padding: 0;
 	font-family: "PingFangSC-Thin";
 }
+div{float:left;}
 /* 设置所有内外边距为0 */
 *{
 	margin: 0px;
@@ -22,6 +14,50 @@ div{
 section{
 	width: 100%;
 	overflow: hidden
+}
+/* 轮播图*/
+.banner,.bannerDiv{
+	width: 100%;
+	height: 420px;
+	height: 420px;
+	position: relative;
+
+}
+.bannerDiv>li>a>img{
+	width: auto;
+	height: 420px;
+}
+.bannerDiv>li>a>img{
+	width: 100%;
+	position: absolute;
+	top:0px;
+	right:0px;
+	z-index: 10;
+	transition: 0.5s;
+}
+#show{
+	z-index: 1000;
+} 
+.bannerDot{
+	display: inline-block;
+	position: absolute;
+	right: 117px;
+	top:350px;
+	z-index: 1000;
+    padding: 10px 20px 10px 0px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 30px;
+}
+.bannerDot>li{
+    float: left;
+}
+.bannerDot>li>span{
+	display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+	background: #FFF;
+	margin-left:20px; 
 }
 /* 设置body */
 body {
@@ -47,7 +83,6 @@ body {
 .body4{
     height:46px;
 	text-align: left;
-    border-bottom: 1px solid #ddd;
     color:gray;
 	width:1180px;
 	font-size:14px;
@@ -72,34 +107,35 @@ body {
 	text-decoration:none;
 	line-height:46px;
 }
-#tjLinkDiv{
+#tjLinkDiv,#tjLinkDiv>ul>li{
 	float: right;
 }
-#tjLink1,#tjLink2,#tjLink3,#tjLink4{
-    line-height:45px;
-	width:100px;
-	text-align:center;
-	border-top:1px solid rgb(221,221,221);
-	border-left:1px solid rgb(221,221,221);
-	border-right:1px solid rgb(221,221,221);
-	border-bottom:1px solid transparent;;
-	margin-left:20px;
-	font-size:18px;
-	color:black;
+#tjLinkDiv>ul>li>span{
+	color: #000;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	width: 100px;
+    height: 43px;
+	line-height: 43px;
+	text-align: center;
+	margin:3px 0px 0px 20px;
+	display: inline-block;
+    border: 1px solid #ddd;
 }
-#tjLink1{
-    border-bottom:1px solid #fff;
-}
+
 .tjDiv{
     width:280px;
 	height:400px;
 	margin-right:20px;
+	box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
 }
 .tjDiv1{
     width:280px;
 	height:400px;
 	outline-style:none;
 	outline-color:rgb(102, 102, 102);
+	box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
 }
 .tjImg{
     width:280px;
@@ -230,12 +266,14 @@ body {
 }
 .searchGo>p{
 	margin-right:20px;
+	float: left;
 }
 .searchGo>a{
 	text-decoration: none;
 	color:#fff;
 	font-weight: bold;
 	margin-right:20px;
+	float: left;
 }
 .startText{
 	width:27%;
@@ -306,6 +344,7 @@ body {
 	width:100%;
 	height:380px;
 	clear: both;
+	overflow: hidden;
 }
 .specialBodyDiv{
 	width:320px;
@@ -612,6 +651,7 @@ body {
 	margin: 30px 0;
 }
 .artYouWantText>p{
+	float: left;
 	margin-top: -3px;
     font-size: 14px;
     line-height: 2;
@@ -623,6 +663,7 @@ body {
 	color: #fff;
 	font-size: 14px;
 	text-decoration: none;
+	float: left;
 }
 .asFeaturedIn{
 	width:100%;
@@ -655,6 +696,9 @@ body {
 	width: 100%;
 	height:35px;
 	margin-top: 60px;
+}
+.asFeaturedInLogo>ul>li{
+   float: left;
 }
 .asFeaturedInLogo1>img,.asFeaturedInLogo2>img,.asFeaturedInLogo3>a>img,.asFeaturedInLogo4>img,.asFeaturedInLogo5>img,.asFeaturedInLogo6>img{
 	width:125.344px;
