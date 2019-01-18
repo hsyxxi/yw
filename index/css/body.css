@@ -19,24 +19,22 @@ section{
 .banner,.bannerDiv{
 	width: 100%;
 	height: 420px;
-	height: 420px;
 	position: relative;
-
 }
 .bannerDiv>li>a>img{
 	width: auto;
 	height: 420px;
-}
-.bannerDiv>li>a>img{
-	width: 100%;
 	position: absolute;
 	top:0px;
 	right:0px;
-	z-index: 10;
-	transition: 0.5s;
+	bottom: 0px;
+	left: 0px;
+	margin: auto;
+	opacity:0;
+    transition:all 1s linear;
 }
-#show{
-	z-index: 1000;
+.bannerDiv>li>a>img.show{
+	opacity: 1;
 } 
 .bannerDot{
 	display: inline-block;
@@ -58,6 +56,9 @@ section{
     border-radius: 50%;
 	background: #FFF;
 	margin-left:20px; 
+}
+.bannerDot>li>span.active{
+	background-color: #CF680A;
 }
 /* 设置body */
 body {
@@ -137,9 +138,27 @@ body {
 	outline-color:rgb(102, 102, 102);
 	box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
 }
+.tj{
+	width: 280px;
+    height: 280px;
+	overflow: hidden;
+	position: relative;
+	background-image: url();
+}
 .tjImg{
     width:280px;
 	height:280px;
+	transition: all 0.5s ease-out; 
+	position: absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	bottom: 0px;
+	margin:auto;
+}
+.tjImg:hover{
+	width:295px;
+    height: 295px;
 }
 .tjText{
     width:240px;
@@ -208,30 +227,51 @@ body {
 	margin:0 auto;
     line-height:35px;
 }
-.newImgBig{
-    width:280px;
+.newImg1,.newImgBig{
+	width:280px;
 	height:280px;
+}
+.newImg1{
+	overflow: hidden;
+	position: relative;
 	margin-right:20px;
 }
+.newImgBig,.newImgSmall{
+	position: absolute;
+	top:0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: auto;
+	transition: all 0.5s ease-out; 
+}
 .newImgSmall{
-    width:130px;
-	height:130px;
-    margin:0px 20px 16px 0px;
+	transition: all 0.6s;
 }
-.newImgSmall1{
-    width:130px;
-	height:130px;
-    margin:0px 0px 16px 0px;
+.newImg2,.newImgSmall{
+	width:130px;
+	height: 130px;
 }
-.newImgSmall2{
-    width:130px;
-	height:130px;
-    margin:0px 20px 0px 0px;
+.newImg2{
+	position: relative;
+	overflow: hidden;
 }
-.newImgSmall3{
-    width:130px;
-	height:130px;
-	margin:0px;
+.newImgBig:hover{
+	width: 295px;
+	height: 295px;
+}
+.newImgSmall:hover{
+    width:135px;
+	height:135px;
+}
+.nis{
+	margin: 0px 20px 20px 0px;
+}
+.nis1{
+    margin-bottom:20px;
+}
+.nis2{
+    margin-right:20px;
 }
 .searchDiv{
     width:100%;
@@ -351,17 +391,17 @@ body {
 	height:380px;
 	position: relative;
 	overflow: hidden;
-	background-position:center;
-	background-size: auto 380px;
 	margin-right:32px;
-
 }
-.specialBodyDiv>div{
-	width: 440;
+.specialBodyDiv>div,.specialBodyDiv>img{
+	width: 440px;
     height: 380px;	
 	position: absolute;
-	top:0px;
-	left:0px;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	margin: auto;
 }
 .specialBodyDiv>div>h2{
 	display: block;
@@ -373,21 +413,6 @@ body {
 .specialBodyDiv>div>p{
 	color:#fff;
 	padding: 0px 30px 30px 30px;
-}
-.specialBodyDiv1{
-	background-image: url(../special-img/1.jpg);
-}
-.specialBodyDiv2{
-	background-image: url(../special-img/2.jpg);
-}
-.specialBodyDiv3{
-	background-image: url(../special-img/3.jpg);
-}
-.specialBodyDiv4{
-	background-image: url(../special-img/4.jpg);
-}
-.specialBodyDiv5{
-	background-image: url(../special-img/5.jpg);
 }
 .artist{
 	width:100%;
@@ -441,10 +466,15 @@ body {
 .artistLeft{
 	width:450px;
 	height:320px;
-	background-image: url(../artist-img/1.jpg);
-	background-size: 450px 320px;
 	color:#fff;
-	position: relative;
+	overflow: hidden;
+	background-image: url(../artist-img/1.jpg);
+	background-position:center;
+	background-size:450px 320px;
+	transition: all 0.5s ease-out;
+}
+.artistLeft:hover{
+	background-size:470px 335px;
 }
 .artistLeft>h3{
 	font-size: 16px;
@@ -517,7 +547,13 @@ body {
 	height:300px;
 	background-image: url(../insight-img/1.jpg);
 	background-size: 580px 300px;
+	background-position:center;
 	position: relative;
+	overflow: hidden;
+	transition: all 0.5s ease-out; 
+}
+.insightBodyDiv1:hover,.insightBodyDiv3:hover{
+	background-size: 600px 315px;
 }
 .insightBodyDiv3{
 	background-image: url(../insight-img/2.jpg);

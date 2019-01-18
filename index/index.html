@@ -13,49 +13,15 @@
 	<link rel="stylesheet" href="./css/head.css">
 	<link rel="stylesheet" href="./css/body.css">
 	<link rel="stylesheet" href="./css/foot.css">
+	<script src="../jquery-1.11.3.js"></script>
 </head>
 
 <body>
 	<!-- 这是头部的开始 -->
-	<header>
-		<div class="header">
-			<img src="./head-img/logo.png" src="https://www.ywart.com/" class="logo2">
-			<span class="wenzi" style="color:#A1A1A1;float:left;">
-				<b>— 原创艺术品电商</b>
-			</span>
-			<div class="header-1">
-				<select name="" class="header-2">
-					<option value="">作品</option>
-					<option value="">艺术家</option>
-				</select>
-				<input class="header-3" placeholder="  搜索感兴趣的关键字">
-				<a class="header-4" href="">
-					<img src="./head-img/sc.svg" alt="">
-				</a>
-			</div>
-			<div>
-				<ul class="header-5">
-					<li>
-						<a>
-							<img src="./head-img/app.png" id="a2">
-						</a>
-					</li>
-					<li>下载APP</li>
-					<b></b>
-					<li>
-						<a><img src="./head-img/login.png" id="a3"></a>
-					</li>
-					<li>登录 / 注册</li>
-					<b></b>
-					<li>
-						<a><img src="./head-img/car.png" id="a4"></a>
-					</li>
-					<li>购物车</li>
-				</ul>
-			</div>
-		</div>
-	</header>
-
+	<script src="head.js"></script>
+	<script>
+	head();
+	</script>
 	<!--导航开始-->
 	<nav>
 		<div class="header2">
@@ -74,24 +40,24 @@
 		<!-- 轮播图 -->
 		<div class="banner">
             <ul class="bannerDiv">
-					<li><a href=""><img id="show" src="./banner-img/banner1.png" alt=""></a></li>
-					<li><a href=""><img src="./banner-img/banner2.jpg" alt=""></a></li>
-					<li><a href=""><img src="./banner-img/banner3.jpg" alt=""></a></li>
-					<li><a href=""><img src="./banner-img/banner4.jpg" alt=""></a></li>
-					<li><a href=""><img src="./banner-img/banner5.jpg" alt=""></a></li>
-					<li><a href=""><img src="./banner-img/banner6.jpg" alt=""></a></li>
-					<li><a href=""><img src="./banner-img/banner7.jpg" alt=""></a></li>
-					<li><a href=""><img src="./banner-img/banner8.jpg" alt=""></a></li>
+					<li><a href=""><img class="show pic" src="./banner-img/banner1.png" alt=""></a></li>
+					<li><a href=""><img class="pic" src="./banner-img/banner2.jpg" alt=""></a></li>
+					<li><a href=""><img class="pic" src="./banner-img/banner3.jpg" alt=""></a></li>
+					<li><a href=""><img class="pic" src="./banner-img/banner4.jpg" alt=""></a></li>
+					<li><a href=""><img class="pic" src="./banner-img/banner5.jpg" alt=""></a></li>
+					<li><a href=""><img class="pic" src="./banner-img/banner6.jpg" alt=""></a></li>
+					<li><a href=""><img class="pic" src="./banner-img/banner7.jpg" alt=""></a></li>
+					<li><a href=""><img class="pic" src="./banner-img/banner8.jpg" alt=""></a></li>
 			</ul>
 			<ul class="bannerDot">
-				<li><span id="active"></span></li>
-				<li><span></span></li>
-				<li><span></span></li>
-				<li><span></span></li>
-				<li><span></span></li>
-				<li><span></span></li>
-				<li><span></span></li>
-				<li><span></span></li>
+				<li><span class="dot active"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
 			</ul>
 		</div>
 
@@ -117,7 +83,7 @@
 					<!-- 推荐图片部分 -->
 					<div>
 						<div class="tjDiv">
-							<div>
+							<div class="tj">
 								<img src="./body-img/tj1.jpg" alt="" class="tjImg">
 							</div>
 							<div class="tjText">
@@ -127,7 +93,7 @@
 							</div>
 						</div>
 						<div class="tjDiv">
-							<div>
+							<div class="tj">
 								<img src="./body-img/tj2.jpg" alt="" class="tjImg">
 							</div>
 							<div class="tjText">
@@ -137,7 +103,7 @@
 							</div>
 						</div>
 						<div class="tjDiv">
-							<div>
+							<div class="tj">
 								<img src="./body-img/tj3.jpg" alt="" class="tjImg">
 							</div>
 							<div class="tjText">
@@ -147,7 +113,7 @@
 							</div>
 						</div>
 						<div class="tjDiv1">
-							<div>
+							<div class="tj">
 								<img src="./body-img/tj4.jpg" alt="" class="tjImg">
 							</div>
 							<div class="tjText">
@@ -170,16 +136,36 @@
 						</span>
 					</div>
 					<div>
-						<div><img src="./new-img/new1.jpg" alt="" class="newImgBig"></div>
-						<div><img src="./new-img/new2.jpg" alt="" class="newImgBig"></div>
-						<div><img src="./new-img/new3.jpg" alt="" class="newImgSmall"></div>
-						<div><img src="./new-img/new4.jpg" alt="" class="newImgSmall"></div>
-						<div><img src="./new-img/new5.jpg" alt="" class="newImgSmall"></div>
-						<div><img src="./new-img/new6.jpg" alt="" class="newImgSmall1"></div>
-						<div><img src="./new-img/new7.jpg" alt="" class="newImgSmall2"></div>
-						<div><img src="./new-img/new8.jpg" alt="" class="newImgSmall2"></div>
-						<div><img src="./new-img/new9.jpg" alt="" class="newImgSmall2"></div>
-						<div><img src="./new-img/new10.jpg" alt="" class="newImgSmall3"></div>
+						<div class="newImg1">
+							<img src="./new-img/new1.jpg" alt="" class="newImgBig">
+						</div>
+						<div class="newImg1">
+							<img src="./new-img/new2.jpg" alt="" class="newImgBig">
+						</div>
+						<div class="newImg2 nis">
+							<img src="./new-img/new3.jpg" alt="" class="newImgSmall">
+						</div>
+						<div class="newImg2 nis">
+							<img src="./new-img/new4.jpg" alt="" class="newImgSmall" >
+						</div>
+						<div class="newImg2 nis">
+							<img src="./new-img/new5.jpg" alt="" class="newImgSmall">
+						</div>
+						<div class="newImg2 nis1">
+							<img src="./new-img/new6.jpg" alt="" class="newImgSmall">
+						</div>
+						<div class="newImg2 nis2">
+							<img src="./new-img/new7.jpg" alt="" class="newImgSmall">
+						</div>
+						<div class="newImg2 nis2">
+							<img src="./new-img/new8.jpg" alt="" class="newImgSmall">
+						</div>
+						<div class="newImg2 nis2">
+							<img src="./new-img/new9.jpg" alt="" class="newImgSmall">
+						</div>
+						<div class="newImg2">
+							<img src="./new-img/new10.jpg" alt="" class="newImgSmall">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -251,31 +237,36 @@
 				</div>
 			</div>
 			<div class="specialBody">
-				<div class="specialBodyDiv specialBodyDiv1">
+				<div class="specialBodyDiv">
+					<img src="./special-img/1.jpg" alt="">
 					<div>
 						<h2>身体OR心灵，总有一个要在路上</h2>
 						<p>当看过了山和大海，穿过了人山人海，不管是停下脚步还是继续前行，都会对曾经看过的风景见过的人，有种放不下忘不了的情感，而这种旅行情结，或许可以靠画作来治愈。</p>
 					</div>
 				</div>
-				<div class="specialBodyDiv specialBodyDiv2">
+				<div class="specialBodyDiv">
+					<img src="./special-img/2.jpg" alt="">
 					<div>
 						<h2>红唇入画·性感不只裸露</h2>
 						<p>选择一幅“红唇”，让艺术给你一个爱的么么哒。</p>
 					</div>
 				</div>
-				<div class="specialBodyDiv specialBodyDiv3">
+				<div class="specialBodyDiv">
+					<img src="./special-img/3.jpg" alt="">
 					<div>
 						<h2>一见钟情</h2>
 						<p>喂，我一见你就挺钟情的一见钟情要多久？答案是30秒。目光所及，赏心悦目，心生欢喜，然后便希望时时刻刻拥有在身边。</p>
 					</div>
 				</div>
-				<div class="specialBodyDiv specialBodyDiv4">
+				<div class="specialBodyDiv">
+					<img src="./special-img/4.jpg" alt="">
 					<div>
 						<h2>城·事<br>一座城一个故事</h2>
 						<p>每个人的记忆，或多或少都与一座城有关。万青在歌里唱到，住在我心里孤独的孤独的海怪，深海的光、停滞的海浪、站在能看到灯火的桥，描述的正是海滨之城。</p>
 					</div>
 				</div>
-				<div class="specialBodyDiv specialBodyDiv5">
+				<div class="specialBodyDiv">
+					<img src="./special-img/5.jpg" alt="">
 					<div>
 						<h2>这些作品都叫<br>《无题》</h2>
 						<p>很多艺术家，都有那么几件作品叫「无题」灵感来了，由心而作，这种纯粹的艺术感觉没有条条框框去束缚，也许就差这么一个机会把它带回家，给它一个专属ID</p>
@@ -313,6 +304,7 @@
 						<div class="insightBody1">
 							<div class="insightBodyDiv1">
 								<a href=""></a>
+
 							</div>
 							<div class="insightBodyDiv2">
 								<p class="insightBodyDiv2P1">艺网 | 携手顶级专业艺术机构开创合作新模式</p>
@@ -412,106 +404,12 @@
 		</div>
 	</section>
 
-	<!--尾部-->
-	<footer>
-		<div class="foot">
-			<div class="footDiv">
-				<div class="footLogo">
-					<img src="./foot-img/footLogo.svg" alt="">
-					<div class="footLogo1">
-						<div>
-							<img class="footLogoWb" src="./foot-img/weibo.svg" alt="">
-							<img class="footLogoWx" src="./foot-img/weixin.svg" alt="">
-						</div>
-						<p class="footLogoTelLogo"><img src="./foot-img/tel.svg" alt="">400-605-7033</p>
-					</div>
-				</div>
-				<div class="footLink">
-					<table>
-						<thead>
-							<tr class="footTitle">
-								<td>YWART.COM</td>
-								<td>了解我们</td>
-								<td>支持与帮助</td>
-								<td>合作</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#">精选</a></td>
-								<td><a href="#">关于我们</a></td>
-								<td><a href="#">如何购买</a></td>
-								<td><a href="#">作品征集</a></td>
-							</tr>
-							<tr>
-								<td><a href="#">原创艺术</a></td>
-								<td><a href="#">工作机会</a></td>
-								<td><a href="#">物流说明</a></td>
-								<td><a href="#">合作伙伴入驻</a></td>
-							</tr>
-							<tr>
-								<td><a href="#">造艺</a></td>
-								<td><a href="#">网站地图</a></td>
-								<td><a href="#">联系我们</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="#">藏艺术</a></td>
-							</tr>
-							<tr>
-								<td><a href="#">艺居生活</a></td>
-							</tr>
-							<tr>
-								<td><a href="#">我的珍藏</a></td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="downCode" id="ios">
-						<img id="codeIos" src="./foot-img/iosDownQRcode.png" alt="">
-						<p>扫一扫，下载APP11</p>
-					</div>
-					<div class="downCode" id="android">
-						<img id="codeAndroid" src="./foot-img/AndroidDownQRcode.png" alt="">
-						<p>扫一扫，下载APP22</p>
-					</div>
-					<span class="footDownDark">
-						<img id="footDownDarkIos" src="./foot-img/iosDowndark.png" alt="">
-						<img id="footDownDarkAnd" src="./foot-img/AndroidDowndark.png" alt="">
-					</span>
-				</div>
-				<div class="friendLinkDiv">
-					<div class="CopyRight">
-						<p>京ICP备16003461号 Copyright © 2015-2018 艺网YWART.COM 版权所有</p>
-					</div>
-					<ul class="friendLink">
-						<li>友情链接</li>
-						<li><a href="">上海论坛</a></li>
-						<li><a href="">中华丹青网</a></li>
-						<li><a href="">书法交易网</a></li>
-						<li><a href="">艺术资讯</a></li>
-						<li><a href="">中华收藏网</a></li>
-						<li><a href="">主题酒店设计</a></li>
-						<li><a href="">室内设计</a></li>
-						<li><a href="">艺缘网</a></li>
-						<li><a href="">中国华人书画网</a></li>
-						<li><a href="">买购网</a></li>
-						<li><a href="">字画批发</a></li>
-						<li><a href="">中国书画百强网</a></li>
-						<li><a href="">集雅斋字画网</a></li>
-						<li><a href="">画美世界</a></li>
-						<li><a href="">淘宝网</a></li>
-						<li><a href="">雅风书画网</a></li>
-						<li><a href="">艺术品收藏</a></li>
-						<li><a href="">广州玻璃钢雕塑</a></li>
-						<li><a href="">国际快递查询</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script type="text/javascript" src="./js/index.js">
-	<script src="js/jquery-1.11.3.js"></script>
-	</script>
-</body>
 
+	<!--尾部-->
+	<script src="foot.js"></script>
+	<script>
+	foot();
+	</script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</body>
 </html>
