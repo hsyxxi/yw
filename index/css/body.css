@@ -299,6 +299,11 @@ body {
 	border-radius:4px;
 	margin-right:6px; 
 }
+#selectKind,#selectPrice,#selectSize,#selectStyle{
+    outline: none;
+	font-size: 14px;
+	color: #333;
+}
 .searchGo{
 	clear: both;
 	font-size: 14px;
@@ -316,30 +321,33 @@ body {
 	float: left;
 }
 .startText{
-	width:27%;
-	height:300px;
-	background-color: #1f1f1f;
+    background-color: #1f1f1f;
 	float: right;
 	position: relative;
+	width:27%;
+	height:300px;
+	z-index: 10;
 }
-.startText>div{
-	width:90px;
-	height:100px;
-    position: absolute;
+.changeColor{
+	background-color: #CF680A;
+	width:0%;
+	height:300px;
+	transition: all 0.4s;
+	position: absolute;
 	top:0px;
-	right:0px;
 	left:0px;
-	bottom:0px;
-	margin: auto;
+	z-index: 100;
 }
-.startText>div>p{
+.startText>p{
 	color: #FFF;
 	font-size: 40px;
 	font-weight: 500;
 	letter-spacing: 4px;
-}
-.startTextP{
-    padding-left:15px; 
+	position: absolute;
+	top:35%;
+	left:42%;
+	z-index: 1000;
+	transition: all 0.4s;
 }
 .specialTitle{
 	width:100%;
@@ -459,19 +467,30 @@ body {
 	float: left;
 	text-align: center;
 }
+.artistTitle>a:hover{
+	background-color: #CF680A;
+	color:#fff;
+}
 .artistBody{
 	width:1180px;
 	height:320px;
 }
-.artistLeft{
+.artistLeft,.bgC{
 	width:450px;
 	height:320px;
-	color:#fff;
+}
+.artistLeft{
 	overflow: hidden;
-	background-image: url(../artist-img/1.jpg);
-	background-position:center;
+	background:url(../artist-img/1.jpg) center;
 	background-size:450px 320px;
 	transition: all 0.5s ease-out;
+	position: relative;
+}
+.bgC{
+	display: inline-block;
+	background:rgba(0,0,0,0.3);
+	position: absolute;
+	top:0px;
 }
 .artistLeft:hover{
 	background-size:470px 335px;
@@ -481,13 +500,16 @@ body {
     font-weight: 500;
     position: absolute;
     bottom: 120px;
-    padding: 0 20px;
+	padding: 0 20px;
+	color:#fff;
 }
 .artistLeft>p{
 	font-size: 12px;
 	position: absolute;
 	bottom: 65px;
 	padding: 0 20px;
+	color:#fff;
+	line-height: 1.75;
 }
 .artistRight{
 	width:679px;
@@ -495,7 +517,113 @@ body {
 	padding-left:25px;
 	border-left:1px solid #d8d8d8;
 	margin-left:24px;
+	position: relative;
 }
+.artistRightText1,.artistRightText2,.artistRightText3{
+	width: 80px;
+	height: 35px;
+	padding: 20px 0px;
+	border-top:1px solid #000;
+}
+.artistRightText2{
+	border-bottom:1px solid #000;
+	border-top:none !important;
+}
+.artistRightText1{
+	position: absolute;
+	bottom: -8%;
+	left:12%;
+}
+.artistRightText2{
+	position: absolute;
+	top: 13%;
+	left:45%;
+}
+.artistRightText3{
+	position: absolute;
+	bottom: -8%;
+	right:8%;
+}
+.textP1{
+	font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+    color: #000;
+}
+.textP2{
+	font-size: 12px;
+    line-height: 1.67;
+    text-align: center;
+    color: #000;
+}
+.spanPic1,.spanPic2,.spanPic3,.spanPic4,.spanPic5,.spanPic6,.spanPic7,.spanPic8,.spanPic9{
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+	display: inline-block;
+}
+.spanPic1{
+	position: absolute;
+	top:15%;
+	left:4%;
+	z-index: 10;
+}
+.spanPic2{
+    position: absolute;
+	top:15%;
+	left:4%;
+	z-index: 100;
+}
+.spanPic3{
+	position: absolute;
+	top:18%;
+	left:5.5%;
+	z-index: 1000;
+}
+.spanPic4{
+	position: absolute;
+	top:40%;
+	left:40%;
+	z-index: 10;
+}
+.spanPic5{
+	position: absolute;
+	top:40%;
+	left:40%;
+	z-index: 100;
+}
+.spanPic6{
+	position: absolute;
+	top:43%;
+	left:41%;
+	z-index: 1000;
+}
+.spanPic7{
+	position: absolute;
+	top:14%;
+	right:0%;
+	z-index: 10;
+}
+.spanPic8{
+	position: absolute;
+	top:14%;
+	right:0%;
+	z-index: 100;
+}
+.spanPic9{
+	position: absolute;
+	top:18%;
+	right:2%;
+	z-index: 1000;
+}
+.artistPic1,.artistPic2,.artistPic3,.artistPic4,.artistPic5,.artistPic6,.artistPic7,.artistPic8,.artistPic9{
+	width: 180px;
+	height:180px;
+}
+
+
+
 .insight{
 	width:100%;
 	height:570px;
@@ -619,10 +747,36 @@ body {
 	width:1180px;
 	height:346px;
 }
+.whyUsPicP{
+	width:120px;
+	display: inline-block;
+	transition: all 0.4s;
+}
 .whyUsPic1,.whyUsPic2,.whyUsPic3{
 	width:393.33px;
 	height:346px;
 	position: relative;
+}
+.whyUsPicL,.whyUsPicC,.whyUsPicR{
+	position: relative;
+}
+.whyUsPicDotL,.whyUsPicDotR{
+	width: 6px;
+	height: 6px;
+	font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+	background-color: #000;
+	transition: all 0.4s;
+	position: absolute;
+	top:20px;
+}
+.whyUsPicDotL{
+	left:45px;
+}
+.whyUsPicDotR{
+	right: 45px;
 }
 .whyUsPic1>div,.whyUsPic2>div,.whyUsPic3>div{
 	width:280px;
@@ -660,6 +814,23 @@ body {
 	width:1180px;
 	height:400px;
 	margin-top:80px;
+	position: relative;
+}
+.artYouWantCenter{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: absolute;
+	top:0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin:auto;
+	background-color: #000;
+	background-image: url("../insight-img/logo_notext.svg");
+	background-size: 40px 40px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .artYouWantPic>img{
 	width:590px;
