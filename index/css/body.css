@@ -227,6 +227,11 @@ body {
 	margin:0 auto;
     line-height:35px;
 }
+.tjChange>img{
+	width: 17px;
+	height: 21px;
+	margin:4px 5px 0px 0px; 
+}
 .newImg1,.newImgBig{
 	width:280px;
 	height:280px;
@@ -235,6 +240,34 @@ body {
 	overflow: hidden;
 	position: relative;
 	margin-right:20px;
+}
+.newImgP,.newImgPs{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 280px;
+	height: 280px;
+	background-color:rgba(0, 0, 0, 0.5);
+	display: block;
+	text-align: center;
+	display: none;
+}
+.newImgPs{
+	width: 130px !important;
+	height: 130px !important;
+}
+.newImgP>p,.newImgPs>p{
+	color:#fff;
+	font-size: 12px;
+	height: 70px;
+	width: 130px;
+	display: inline-block;
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
 }
 .newImgBig,.newImgSmall{
 	position: absolute;
@@ -255,14 +288,6 @@ body {
 .newImg2{
 	position: relative;
 	overflow: hidden;
-}
-.newImgBig:hover{
-	width: 295px;
-	height: 295px;
-}
-.newImgSmall:hover{
-    width:135px;
-	height:135px;
 }
 .nis{
 	margin: 0px 20px 20px 0px;
@@ -681,7 +706,7 @@ body {
 	transition: all 0.5s ease-out; 
 }
 .insightBodyDiv1:hover,.insightBodyDiv3:hover{
-	background-size: 600px 315px;
+	background-size: 600px 318px;
 }
 .insightBodyDiv3{
 	background-image: url(../insight-img/2.jpg);
@@ -771,6 +796,7 @@ body {
 	transition: all 0.4s;
 	position: absolute;
 	top:20px;
+	transition: all 0.4s;
 }
 .whyUsPicDotL{
 	left:45px;
