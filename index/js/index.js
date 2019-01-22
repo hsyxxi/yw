@@ -41,22 +41,19 @@ getDownPic("#footDownDarkAnd","#codeAndroid");
 //最新上架效果
 function getDiv(x,y,z){
 $(".newImg1").mouseover(function(){
-   $newImgBig=$(".newImg1>.newImgBig");
-   $newImgP=$(".newImg1>.newImgP");
-   $newImgP.css("display","block")
+   var $newImg1=$(this);
+   $newImg1.children(":first").css("width",290)
+   $newImg1.children(":first").css("height",290)
+   $newImg1.children(":last").css("display","block")
 }).mouseout(function(){
-   $newImgP.css("display","none")
+   var $newImg1=$(this);
+   $newImg1.children(":first").css("width",280)
+   $newImg1.children(":first").css("height",280)
+   $newImg1.children(":last").css("display","none")
 })
 }
 getDiv(".newImg1","newImgBig","newImgP");
 getDiv(".newImg2",);
-
-
-
-
-
-
-
 
 
 
@@ -93,3 +90,4 @@ $(".startText").mouseover(function (){
 //滚轮向下滑动时。nav字体颜色变黑，并上移，nav边框同时上移
 //上移时搜索框隐藏，白色部分高度变少，左边字体消失。右边文字和|消失
 //始终固定在顶部
+

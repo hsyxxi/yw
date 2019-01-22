@@ -105,9 +105,6 @@ body {
 #a4 {
 	margin: 27.5px 8px 0px 0px;
 }
-.header-5{
-	float: right;
-}
 .header-5>li {
 	color: #333333;
 	font-size: 14px;
@@ -130,18 +127,19 @@ body {
 }
 .headerRight{
 	position: relative;
+	float: right;
 }
 .headHover{
 	position: absolute;
     padding-right: 0;
-    left: -165px;
+    right: 165px;
     top: 8px;
     width: 268px;
     height: 246px;
     background-color: #FFF;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
 	text-align: center;
-	display: none;
+    z-index: 1000;
 }
 .headHover>p{
 	font-size: 14px;
@@ -178,7 +176,7 @@ body {
 	right:0px;
 	bottom: 0px;
 	margin:auto;
-	padding-top:12px;
+	padding-top:15px;
 }
 .header2_1>li{
 	display: inline-block;

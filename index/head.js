@@ -1,5 +1,4 @@
 function head(){
-	console.log("123");
 	document.write('<header>'+
 		'<div class="header">'+
 			'<img src="./head-img/logo.png" src="https://www.ywart.com/" class="logo2">'+
@@ -37,14 +36,13 @@ function head(){
 					'</li>'+
 					'<li>购物车</li>'+
 				'</ul>'+
-				'<span class="headHover">'+
+				'<div class="headHover">'+
 					'<p>使用手机扫一扫</p>'+
 					'<img src="./head-img/iosDownQRcode.png" alt=""/>'+
 					'<span>购买咨询：400-605-7033</span>'+
-				'</span>'+
+				'</div>'+
 			'</div>'+
 		'</div>'+
 	'</header>'
 	);
-	console.log("12345");
 }
