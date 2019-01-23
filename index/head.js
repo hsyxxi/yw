@@ -11,18 +11,18 @@ function head(){
 					'<option value="">艺术家</option>'+
 				'</select>'+
 				'<input class="header-3" placeholder="  搜索感兴趣的关键字">'+
-				'<a class="header-4" href="">'+
+				'<button class="header-4" href="">'+
 					'<img src="./head-img/sc.svg" alt="">'+
-				'</a>'+
+				'</button>'+
 			'</div>'+
 			'<div class="headerRight">'+
 				'<ul class="header-5">'+
-					'<li>'+
+					'<li class="codeShow">'+
 						'<a>'+
 							'<img src="./head-img/app.png" id="a2">'+
 						'</a>'+
 					'</li>'+
-					'<li>'+
+					'<li class="codeShow">'+
 						'<p id="headDown">下载APP</p>'+
 					'</li>'+
 					'<b></b>'+
@@ -36,13 +36,13 @@ function head(){
 					'</li>'+
 					'<li>购物车</li>'+
 				'</ul>'+
-				'<div class="headHover">'+
-					'<p>使用手机扫一扫</p>'+
-					'<img src="./head-img/iosDownQRcode.png" alt=""/>'+
-					'<span>购买咨询：400-605-7033</span>'+
-				'</div>'+
 			'</div>'+
 		'</div>'+
-	'</header>'
+	'</header>'+
+	'<div class="headHover">'+
+		'<p>使用手机扫一扫</p>'+
+		'<img src="./head-img/iosDownQRcode.png" alt=""/>'+
+		'<span>购买咨询：400-605-7033</span>'+
+	'</div>'
 	);
 }

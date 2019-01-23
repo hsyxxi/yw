@@ -78,13 +78,15 @@ body {
 
 .header-4 {
 	height: 40px;
-	width: auto;
+	width: 40px;
 	cursor: pointer;
+	background-color: #F8F8F8;
+	border: none;
 }
 .header-4>img{
 	width: 16px;
 	height: 16px;
-    margin: 12px 12px 0px 0px;
+	margin: 0 auto;
 }
 .header-5 {
     height:80px;
@@ -132,14 +134,15 @@ body {
 .headHover{
 	position: absolute;
     padding-right: 0;
-    right: 165px;
-    top: 8px;
+    right: 265px;
+    top: 65px;
     width: 268px;
     height: 246px;
     background-color: #FFF;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
 	text-align: center;
-    z-index: 1000;
+	z-index: 1000;
+	display: none;
 }
 .headHover>p{
 	font-size: 14px;
