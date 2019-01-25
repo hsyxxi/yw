@@ -13,7 +13,6 @@ div{float:left;}
 /* 设置模块宽度和超出隐藏 */
 section{
 	width: 100%;
-	overflow: hidden
 }
 /* 轮播图*/
 .banner,.bannerDiv{
@@ -272,7 +271,7 @@ body {
 .newImgBig,.newImgSmall{
 	position: absolute;
 	top:0px;
-	right: 0px;s
+	right: 0px;
 	bottom: 0px;
 	left: 0px;
 	margin: auto;
@@ -414,10 +413,8 @@ body {
 	display: inline-block;
 }	
 .specialBody{
-	width:100%;
+	width:1900px;
 	height:380px;
-	clear: both;
-	overflow: hidden;
 }
 .specialBodyDiv{
 	width:320px;
@@ -425,27 +422,35 @@ body {
 	position: relative;
 	overflow: hidden;
 	margin-right:32px;
+	transition: all 0.5s ease-out;
 }
-.specialBodyDiv>div,.specialBodyDiv>img{
+.specialText,.specialImg{
 	width: 440px;
     height: 380px;	
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	left: 0px;
-	bottom: 0px;
-	margin: auto;
+	bottom:0px;
+	left:0px;
+	margin:auto;
 }
-.specialBodyDiv>div>h2{
+.specialText{
+	background-color: rgba(0,0,0,0.2);
+}
+.specialText>h2{
 	display: block;
     font-size: 30px;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff;
 	padding: 30px;
+	width: 260px;
 }
-.specialBodyDiv>div>p{
+.specialText>p{
 	color:#fff;
-	padding: 0px 30px 30px 30px;
+	font-size: 14px;
+	width: 260px;
+	padding: 30px;
+	width: 260px;
 }
 .artist{
 	width:100%;

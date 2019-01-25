@@ -104,18 +104,38 @@ function getMove(n,m,k){
    getMove(".artistImgs2",".artistImgs2>.movePic",".artistImgs2>.movePic2");
    getMove(".artistImgs3",".artistImgs3>.movePic",".artistImgs3>.movePic2");
    
+//专题效果
+function getSplMove(n,m){
+   $(n).mouseover(function (){ 
+      var $n=$(this);
+      var $m=$(this);
+      $n.css("width","440px"),
+      $m.css("width","440px")
+   }).mouseout(function (){  
+      var $n=$(this);
+      var $m=$(this);
+      $n.css("width","320px"),
+      $m.css("width","320px")
+   });
+} 
+getSplMove(".specialBodyDiv",".specialText")
 
-
-
-//鼠标移入时显示左右隐藏部分，并且左边所有元素左移Xpx，右边所有元素右移Xpx
-//鼠标移出时所有效果取消，归原
-//文字部分始终定位在中间
 
 //滚轮向下滑动时。nav字体颜色变黑，并上移，nav边框同时上移
 //上移时搜索框隐藏，白色部分高度变少，左边字体消失。右边文字和|消失
 //始终固定在顶部
 
+/*
+$(n).mouseover(function (){ 
+   var $n=$(this);
+   $n.css("width","440px"),
+   $(m).css("width","440px")
+}).mouseout(function (){  
+   var $n=$(this);
+   $n.css("width","320px"),
+   $(m).css("width","320px")
+}); 
 
-
+*/
  
   
