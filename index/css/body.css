@@ -56,6 +56,9 @@ section{
 	background: #FFF;
 	margin-left:20px; 
 }
+.bannerDot>li>span:hover{
+    background-color: #CF680A;
+}
 .bannerDot>li>span.active{
 	background-color: #CF680A;
 }
@@ -81,12 +84,14 @@ body {
 	margin:auto;
 }
 .body4{
+	display: inline-block;
     height:46px;
 	text-align: left;
     color:gray;
 	width:1180px;
 	font-size:14px;
 	margin-bottom:40px;
+	border-bottom: 1px solid #ddd;
 }
 .body4>h2{
     float:left;
@@ -102,28 +107,41 @@ body {
     text-align: center;
 }
 .body4>span>a{
-    color:gray;
+    color:#003569;
 	margin:0 auto;
 	text-decoration:none;
 	line-height:46px;
 }
-#tjLinkDiv,#tjLinkDiv>ul>li{
+.body4>div{
+	width: 100px;
+	height: 43px;
 	float: right;
-}
-#tjLinkDiv>ul>li>span{
-	color: #000;
+	margin:2px 0px 0px 20px;
+	line-height: 43px;
+	vertical-align: middle;
+	color:#000;
 	font-size: 18px;
 	font-weight: 500;
 	letter-spacing: 2px;
-	width: 100px;
-    height: 43px;
-	line-height: 43px;
 	text-align: center;
-	margin:3px 0px 0px 20px;
-	display: inline-block;
-    border: 1px solid #ddd;
 }
-
+#tjLink1{
+	border: 1px solid #ddd ;
+	border-bottom: 1px solid #fff;
+}
+#tjLink2,#tjLink3,#tjLink4{
+	border: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+	
+}
+#tjPart1,#tjPart2,#tjPart3,#tjPart4{
+	position: absolute;
+	left:0px;
+	top:87px;
+}
+#tjPart2,#tjPart3,#tjPart4{
+	display: none;
+}
 .tjDiv{
     width:280px;
 	height:400px;
@@ -163,10 +181,10 @@ body {
     width:240px;
 	height:72px;
 	padding:20px 20px;
+	font-size:12px;
 }
 .tjText>h3{
     width:100%;
-    font-size:14px;
 	font-weight:600;
     line-height:18px;
 	outline-style:none;
@@ -197,9 +215,11 @@ body {
 	width:1180px;
 	height:355px;
 	position: absolute;
+	top:0px;
 	left:0px;
 	right:0px;
-	margin: auto;
+	bottom:110px;
+	margin:auto;
 }
 .tjNewTitle{
     width:1180px;
@@ -222,38 +242,77 @@ body {
 .tjChange{
     color:rgb(0,53,105);
     font-size:16px;
-    text-align:center;
-	margin:0 auto;
-    line-height:35px;
+	line-height:35px;
 }
 .tjChange>img{
+	padding-right:3px;
 	width: 17px;
-	height: 21px;
-	margin:4px 5px 0px 0px; 
+	height: 20px;
+	line-height: 35px;
+	margin-top:8px; 
+}
+.tjChange>p{
+	display: inline-block;
+}
+
+
+
+
+.newImgDiv{
+	position: absolute;
+	top:75px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	margin:auto;
+}
+.newImg1,.newImg2{
+	position: relative;
+	overflow:hidden;
 }
 .newImg1,.newImgBig{
 	width:280px;
 	height:280px;
 }
 .newImg1{
-	overflow: hidden;
-	position: relative;
+	margin-right:20px;
+}
+.newImg2,.newImgSmall{
+	width:130px;
+	height:130px;
+}
+.newImgBig,.newImgSmall{
+	transition: all 2s;
+}
+.front,.back,.newImgBig,.newImgSmall,.newImgP,.newImgPs,.newImgP>p,.newImgPs>p{
+    position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	margin:auto;
+}
+.front,.back{
+	backface-visibility:hidden;
+	transform-style:preserve-3d;
+	perspective: 700px;
+	transition: all 2s;
+}
+.back{
+	transform:rotate3D(0,1,0,-180deg);
+}
+.nis{
+	margin:0px 20px 20px 0px;
+}
+.nis1{
+    margin-bottom:20px;
+}
+.nis2{
 	margin-right:20px;
 }
 .newImgP,.newImgPs{
-	position: absolute;
-	top:0px;
-	left:0px;
-	width: 280px;
-	height: 280px;
-	background-color:rgba(0, 0, 0, 0.5);
-	display: block;
-	text-align: center;
-	display: none;
-}
-.newImgPs{
-	width: 130px !important;
-	height: 130px !important;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
 }
 .newImgP>p,.newImgPs>p{
 	color:#fff;
@@ -261,42 +320,14 @@ body {
 	height: 70px;
 	width: 130px;
 	display: inline-block;
-	position: absolute;
-	top:0px;
-	bottom:0px;
-	left:0px;
-	right:0px;
-	margin:auto;
+	text-align: center;
 }
-.newImgBig,.newImgSmall{
-	position: absolute;
-	top:0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	margin: auto;
-	transition: all 0.5s ease-out; 
-}
-.newImgSmall{
-	transition: all 0.6s;
-}
-.newImg2,.newImgSmall{
-	width:130px;
-	height: 130px;
-}
-.newImg2{
-	position: relative;
-	overflow: hidden;
-}
-.nis{
-	margin: 0px 20px 20px 0px;
-}
-.nis1{
-    margin-bottom:20px;
-}
-.nis2{
-    margin-right:20px;
-}
+
+
+
+
+
+
 .searchDiv{
     width:100%;
 	height:300px;
@@ -369,14 +400,15 @@ body {
 	letter-spacing: 4px;
 	position: absolute;
 	top:35%;
-	left:42%;
+	left:40%;
 	z-index: 1000;
 	transition: all 0.4s;
 }
 .specialTitle{
 	width:100%;
-	height:100px;
+	height:480px;
 	text-align: center;
+	position: relative;
 }
 .specialLeft,.specialRight{
 	width:10.5%;
@@ -384,6 +416,9 @@ body {
 	display:flex;
 	justify-content: center;
 	align-items: center;
+}
+.specialLeft:hover,.specialRight:hover{
+	background-color: #eee;
 }
 .specialRight{
     float: right;
@@ -395,7 +430,6 @@ body {
     border-left: solid 1px #000;
 	border-top: solid 1px #000;
 	margin: 0 auto;
-
 }
 .specialRight>div{
     width:20px;
@@ -413,8 +447,16 @@ body {
 	display: inline-block;
 }	
 .specialBody{
-	width:1900px;
+	margin-left:0px;
+	width:8950px;
 	height:380px;
+	position: absolute;
+	top:100px;
+	left:0px;
+	transition: all 0.5s ease-out;
+}
+.specialBody:hover{  
+	left:-60px;
 }
 .specialBodyDiv{
 	width:320px;
@@ -424,15 +466,27 @@ body {
 	margin-right:32px;
 	transition: all 0.5s ease-out;
 }
-.specialText,.specialImg{
+.specialBodyDiv:hover{
+	width:440px;
+}
+.specialText{
 	width: 440px;
     height: 380px;	
 	position: absolute;
 	top: 0px;
-	right: 0px;
-	bottom:0px;
 	left:0px;
-	margin:auto;
+	transition: all 0.5s ease-out;
+}
+.specialText:hover{
+	padding-left:60px;
+}
+.specialImg{
+	width: 440px;
+    height: 380px;	
+	position: absolute;
+	top: 0px;
+	left:-60px;
+	transition: all 0.5s ease-out;
 }
 .specialText{
 	background-color: rgba(0,0,0,0.2);
@@ -524,6 +578,7 @@ body {
 }
 .artistLeft:hover{
 	background-size:470px 335px;
+
 }
 .artistLeft>h3{
 	font-size: 16px;
@@ -561,8 +616,8 @@ body {
 }
 .artistRightText1{
 	position: absolute;
-	bottom: -8%;
-	left:12%;
+	bottom: -4%;
+	left:10%;
 }
 .artistRightText2{
 	position: absolute;
@@ -571,8 +626,8 @@ body {
 }
 .artistRightText3{
 	position: absolute;
-	bottom: -8%;
-	right:8%;
+	bottom: -4%;
+	right:10%;
 }
 .textP1{
 	font-size: 16px;
@@ -588,33 +643,43 @@ body {
     color: #000;
 }
 .artistImgs1,.artistImgs2,.artistImgs3{
-	width: 180px;
-	height: 180px;
-	background-image: url("../artist-img/1.3.jpg");
-	background-size: 180px 180px;
-	background-position: center;
+	width: 200px;
+	height: 200px;
 	position: absolute;
-	top:47px;
+	position: relative;
+	transition: all 0.5s ease-out;
+}
+.artistImgs1{
+	top:20px;
+	left:0px;
+}
+.artistImgs2{
+	top:120px;
+	left:35px;
+}
+.artistImgs3{
+	top:20px;
+	left:70px;
 }
 .artistImgs1>img,.artistImgs2>img,.artistImgs3>img{
 	width: 180px;
 	height: 180px;
 	transition: all 0.5s ease-out; 
 }
-.movePic1{
+.movePic,.movePic1{
 	position: absolute;
-	top:11px;
-	left:9px;
+	top:0px;
+	left:0px;
+	opacity: 0.3;
 }
-.artistImgs2{
-	background-image: url("../artist-img/2.3.jpg") !important;
-	top:140px;
-	left:265px;
+.movePic1{
+	opacity: 0.6 !important;
 }
-.artistImgs3{
-	background-image: url("../artist-img/3.3.jpg") !important;
-	top:47px;
-	right:15px;
+.movePic2{
+	position: absolute;
+	top:10px;
+	left:10px;
+	box-shadow: -4px 2px 6px 0 rgba(0,0,0,0.5);
 }
 .insight{
 	width:100%;
@@ -673,7 +738,7 @@ body {
 	transition: all 0.5s ease-out; 
 }
 .insightBodyDiv1:hover,.insightBodyDiv3:hover{
-	background-size: 600px 318px;
+	background-size: 608px 312px;
 }
 .insightBodyDiv3{
 	background-image: url(../insight-img/2.jpg);
@@ -686,7 +751,7 @@ body {
 	margin-top: 20px;
     font-size: 24px;
     font-weight: 500;
-    color: #000;
+	color: #000;
 }
 .insightBodyDiv2>div,.insightBodyDiv4>div{
 	display: block;
@@ -699,7 +764,8 @@ body {
 	height: 100px;
     font-size: 14px;
 	color: #000;
-    margin:0px 20px;
+	margin:0px 18px;
+	letter-spacing: 1.4px;
 }
 .insightBody2{
 	width:580px;
@@ -763,7 +829,6 @@ body {
 	transition: all 0.4s;
 	position: absolute;
 	top:20px;
-	transition: all 0.4s;
 }
 .whyUsPicDotL{
 	left:45px;

@@ -1,3 +1,26 @@
+//滚动时头部效果
+$(document).scroll(function(){
+   $(".header").css({ //顶部定位
+      "position":"fixed","top":"0px","z-index":"999","height":"46px"
+   }),$(".logo2").css({   //logo缩小
+      "margin-top":"10px","height":"28px","width":"auto"
+   }),$(".header2").css(   //导航栏上移消失
+      "height","0px",
+   ),$(".header-1,.wenzi,.codeShow,.headResLog,.headCar").css({   //搜索框和文字消失
+      "display":"none"
+   }),$(".header5,.header-5>li,.header2_1,.header2_1>li").css({  //右边图片和文字变小
+      "height":"46px","line-height":"46px"
+   }),$(".header-5").css(
+      "width","160px"
+   ),$(".blockImg,.headResLogImg").css({
+      "margin-right":"25px"
+   }),$(".header2_1").css({
+      "top":"0px","color":"#000","background-color":"#fff",
+      "z-index":"9999","margin":"0"
+   })
+})
+
+
 //轮播图
 var imgs=document.getElementsByClassName("pic");
 var dots=document.getElementsByClassName("dot");
@@ -13,12 +36,14 @@ function change(){
       dots[i].className="dot active";
       i++;
       if(i==8){
-            i=0; 
+         i=0; 
       }
    }
 }
 change();
 setInterval(change,3000);
+
+
 
 //鼠标移入移出隐藏效果
 //尾部左边一个二维码，头部右边的二维码
@@ -31,47 +56,95 @@ function getCode(x,y){
 }
 getCode(".footLogoWx",".footLogoWxDown");
 getCode(".codeShow",".headHover");
+getCode(".blockImg",".headHover");
 
- //尾部右边两个二维码
+//尾部右边两个二维码
 function getDownPic(x,y){
-$(x).mouseover(function (){ 
-    $(".downCode").show(),$(y).show();
- }).mouseout(function (){  
-    $(".downCode").hide(),$(y).hide();
- }) 
-}
-getDownPic("#footDownDarkIos","#codeIos");
-getDownPic("#footDownDarkAnd","#codeAndroid");
+   $(x).mouseover(function (){ 
+      $(".downCode").show(),$(y).show();
+   }).mouseout(function (){  
+      $(".downCode").hide(),$(y).hide();
+   }) 
+   }
+   getDownPic("#footDownDarkIos","#codeIos");
+   getDownPic("#footDownDarkAnd","#codeAndroid");
 
-//最新上架效果
-function getDiv(x,y,z){
+//推荐点击切换div效果
+function getTjPart(u,i){
+   $(u).click(function(){
+      $(i).css({
+         "display":"block",
+      }).siblings("div").css({
+         "display":"none"
+      }),$(u).css({
+         "border-top":"1px solid #ddd",
+         "border-left": "1px solid #ddd",
+         "border-right": "1px solid #ddd",
+         "border-bottom":"1px solid #fff"
+      }),$(u).siblings("div").css({
+         "border-top": "1px solid #fff",
+         "border-left": "1px solid #fff",
+         "border-right": "1px solid #fff",
+         "border-bottom":"1px solid #ddd",
+      })
+   })
+}  
+getTjPart("#tjLink2","#tjPart2");
+getTjPart("#tjLink3","#tjPart3");
+getTjPart("#tjLink4","#tjPart4");
+getTjPart("#tjLink1","#tjPart1");
+
+//最新上架简介显示效果
+function getDiv(x,m){
    $(x).mouseover(function(){
       var $x=$(this);
-      $x.children(":first").css("width",y)
-      $x.children(":first").css("height",y)
-      $x.children(":last").css("display","block")
+      $x.children("img").css({
+         "transform":"scale(1.07,1.07)"
+      }),$x.children(m).css("opacity","1")
    }).mouseout(function(){
       var $x=$(this);
-      $x.children(":first").css("width",z)
-      $x.children(":first").css("height",z)
-      $x.children(":last").css("display","none")
+      $x.children("img").css({
+         "transform":"scale(1,1)"
+      }),$x.children(m).css("opacity","0")
    })
    }
-getDiv(".newImg1",290,280);
-getDiv(".newImg2",140,140);
+getDiv(".front",".newImgP");
+getDiv(".front",".newImgPs");
+getDiv(".back",".newImgP");
+getDiv(".back",".newImgPs");
+
+//最新上架点击按钮翻转切换图片效果
+function getRotate(n){
+   $(".tjChange").click(function(){  
+      $(n).children(".front").css({
+         "transform":"rotate3D(0,1,0,-180deg)"
+      })
+      .removeClass("front").addClass("back").siblings("div.back").css({
+
+         "transform":"rotate3D(0,1,0,-360deg)"
+      })
+      .removeClass("back").addClass("front")  
+   })
+}
+getRotate(".newImg1");  
+getRotate(".newImg2");
+
+
+
+
 
 
 
 //圆点移动并放大效果
-function getMove(n,m,k){
-$(n).mouseover(function (){ 
-   $(m).css("left","55px"),$(k).css("right","55px"),
-   $(m).css("width","7.5px"),$(m).css("height","7.5px");
-   $(k).css("width","7.5px"),$(k).css("height","7.5px");
+function getMove(z,x,c){
+$(z).mouseover(function (){ 
+   $(x).css("left","55px"),$(c).css("right","55px"),
+   $(x).css("width","7.5px"),$(x).css("height","7.5px"),
+   $(c).css("width","7.5px"),$(c).css("height","7.5px")
 }).mouseout(function (){  
-   $(m).css("left","45px"),$(k).css("right","45px");
-   $(m).css("width","6px"),$(m).css("height","6px");
-   $(k).css("width","6px"),$(k).css("height","6px");
+   $(x).css("left","45px"),$(c).css("right","45px"),
+   $(x).css("width","6px"),$(x).css("height","6px"),
+   $(c).css("width","6px"),$(c).css("height","6px")
 }); 
 }
 getMove(".whyUsPic1",".whyUsPicL>.whyUsPicDotL",".whyUsPicL>.whyUsPicDotR");
@@ -81,61 +154,66 @@ getMove(".whyUsPic3",".whyUsPicR>.whyUsPicDotL",".whyUsPicR>.whyUsPicDotR");
 //开始GO的移动变色效果
 $(".startText").mouseover(function (){ 
    $(".changeColor").css("width","100%"),
-   $(".startText>p").css("left","47%");
-   
+   $(".startText>p").css("left","51%");
 }).mouseout(function (){  
    $(".changeColor").css("width","0%");
-   $(".startText>p").css("left","42%");
+   $(".startText>p").css("left","40%");
 }) 
 
-//鼠标移入移动效果
-function getMove(n,m,k){
+//艺术家左边div鼠标移入移动效果
+function getMoveDiv(n,m,k){
    $(n).mouseover(function (){ 
       var $n=$(this);
-      $(m).css("transform","translate(20,20)"),$(k),
-      $(k).css("transform","translate(20,20)"),$(k);
+      $(m).css({"transform":"translate(15px,15px)"}),
+      $(k).css({"transform":"translate(20px,20px)"})
    }).mouseout(function (){  
       var $n=$(this);
-      $(m).css("transform","translate(-20,-20)"),$(k),
-      $(k).css("transform","translate(-20,-20)"),$(k);
-   }); 
-   }
-   getMove(".artistImgs1",".artistImgs1>.movePic",".artistImgs1>.movePic2");
-   getMove(".artistImgs2",".artistImgs2>.movePic",".artistImgs2>.movePic2");
-   getMove(".artistImgs3",".artistImgs3>.movePic",".artistImgs3>.movePic2");
-   
-//专题效果
-function getSplMove(n,m){
-   $(n).mouseover(function (){ 
-      var $n=$(this);
-      var $m=$(this);
-      $n.css("width","440px"),
-      $m.css("width","440px")
-   }).mouseout(function (){  
-      var $n=$(this);
-      var $m=$(this);
-      $n.css("width","320px"),
-      $m.css("width","320px")
+      $(m).css({"transform":"translate(0px,0px)"}),
+      $(k).css({"transform":"translate(0px,0px)"})
    });
-} 
-getSplMove(".specialBodyDiv",".specialText")
+   }
+   getMoveDiv(".artistImgs1",".artistImgs1>.movePic1",".artistImgs1>.movePic2");
+   getMoveDiv(".artistImgs2",".artistImgs2>.movePic1",".artistImgs2>.movePic2");
+   getMoveDiv(".artistImgs3",".artistImgs3>.movePic1",".artistImgs3>.movePic2");
 
+//专题左右移动效果
+   $(".specialBodyDiv").mouseover(function (){ 
+      var spI=$(this).children(".specialImg");
+      spI.css("left","0px")
+   }).mouseout(function (){  
+      var spI=$(this).children(".specialImg");
+      spI.css("left","-60px")
+   });
 
-//滚轮向下滑动时。nav字体颜色变黑，并上移，nav边框同时上移
-//上移时搜索框隐藏，白色部分高度变少，左边字体消失。右边文字和|消失
-//始终固定在顶部
+   //专题左右按钮点击效果
+   var pageW=document.body.clientWidth;  //获取网页显示区域宽度
+   var math=Math.floor(pageW/352);  //计算当前显示区可显示的完整div数
+   var pics=$(".specialBodyDiv").length;  //div总数
+   var num=Math.floor(352*pics/pageW);
+   var $spDiv=$(".specialBody");   
+   var move=0;  
+   //点击右键的移动效果
+   $(".specialRight").click(function (){ 
+      if(move>-num){
+         move--;  
+         var k=move*math*352;   //获取每次移动的右边距数值
+         $spDiv.css("margin-left",k);   
+         if(-move==num){    
+            var mrL=pageW-math*352;   //页面上除能完成显示的div以外的显示边距值
+            $spDiv.css("margin-left",k+(mrL+32))   //最后一次距离
+         }
+      }
+   })   
+   //点击左键的移动效果
+   $(".specialLeft").click(function (){ 
+      if(move<0){
+         move++;  
+         var k=move*math*352;
+         $spDiv.css("margin-left",k);   
+         if(move==0){    
+            var mrL=pageW-math*352;  
+            $spDiv.css("margin-left",0)
+         }
+      }
+   })
 
-/*
-$(n).mouseover(function (){ 
-   var $n=$(this);
-   $n.css("width","440px"),
-   $(m).css("width","440px")
-}).mouseout(function (){  
-   var $n=$(this);
-   $n.css("width","320px"),
-   $(m).css("width","320px")
-}); 
-
-*/
- 
-  

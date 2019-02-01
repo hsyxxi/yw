@@ -2,7 +2,7 @@ function head(){
 	document.write('<header>'+
 		'<div class="header">'+
 			'<img src="./head-img/logo.png" src="https://www.ywart.com/" class="logo2">'+
-			'<span class="wenzi" style="color:#A1A1A1;float:left;">'+
+			'<span class="wenzi">'+
 				'<b>— 原创艺术品电商</b>'+
 			'</span>'+
 			'<div class="header-1">'+
@@ -17,7 +17,7 @@ function head(){
 			'</div>'+
 			'<div class="headerRight">'+
 				'<ul class="header-5">'+
-					'<li class="codeShow">'+
+					'<li class="blockImg">'+
 						'<a>'+
 							'<img src="./head-img/app.png" id="a2">'+
 						'</a>'+
@@ -25,16 +25,22 @@ function head(){
 					'<li class="codeShow">'+
 						'<p id="headDown">下载APP</p>'+
 					'</li>'+
-					'<b></b>'+
-					'<li>'+
-						'<a><img src="./head-img/login.png" id="a3"></a>'+
+					'<li class="headResLogImg">'+
+						'<a>'+
+						    '<img src="./head-img/login.png" id="a3">'+
+						'</a>'+
 					'</li>'+
-					'<li>登录 / 注册</li>'+
-					'<b></b>'+
-					'<li>'+
-						'<a><img src="./head-img/car.png" id="a4"></a>'+
+					'<li class="headResLog">'+
+					    '<p>登录 / 注册</p>'+
 					'</li>'+
-					'<li>购物车</li>'+
+					'<li class="headCarImg">'+
+						'<a>'+
+						    '<img src="./head-img/car.png" id="a4">'+
+						'</a>'+
+					'</li>'+
+					'<li class="headCar">'+
+					    '<p>购物车</p>'+
+					'</li>'+
 				'</ul>'+
 			'</div>'+
 		'</div>'+
@@ -43,6 +49,17 @@ function head(){
 		'<p>使用手机扫一扫</p>'+
 		'<img src="./head-img/iosDownQRcode.png" alt=""/>'+
 		'<span>购买咨询：400-605-7033</span>'+
-	'</div>'
+	'</div>'+
+	'<nav>'+
+		'<div class="header2">'+
+			'<ul class="header2_1">'+
+				'<li><a class="indexTitle" href="">首页</a></li>'+
+				'<li><a href="">原创艺术</a></li>'+
+				'<li><a href="">造艺</a></li>'+
+				'<li><a href="">藏艺术</a></li>'+
+				'<li><a href="">艺居生活</a></li>'+
+			'</ul>'+
+		'</div>'+
+	'</nav>'
 	);
 }

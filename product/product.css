@@ -468,13 +468,22 @@ display: inline-block;
     width: 608px;
     height: 300px;
     float: right;
+    position: relative;
 }
 .commentary2>p,.commentary4>p{
     width: 608px;
+    height: auto;
     color: #666;
     font-size: 14px;
     line-height: 30px;;
     letter-spacing: 0.4px;
+    position: absolute;
+    top:130px;
+    left:0px;
+    right:0px;
+    bottom: 0px;
+    margin:auto;
+
 }
 .commentary4>p{
     float: left;
