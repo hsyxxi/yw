@@ -2,7 +2,7 @@ const pool=require('../pool.js');
 const express=require('express');
 var router=express.Router();
 //1.用户登录路由
-router.post('/resLogin',(req,res)=>{
+router.post('/resLogin/resLogin',(req,res)=>{
   var obj=req.body;
   var $phone=obj.phone;
   var $upwd=obj.upwd;
@@ -25,7 +25,7 @@ router.post('/resLogin',(req,res)=>{
 });
 
 //2.用户注册路由
-router.post('/resLogin',(req,res)=>{
+router.post('/resLogin/resLogin',(req,res)=>{
   var obj=req.body;
   var $phone=obj.phone;
   if(!$phone){

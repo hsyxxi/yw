@@ -1,28 +1,38 @@
-//滚动时头部效果
-$(document).scroll(function(){
-   $(".header").css({ //顶部定位
-      "position":"fixed","top":"0px","z-index":"999","height":"46px"
-   }),$(".logo2").css({   //logo缩小
-      "margin-top":"10px","height":"28px","width":"auto"
-   }),$(".header2").css(   //导航栏上移消失
-      "height","0px",
-   ),$(".header-1,.wenzi,.codeShow,.headResLog,.headCar").css({   //搜索框和文字消失
-      "display":"none"
-   }),$(".header5,.header-5>li,.header2_1,.header2_1>li").css({  //右边图片和文字变小
-      "height":"46px","line-height":"46px"
-   }),$(".header-5").css(
-      "width","160px"
-   ),$(".blockImg,.headResLogImg").css({
-      "margin-right":"25px"
-   }),$(".header2_1").css({
-      "top":"0px","color":"#000","background-color":"#fff",
-      "z-index":"9999","margin":"0"
-   })
-})
-
+//点击跳转到登录注册页
+$(".headResLog").click(function(){
+   window.open("../regLogin/regLogin.html");
+});
 
 //轮播图
 var imgs=document.getElementsByClassName("pic");
+var dots=document.getElementsByClassName("dot");
+var liDot=document.getElementsByClassName("liDot");
+var i=0;
+var getChange=setInterval(function(){
+   for(var key in imgs){
+      imgs[key].className="pic";
+      dots[key].className="dot";
+   }
+   if(i<imgs.length){
+      imgs[i].className="show pic";
+      dots[i].className="dot active";
+      i++;
+      if(i==8){
+         i=0; 
+      }
+   };
+},2000);
+
+/*$(".liDot").bind("click",function(){
+   var dotIndex = $(".liDot").index(this);
+   var $dot=$(this);
+   $dot.children("span.dot").addClass("active"),
+   $dot.siblings().children("span.dot").removeClass("active");
+   $(".bannerDiv>li").eq(dotIndex).addClass("show")
+})*/
+
+
+/*var imgs=document.getElementsByClassName("pic");
 var dots=document.getElementsByClassName("dot");
 var liDot=document.getElementsByClassName("liDot");
 var i=0;
@@ -41,9 +51,12 @@ function change(){
    }
 }
 change();
-setInterval(change,3000);
+setInterval(change,3000);*/
 
-
+//点击跳转至产品页
+$("#hrefProduct").click(function(){
+   window.open("../product/product.html");
+});
 
 //鼠标移入移出隐藏效果
 //尾部左边一个二维码，头部右边的二维码
@@ -68,6 +81,20 @@ function getDownPic(x,y){
    }
    getDownPic("#footDownDarkIos","#codeIos");
    getDownPic("#footDownDarkAnd","#codeAndroid");
+
+//推荐鼠标移入放大效果
+   $(".tj").mouseover(function(){
+      var $x=$(this);
+      $x.children("img.tjImg").css(
+         "transform","scale(1.06,1.06)"
+      )
+   }).mouseout(function(){
+      var $x=$(this);
+      $x.children("img.tjImg").css(
+         "transform","scale(1,1)"
+      )
+   })
+
 
 //推荐点击切换div效果
 function getTjPart(u,i){
@@ -131,10 +158,6 @@ getRotate(".newImg2");
 
 
 
-
-
-
-
 //圆点移动并放大效果
 function getMove(z,x,c){
 $(z).mouseover(function (){ 
@@ -186,10 +209,10 @@ function getMoveDiv(n,m,k){
    });
 
    //专题左右按钮点击效果
-   var pageW=document.body.clientWidth;  //获取网页显示区域宽度
+   var pageW=window.innerWidth;  //获取网页显示区域宽度
    var math=Math.floor(pageW/352);  //计算当前显示区可显示的完整div数
    var pics=$(".specialBodyDiv").length;  //div总数
-   var num=Math.floor(352*pics/pageW);
+   var num=Math.ceil(352*pics/pageW);
    var $spDiv=$(".specialBody");   
    var move=0;  
    //点击右键的移动效果
@@ -197,12 +220,12 @@ function getMoveDiv(n,m,k){
       if(move>-num){
          move--;  
          var k=move*math*352;   //获取每次移动的右边距数值
-         $spDiv.css("margin-left",k);   
+         $spDiv.css("margin-left",k);  
          if(-move==num){    
-            var mrL=pageW-math*352;   //页面上除能完成显示的div以外的显示边距值
-            $spDiv.css("margin-left",k+(mrL+32))   //最后一次距离
+            $spDiv.css("margin-left",-7245)   //最后一次距离
          }
       }
+      
    })   
    //点击左键的移动效果
    $(".specialLeft").click(function (){ 
@@ -216,4 +239,3 @@ function getMoveDiv(n,m,k){
          }
       }
    })
-

@@ -48,14 +48,14 @@ body {
 
 .header-1 {
     position: absolute;
-	left: 40%;
+	left: 37%;
 	top: 20px;
 	transition: all 0.5s;	
 }
 
 .header-2 {
-	line-height: 46px;
-	height: 46px;
+	line-height: 40px;
+	height: 40px;
 	width: 80px;
 	background-color: #F8F8F8;
 	color: #CF680A;
@@ -87,7 +87,7 @@ body {
 .header-4>img{
 	width: 16px;
 	height: 16px;
-	margin: 0 auto;
+	margin: 0 auto; 
 }
 .headerRight{
 	position: relative;
@@ -180,8 +180,8 @@ body {
 }
 .header2_1{
 	width:650px;
-	position:fixed;
-	top:75px;
+	position: absolute;;
+	top:0px;
 	left:0px;
 	right:0px;
 	bottom: 0px;

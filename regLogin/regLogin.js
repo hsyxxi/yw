@@ -36,36 +36,6 @@
       resLogText.style.display="block";
   }
 
-//登录交互
-function post_Msg(){
-  var xhr=new XMLHttpRequest();
-  xhr.onreadystatechange=function(){
-    if(xhr.readyState==4 && xhr.status==200){
-      var result=xhr.responseText;
-      alert(result);
-	  }
-    } 
-	xhr.open('post','/user/resLogin',true);
-	var formdata='phone='+phone.value+'&upwd='+upwd.value;
-    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xhr.send(formdata);
-	}
-
-//注册交互
-function resUserId(){
-  var xhr=new XMLHttpRequest();
-  xhr.onreadystatechange=function(){
-    if(xhr.readyState==4 && xhr.status==200){
-      var result=xhr.responseText;
-      alert(result);
-	  }
-  }
-  xhr.open('post','/user/resLogin',true);
-  var formdata='phone='+phone.value+'&upwd='+upwd.value;
-  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-  xhr.send(formdata);
-}
-
 //刷新随机切换背景图
 function roll(){
 var bgImgPic=document.getElementById("bgImgPic");
@@ -78,7 +48,7 @@ window.onload=roll;
 
 //表单框效果
   input1.onclick=function(){
-    phone1.style.borderBottom="2px solid rgb(207, 104, 10)";
+  phone1.style.borderBottom="2px solid rgb(207, 104, 10)";
 	inputMsg1.style.top="11px";
 	inputMsg1.style.fontSize="12px";	
 	inputMsg1.style.color="rgba(207, 104, 10,1)";
@@ -120,6 +90,35 @@ window.onload=roll;
 	phone5.placeholder="";
   };
 
+//登录交互
+function post_Msg(){
+  var xhr=new XMLHttpRequest();
+  xhr.onreadystatechange=function(){
+    if(xhr.readyState==4 && xhr.status==200){
+      var result=xhr.responseText;
+      alert(result);
+	  }
+    } 
+	xhr.open('post','/user/resLogin/resLogin',true);
+	var formdata='$phone='+phone.value+'&upwd='+upwd.value;
+    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	xhr.send(formdata);
+	}
+
+//注册交互
+function resUserId(){
+  var xhr=new XMLHttpRequest();
+  xhr.onreadystatechange=function(){
+    if(xhr.readyState==4 && xhr.status==200){
+      var result=xhr.responseText;
+      alert(result);
+	  }
+  }
+  xhr.open('post','/user/resLogin/resLogin',true);
+  var formdata='$phone='+phone.value+'&upwd='+upwd.value;
+  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  xhr.send(formdata);
+}
 
 
 

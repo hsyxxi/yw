@@ -9,28 +9,29 @@
 	<meta name="Description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 	<title>艺网_艺术品电商_原创艺术品电商购物平台</title>
-	<link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="./product.css">
+    <script src="../jquery-1.11.3.js"></script>
 </head>
 <body>
     <!-- 顶部导航 -->
     <div class="productNav">
-      <div class="headLeft">
-          <button><div></div>返回</button>
-          <ul class="headUl">
-              <li>艺网</li>
-              <li>油画</li>
-              <li>张文彬</li>
-              <li>绿日</li>
-          </ul>
-      </div>
-      <div class="headRight">
-            <img src="./img/login.png" alt="">
+        <div class="headLeft">
+            <button><div></div>返回</button>
+            <ul class="headUl">
+                <li>艺网</li>
+                <li>油画</li>
+                <li>张文彬</li>
+                <li>绿日</li>
+            </ul>
+        </div>
+        <div class="headRight">
+            <img class="toIndex" src="./img/login.png" alt="">
             <img src="./img/car.png" alt="">
-      </div>
+        </div>
     </div>
 
     <!-- 详情主体 -->
-    <div class=".productBody">
+    <div class="productBody">
         <div>
             <div class="productBodyTitle">
                 <div>详情</div>
@@ -41,19 +42,18 @@
             <div class="productBodyPart">
                 <div class="productBodyPic">
                     <div class="productBodyPicBig">
-                      <img src="./img/product1.png@1.src" alt="">
+                        <img src="./img/product1.png@1.src" alt="">
                     </div>
                     <div class="productBodyPicSmall">
-                      <img src="./img/product1.png@1.src" alt="">
+                        <img src="./img/product1.png@1.src" alt="">
                     </div>
                 </div>
                 <div class="productBodyText">
                     <div class="productBodyTextTitle">
                         <span class="productPriceTitle1">价格</span>
-                        <button></button>
                         <span class="productPriceTitle2">作品信息</span>
                     </div>
-                    <div class="productBodyTextDiv">
+                    <div class="productBodyTextDiv1">
                         <p class="price">¥2,020</p>
                         <div class="priceInfo">
                             <div>
@@ -68,21 +68,38 @@
                         <div>
                             <div class="prdChoice">
                                 <span id="btnChoice">选择画框装裱：</span>
-                                <span id="toggle">▾</span>
-                                <span id="btnNo">无框，无卡纸</span>                             
+                                <span id="toggle">▾</span>                                 
+                                <span id="btnNo1">，无卡纸</span>  
+                                <span id="btnNo">无框</span>                         
                             </div>
                             <div class="choice">
-                                <div class="choice1">
-                                    无框
+                                <div class="choice1 borderColor">
+                                    <span>无框</span>
                                 </div>
-                                <div class="choice2"></div>
-                                <div class="choice3"></div>
-                                <div class="choice4"></div>
-                                <div class="choice5"></div>
-                                <div class="choice6"></div>
-                                <div class="choice7"></div>
-                                <div class="choice8"></div>
-                                <div class="choice9"></div>
+                                <div class="choice2">
+                                    <span></span>
+                                </div>
+                                <div class="choice3">
+                                    <span></span>
+                                </div>
+                                <div class="choice4">
+                                    <span></span>
+                                </div>
+                                <div class="choice5">
+                                    <span></span>
+                                </div>
+                                <div class="choice6">
+                                    <span></span>
+                                </div>
+                                <div class="choice7">
+                                    <span></span>
+                                </div>
+                                <div class="choice8">
+                                    <span></span>
+                                </div>
+                                <div class="choice9">
+                                    <span></span>
+                                </div>
                             </div>
                         </div>
                         <div class="cardBoard">
@@ -95,9 +112,18 @@
                         <div class="inCar">
                             <button>加入购物车</button>
                             <div>
-                                <span>装裱费：¥156</span>
+                                <span class="mountPrice">装裱费：免费</span>
                                 <span>运费：¥100</span>
                             </div>
+                        </div>
+                    </div>
+                    <div class="productBodyTextDiv2">
+                        <div class="aboutPicMsg">
+                            <p class="msgOfArt">严伟</p>
+                            <p class="p1">水柚清山, 2018</p>
+                            <p class="p2">布面油画, 30x30x2cm</p>
+                            <p class="p3">编辑推荐：</p>
+                            <p class="p4">艺术家刻意制造出一种肌理的质感，运用颜色与肌理效果一起迸发出光怪陆离的美，像一阵清风徐来，绘画技法在艺术家这里把玩得如此高超，也给我们打开了一个新视野。</p>
                         </div>
                     </div>
                 </div>
@@ -109,15 +135,15 @@
                 </div>
                 <div class="artist">
                     <div>
-                      <span>严伟</span>
-                      <img src="./img/artistLevel.png" alt="">
+                        <span>严伟</span>
+                        <img src="./img/artistLevel.png" alt="">
                     </div>
                 </div>
                 <div class="picNumber">
                     <div>
-                      <a href="">共
-                          <span>23</span>
-                          件作品</a>
+                        <a href="">共
+                            <span>23</span>
+                            件作品</a>
                     </div>
                 </div>
                 <div class="artistAll">
@@ -299,5 +325,6 @@
             </div>
         </div>
     </div>
+    <script src="product.js"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ function head(){
 						'<p id="headDown">下载APP</p>'+
 					'</li>'+
 					'<li class="headResLogImg">'+
-						'<a>'+
+						'<a href="../regLogin/regLogin.html" target="_blank">'+
 						    '<img src="./head-img/login.png" id="a3">'+
 						'</a>'+
 					'</li>'+
