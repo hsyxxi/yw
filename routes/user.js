@@ -2,6 +2,7 @@ const pool=require('../pool.js');
 const express=require('express');
 var router=express.Router();
 //1.用户登录路由
+//127.0.0.1:3000/user/resLogin/resLogin
 router.post('/resLogin/resLogin',(req,res)=>{
   var obj=req.body;
   var $phone=obj.phone;
@@ -11,7 +12,7 @@ router.post('/resLogin/resLogin',(req,res)=>{
 	return;
   }
   if(!$upwd){
-    res.send({code:402,msg:'登录密码不能为空'});
+    res.send({code:402,msg:'登录密码不能为空'});//数据发送到前端页面
 	return;
   }
   pool.query('SELECT * FROM yw_user WHERE phone=? AND upwd=? ',[$phone,$upwd],(err,result)=>{
@@ -48,5 +49,6 @@ router.post('/resLogin/resLogin',(req,res)=>{
 	}
   });
 });
+
 
 module.exports=router;

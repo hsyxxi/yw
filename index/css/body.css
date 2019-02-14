@@ -406,6 +406,9 @@ body {
 	text-align: center;
 	position: relative;
 }
+#ajaxPart3{
+	text-align: left;
+}
 .specialLeft,.specialRight{
 	width:10.5%;
 	height:100px;
@@ -494,6 +497,7 @@ body {
     color: #fff;
 	padding: 30px;
 	width: 260px;
+	height: 80px;
 }
 .specialText>p{
 	color:#fff;
