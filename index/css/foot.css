@@ -32,10 +32,12 @@
 	width: 25px;
 	height:auto;
 	margin-right: 20px;
+	cursor: pointer;
 }
 .footLogoWx{
 	width: 28px;
 	height:auto;
+	cursor: pointer;
 }
 .footLogoWxDown{
 	width: 120px;
@@ -48,7 +50,7 @@
 .footLogoTelLogo{
 	color: #fff;
 	clear: both;
-	margin-top: 15px;
+	margin-top: 45px;
 }
 .footLogoTelLogo>img{
 	width: 20px;

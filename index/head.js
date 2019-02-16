@@ -54,10 +54,10 @@ function head(){
 		'<div class="header2">'+
 			'<ul class="header2_1">'+
 				'<li><a class="indexTitle" href="">首页</a></li>'+
-				'<li><a href="">原创艺术</a></li>'+
-				'<li><a href="">造艺</a></li>'+
-				'<li><a href="">藏艺术</a></li>'+
-				'<li><a href="">艺居生活</a></li>'+
+				'<li><a href="javascript:void(0)">原创艺术</a></li>'+
+				'<li><a href="javascript:void(0)">造艺</a></li>'+
+				'<li><a href="javascript:void(0)">藏艺术</a></li>'+
+				'<li><a href="javascript:void(0)">艺居生活</a></li>'+
 			'</ul>'+
 		'</div>'+
 	'</nav>'

@@ -23,24 +23,6 @@ function getShow(x,m,l){
 getShow(".productPriceTitle2",".productBodyTextDiv2",".productBodyTextDiv1")
 getShow(".productPriceTitle1",".productBodyTextDiv1",".productBodyTextDiv2")
 
-//点击切换背景框
-function getBorderPic(x,m,k){
-    $(x).click(function(){
-        $("#btnNo").text(k),
-        $(x).css("border","solid 2px #CF680A").siblings().css("border","solid 2px #fff")
-        $(".productBodyPicBig>img").attr("src",m),
-        $(".productBodyPicBig").css("filter","drop-shadow(2px 3px 6px rgba(0,0,0,0.5))")
-    })
-}
-getBorderPic(".choice1","./img/border1pic.png","无框")
-getBorderPic(".choice2","./img/border2pic.jpg","黑色细框")
-getBorderPic(".choice3","./img/border3pic.jpg","白色细框")
-getBorderPic(".choice4","./img/border4pic.jpg","原木细框")
-getBorderPic(".choice5","./img/border5pic.jpg","金色现代")
-getBorderPic(".choice6","./img/border6pic.jpg","碳木简约")
-getBorderPic(".choice7","./img/border7pic.jpg","金色简约")
-getBorderPic(".choice8","./img/border8pic.jpg","黑色古典")
-getBorderPic(".choice9","./img/border9pic.jpg","金色古典")
 
 //ajax动态获取数据
 $(function () {
@@ -50,6 +32,53 @@ $(function () {
         dataType: "json",
         success: function (result) {
             var p = result;
+
+            var html=`<div class="productBodyPicBig">
+            <img src=${p[1].picdetbig} alt="">
+            </div>
+            <div class="productBodyPicSmall">
+            <img src=${p[1].picdetsmall} alt="">
+            </div>`;
+            var div=document.querySelector("#ajaxPart4");
+            div.innerHTML=html;
+
+            var html=`<p class="price">¥${p[1].price}</p>`;
+            var div=document.querySelector("#ajaxPart5");
+            div.innerHTML=html;
+
+            var html=`<p class="msgOfArt">${p[1].partist}</p>
+            <p class="p1">${p[1].ptitle}, ${p[1].pyear}</p>
+            <p class="p2">${p[1].papar}, ${p[1].psize}</p>
+            <p class="p3">编辑推荐：</p>
+            <p class="p4">${p[1].pestimate}</p>`;
+            var div=document.querySelector("#ajaxPart6");
+            div.innerHTML=html;
+
+            var html=`<span>${p[1].partist}</span>
+                <img src="./img/artistLevel.png" alt="">`;
+            var div=document.querySelector("#ajaxPart7");
+            div.innerHTML=html;
+
+            var html=`<table>
+            <tr>
+                <td>作品名称：${p[1].ptitle}</td>
+                <td>艺 术 家：${p[1].partist}</td>
+                <td>材  质：${p[1].papar}</td>
+            </tr>
+            <tr>
+                <td>尺  寸：${p[1].psize}</td>
+                <td>创作时间：${p[1].pyear}</td>
+                <td>作品类型：${p[1].ptype}</td>
+            </tr>
+            <tr>
+                <td>风  格：${p[1].pstyle}</td>
+                <td>题  材：${p[1].ptheme}</td>
+                <td></td>
+            </tr>
+        </table>`;
+            var div=document.querySelector("#ajaxPart8");
+            div.innerHTML=html;
+
             var html=`<div class="maybeULikePicDiv">
             <div class="maybeULikeImg">
                 <a href="">
@@ -146,8 +175,38 @@ $(function () {
                 <p class="likePrice">¥${p[43].price}</p>
             </div>
         </div>`;
-            var div=document.querySelector("#ajaxPart4");
+            var div=document.querySelector("#ajaxPart9");
             div.innerHTML=html;
+        }
+    })
+})
+
+//ajax传参 选择艺术品边框
+$(function () {
+    $.ajax({
+        url: "http://localhost:3000/details/detailsBorder",
+        type: "get",
+        dataType: "json",
+        success: function (result) {
+            var b = result;
+        //点击切换背景框
+        function getBorderPic(x,m,k){
+            $(x).click(function(){
+                $("#btnNo").text(k),
+                $(x).css("border","solid 2px #CF680A").siblings().css("border","solid 2px #fff")
+                $(".productBodyPicBig>img").attr("src",m),
+                $(".productBodyPicBig").css("filter","drop-shadow(2px 3px 6px rgba(0,0,0,0.5))")
+            })
+        }
+        getBorderPic(".choice1",`${b[0].burl}`,`${b[0].btype}`)
+        getBorderPic(".choice2",`${b[1].burl}`,`${b[1].btype}`)
+        getBorderPic(".choice3",`${b[2].burl}`,`${b[2].btype}`)
+        getBorderPic(".choice4",`${b[3].burl}`,`${b[3].btype}`)
+        getBorderPic(".choice5",`${b[4].burl}`,`${b[4].btype}`)
+        getBorderPic(".choice6",`${b[5].burl}`,`${b[5].btype}`)
+        getBorderPic(".choice7",`${b[6].burl}`,`${b[6].btype}`)
+        getBorderPic(".choice8",`${b[7].burl}`,`${b[7].btype}`)
+        getBorderPic(".choice9",`${b[8].burl}`,`${b[8].btype}`)
         }
     })
 })

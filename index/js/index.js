@@ -48,11 +48,12 @@ function getDownPic(x, y) {
 getDownPic("#footDownDarkIos", "#codeIos");
 getDownPic("#footDownDarkAnd", "#codeAndroid");
 
+
 //页面加载后即执行
 window.onload = function () {
    //点击跳转至产品页
    $("#hrefProduct").click(function () {
-      window.open("../product/product.html");
+      window.open("../product/details.html");
    });
 
    //推荐鼠标移入放大效果
@@ -107,26 +108,44 @@ window.onload = function () {
          }), $x.children(m).css("opacity", "0")
       })
    }
-   getDiv(".front", ".newImgP");
-   getDiv(".front", ".newImgPs");
-   getDiv(".back", ".newImgP");
-   getDiv(".back", ".newImgPs");
-
+   //getDiv(".front", ".newImgP");
+   //getDiv(".front", ".newImgPs");
+   //getDiv(".back", ".newImgP");
+   //getDiv(".back", ".newImgPs");
+   
+   a=0;
    //最新上架点击按钮翻转切换图片效果
    function getRotate(n) {
+      
       $(".tjChange").click(function () {
+         a=1;
+         console.log(a);
          $(n).children(".front").css({
                "transform": "rotate3D(0,1,0,-180deg)"
             })
             .removeClass("front").addClass("back").siblings("div.back").css({
-
                "transform": "rotate3D(0,1,0,-360deg)"
             })
-            .removeClass("back").addClass("front")
+            .removeClass("back").addClass("front");
       })
+      setTimeout(function(){
+         a=0;
+         console.log(123);
+      },2000)
    }
-   getRotate(".newImg1");
-   getRotate(".newImg2");
+   //getRotate(".newImg1");
+   //getRotate(".newImg2");
+  
+   if(a=0){
+      getDiv(".front", ".newImgP");
+      getDiv(".front", ".newImgPs");
+      getDiv(".back", ".newImgP");
+      getDiv(".back", ".newImgPs");
+   }else{
+      getRotate(".newImg1");
+      getRotate(".newImg2");
+   }
+
 
    //专题左右移动效果
    $(".specialBodyDiv").mouseover(function () {
@@ -137,7 +156,7 @@ window.onload = function () {
       spI.css("left", "-60px")
    });
 
-   //专题左右按钮点击效果
+//专题左右按钮点击效果
    var pageW = window.innerWidth; //获取网页显示区域宽度
    var math = Math.floor(pageW / 352); //计算当前显示区可显示的完整div数
    var pics = $(".specialBodyDiv").length; //div总数
@@ -221,8 +240,6 @@ getMoveDiv(".artistImgs2", ".artistImgs2>.movePic1", ".artistImgs2>.movePic2");
 getMoveDiv(".artistImgs3", ".artistImgs3>.movePic1", ".artistImgs3>.movePic2");
 
 
-
-
 //ajax动态获取数据  推荐/最新上架
 //推荐部分传参
 $(function () {
@@ -240,7 +257,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[0].partist}</h3>
-               <a href="">${p[0].ptitle}，${p[0].pyear}<br>${p[0].papar} ${p[0].psize}</a>
+               <a href="javascript:void(0)">${p[0].ptitle}，${p[0].pyear}<br>${p[0].papar} ${p[0].psize}</a>
                <p>￥${p[0].price}</p>
             </div>
          </div>
@@ -260,7 +277,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[2].partist}</h3>
-               <a href="">${p[2].ptitle}，${p[2].pyear}<br>${p[2].papar} ${p[2].psize}</a>
+               <a href="javascript:void(0)">${p[2].ptitle}，${p[2].pyear}<br>${p[2].papar} ${p[2].psize}</a>
                <p>￥${p[2].price}</p>
             </div>
          </div>
@@ -270,7 +287,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[3].partist}</h3>
-               <a href="">${p[3].ptitle}，${p[3].pyear}<br>${p[3].papar} ${p[3].psize}</a>
+               <a href="javascript:void(0)">${p[3].ptitle}，${p[3].pyear}<br>${p[3].papar} ${p[3].psize}</a>
                <p>￥${p[3].price}</p>
             </div>
          </div>
@@ -282,7 +299,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[4].partist}</h3>
-               <a href="">${p[4].ptitle}，${p[4].pyear}<br>${p[4].papar} ${p[4].psize}</a>
+               <a href="javascript:void(0)">${p[4].ptitle}，${p[4].pyear}<br>${p[4].papar} ${p[4].psize}</a>
                <p>￥${p[4].price}</p>
             </div>
          </div>
@@ -292,7 +309,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[5].partist}</h3>
-               <a href="">${p[5].ptitle}，${p[5].pyear}<br>${p[5].papar} ${p[5].psize}</a>
+               <a href="javascript:void(0)">${p[5].ptitle}，${p[5].pyear}<br>${p[5].papar} ${p[5].psize}</a>
                <p>￥${p[5].price}</p>
             </div>
          </div>
@@ -302,7 +319,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[6].partist}</h3>
-               <a href="">${p[6].ptitle}，${p[6].pyear}<br>${p[6].papar} ${p[6].psize}
+               <a href="javascript:void(0)">${p[6].ptitle}，${p[6].pyear}<br>${p[6].papar} ${p[6].psize}
                </a>
                <p>￥${p[6].price}</p>
             </div>
@@ -313,7 +330,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[7].partist}</h3>
-               <a href="">${p[7].ptitle}，${p[7].pyear}<br>${p[7].papar} ${p[7].psize}
+               <a href="javascript:void(0)">${p[7].ptitle}，${p[7].pyear}<br>${p[7].papar} ${p[7].psize}
                </a>
                <p>￥${p[7].price}</p>
             </div>
@@ -326,7 +343,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[8].partist}</h3>
-               <a href="">${p[8].ptitle}，${p[8].pyear}<br>${p[8].papar} ${p[8].psize}</a>
+               <a href="javascript:void(0)">${p[8].ptitle}，${p[8].pyear}<br>${p[8].papar} ${p[8].psize}</a>
                <p>￥${p[8].price}</p>
             </div>
          </div>
@@ -336,7 +353,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[9].partist}</h3>
-               <a href="">${p[9].ptitle}，${p[9].pyear}<br>${p[9].papar} ${p[9].psize}</a>
+               <a href="javascript:void(0)">${p[9].ptitle}，${p[9].pyear}<br>${p[9].papar} ${p[9].psize}</a>
                <p>￥${p[9].price}</p>
             </div>
          </div>
@@ -346,7 +363,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[10].partist}</h3>
-               <a href="">${p[10].ptitle}，${p[10].pyear}<br>${p[10].papar} ${p[10].psize}</a>
+               <a href="javascript:void(0)">${p[10].ptitle}，${p[10].pyear}<br>${p[10].papar} ${p[10].psize}</a>
                <p>￥${p[10].price}</p>
             </div>
          </div>
@@ -356,7 +373,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[11].partist}</h3>
-               <a href="">${p[11].ptitle}，${p[11].pyear}<br>${p[11].papar} ${p[11].psize}</a>
+               <a href="javascript:void(0)">${p[11].ptitle}，${p[11].pyear}<br>${p[11].papar} ${p[11].psize}</a>
                <p>￥${p[11].price}</p>
             </div>
          </div>
@@ -368,7 +385,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[12].partist}</h3>
-               <a href="">${p[12].ptitle}，${p[12].pyear}<br>${p[12].papar} ${p[12].psize}</a>
+               <a href="javascript:void(0)">${p[12].ptitle}，${p[12].pyear}<br>${p[12].papar} ${p[12].psize}</a>
                <p>￥${p[12].price}</p>
             </div>
          </div>
@@ -378,7 +395,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[13].partist}</h3>
-               <a href="">${p[13].ptitle}，${p[13].pyear}<br>${p[13].papar} ${p[13].psize}</a>
+               <a href="javascript:void(0)">${p[13].ptitle}，${p[13].pyear}<br>${p[13].papar} ${p[13].psize}</a>
                <p>￥${p[13].price}</p>
             </div>
          </div>
@@ -388,7 +405,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[14].partist}</h3>
-               <a href="">${p[14].ptitle}，${p[14].pyear}<br>${p[14].papar} ${p[14].psize}</a>
+               <a href="javascript:void(0)">${p[14].ptitle}，${p[14].pyear}<br>${p[14].papar} ${p[14].psize}</a>
                <p>￥${p[14].price}</p>
             </div>
          </div>
@@ -398,7 +415,7 @@ $(function () {
             </div>
             <div class="tjText">
                <h3>${p[15].partist}</h3>
-               <a href="">${p[15].ptitle}，${p[15].pyear}<br>${p[15].papar} ${p[15].psize}</a>
+               <a href="javascript:void(0)">${p[15].ptitle}，${p[15].pyear}<br>${p[15].papar} ${p[15].psize}</a>
                <p>￥${p[15].price}</p>
             </div>
          </div>

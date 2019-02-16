@@ -83,6 +83,7 @@ body {
 	cursor: pointer;
 	background-color: #F8F8F8;
 	border: none;
+	outline:none; 
 }
 .header-4>img{
 	width: 16px;

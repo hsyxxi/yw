@@ -17,22 +17,35 @@ CREATE TABLE yw_user(
 /**产品信息表**/
 CREATE TABLE yw_product(
   pid INT PRIMARY KEY AUTO_INCREMENT,
-  ptype VARCHAR(10),
-  partist VARCHAR(32),
-  ptitle VARCHAR(128),
-  pyear VARCHAR(32),
-  papar  VARCHAR(32),
-  psize VARCHAR(128),
-  price DECIMAL(7,0),
-  purl VARCHAR(255)
+  picdetbig VARCHAR(255),  /**详情页大图**/
+  picdetsmall VARCHAR(255),   /**详情页小图**/
+  ptype VARCHAR(10),   /**作品类型**/
+  partist VARCHAR(32),  /**作者**/
+  ptitle VARCHAR(128),  /**作品名**/
+  pyear VARCHAR(32),  /**创作时间**/
+  papar  VARCHAR(32),  /**纸张**/
+  psize VARCHAR(128),  /**尺寸**/
+  price DECIMAL(7,0),  /**价格**/
+  purl VARCHAR(255),  /**底部方块推荐图**/
+  pestimate VARCHAR(1024),  /**详情页作品评价**/
+  pestshort VARCHAR(1024),  /**详情页作品短评**/
+  pesturlone VARCHAR(255),  /**详情页图一**/
+  pesturltwo VARCHAR(255),  /**详情页图二**/
+  pstyle VARCHAR(32),  /**作品风格**/
+  ptheme VARCHAR(32)  /**题材**/
 );
 
 /**专题信息表**/
 CREATE TABLE yw_special(
   sid INT PRIMARY KEY AUTO_INCREMENT,
-  stitle VARCHAR(258),
-  section VARCHAR(1025),
-  surl VARCHAR(255)
+  stitle VARCHAR(258),  /**专题简介标题**/
+  section VARCHAR(1025),  /**专题简介内容**/
+  surl VARCHAR(255)  /**专题封面图url**/
+);
+
+CREATE TABLE yw_border(
+  btype VARCHAR(10), 
+  burl VARCHAR(255)  /**边框图**/
 );
 
 /**用户信息数据库**/
@@ -42,50 +55,50 @@ INSERT INTO yw_user VALUES
 
 /**产品信息数据库**/
 INSERT INTO yw_product VALUES
-(NULL,'油画','邱黯雄','新山海经——黄浦云霄图','2018','布面丙烯','50x50cm','3500','./body-img/tj1.png'),
-(NULL,'油画','严伟','水柚清山','2018','布面油画','30x30x2cm','2020','./body-img/tj2.png'),
-(NULL,'油画','张家玮','七月的天空','2017','档案级布面微喷','35x50cm','1320','./body-img/tj3.png'),
-(NULL,'油画','段晓刚','形状2号','2017','布面丙烯','90x130cm','40350','./body-img/tj4.jpg'),
-(NULL,'版画','郑伊华','你的信仰','2018','数码微喷','25x30cm','2120','./body-img/tj5.jpg'),
-(NULL,'版画','张占占','一点温暖','2018','丝网版画','79x98cm','4800','./body-img/tj6.jpg'),
-(NULL,'版画','李欣蔚','蓝⾊是最温暖的颜色','2018','博物馆收藏级美术纸','70x42cm','1099','./body-img/tj7.jpg'),
-(NULL,'版画','张鑫','月中行','2018','专业博物馆级艺术微喷','38x50cm','699','./body-img/tj8.jpg'),
-(NULL,'水墨','杨志刚','幽居','2013','纸本设色','69x70cm','1260','./body-img/tj9.jpg'),
-(NULL,'水墨','韩健','江山平远入新秋','2018','纸本水墨','180x70cm','4950','./body-img/tj10.jpg'),
-(NULL,'水墨','左群','仁山智水-1','2018','纸本设色','240x69cm','7000','./body-img/tj11.jpg'),
-(NULL,'水墨','凌贵元','众香曼妙－29','2018','纸本水墨','46x19cm','1120','./body-img/tj12.jpg'),
-(NULL,'水彩','毛丽玲','如鱼得水','2018','纸本水彩','55x35cm','3520','./body-img/tj13.jpg'),
-(NULL,'水彩','周峰','华灯初上之一','2017','纸本水彩','54x72cm','6260','./body-img/tj14.jpg'),
-(NULL,'水彩','吴祥','城市之间','2018','纸本水彩','28x38cm','2520','./body-img/tj15.jpg'),
-(NULL,'水彩','杨虎','MO（四）2','2017','纸本水彩','54x76cm','8260','./body-img/tj16.jpg'),
-(NULL,NULL,'刘海轮','寄居蟹','2017','纸本设色','33x33cm','2120','./new-img/new1.jpg'),
-(NULL,NULL,'Cariueu Fena','菲格雷斯的白墙','2017','版画','46x66cm','1920','./new-img/new2.jpg'),
-(NULL,NULL,'高波涛','萤火系','2016',NULL,NULL,'24350','./new-img/new3.jpg'),
-(NULL,NULL,'RAMON TRIAS TIORRES','失去的芭蕉','不详',NULL,NULL,'2860','./new-img/new4.jpg'),
-(NULL,NULL,'乔治-亨利-曼扎纳·毕沙罗','冬日街景','1950',NULL,NULL,'615070','./new-img/new5.jpg'),
-(NULL,NULL,'孙榕宁','丝绸之路','2017',NULL,NULL,'10260','./new-img/new6.jpg'),
-(NULL,NULL,'吕妹','塘','2017',NULL,NULL,'6260','./new-img/new7.jpg'),
-(NULL,NULL,'丛培波','汉字艺术作品2013112833释文 叶','2013',NULL,NULL,'8400','./new-img/new8.jpg'),
-(NULL,NULL,'徐昕','巴黎圣母院','2017',NULL,NULL,'5720','./new-img/new9.jpg'),
-(NULL,NULL,'钟凌','遇见过去的自己','2015',NULL,NULL,'2100','./new-img/new10.jpg'),
-(NULL,NULL,'段晓刚','无题','2015','布面丙烯','100x130cm','40350','./new-img/new11.jpg'),
-(NULL,NULL,'葛雅静','书-2','2015','布面油画','65x85cm','11550','./new-img/new12.jpg'),
-(NULL,NULL,'栗金阳','符号·江南小品之五','2017',NULL,NULL,'2120','./new-img/new13.jpg'),
-(NULL,NULL,'魏盼盼','威尼斯水城','2017',NULL,NULL,'6120','./new-img/new14.jpg'),
-(NULL,NULL,'房徽','涟漪','2016',NULL,NULL,'8120','./new-img/new15.jpg'),
-(NULL,NULL,'王玲云','桃花五','2015',NULL,NULL,'2520','./new-img/new16.jpg'),
-(NULL,NULL,'吴伟林','情人','2017',NULL,NULL,'12350','./new-img/new17.png'),
-(NULL,NULL,'刘国义','意外怀孕生下银河','2017',NULL,NULL,'2370','./new-img/new18.jpg'),
-(NULL,NULL,'李倩','玫瑰','2018',NULL,NULL,'2120','./new-img/new19.jpg'),
-(NULL,NULL,'林剑峰','迷景之二','2016',NULL,NULL,'2280','./new-img/new20.jpg'),
-(NULL,NULL,NULL,'洞·蓝调','2015','布面油画','60✕45cm','6520','./img/like1.jpg'),
-(NULL,NULL,NULL,'地中海','2013','布面油画','168✕120cm','120500','./img/like2.jpg'),
-(NULL,NULL,NULL,'须臾之二十三','2015','综合材料','80✕40cm','3860','./img/like3.jpg'),
-(NULL,NULL,NULL,'海滩2','2012','纸本水彩','75✕110cm','12400','./img/like4.jpg'),
-(NULL,NULL,NULL,'21克','2016','布面丙烯 ','100✕80cm','40350','./img/like5.jpg'),
-(NULL,NULL,NULL,'格里芬兽刻赤','2013','布面油画','70✕50cm','19260','./img/like6.jpg'),
-(NULL,NULL,NULL,'无题4','2016','纸面丙烯','24.50✕34.50cm','4120','./img/like7.jpg'),
-(NULL,NULL,NULL,'印象欧洲系列作品No.2','2015','布面油画','40✕30cm','10120','./img/like8.jpg');
+(NULL,NULL,NULL,'油画','邱黯雄','新山海经——黄浦云霄图','2018','布面丙烯','50x50cm','3500','./body-img/tj1.png',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,'./img/product1.png@1.src','./img/product1.png@1.src','油画','严伟','水柚清山','2018','布面油画','30x30x2cm','2020','./body-img/tj2.png','艺术家刻意制造出一种肌理的质感，运用颜色与肌理效果一起迸发出光怪陆离的美，像一阵清风徐来，绘画技法在艺术家这里把玩得如此高超，也给我们打开了一个新视野。','流动的状态具有不确定性，存在一种冒险的刺激，艺术家这种冒险的品质弥足珍贵，每件作品都是独一无二，不可复制的。','./img/arter1.png','./img/artistLevel.png','抽象表现','风景'),
+(NULL,NULL,NULL,'油画','张家玮','七月的天空','2017','档案级布面微喷','35x50cm','1320','./body-img/tj3.png',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'油画','段晓刚','形状2号','2017','布面丙烯','90x130cm','40350','./body-img/tj4.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'版画','郑伊华','你的信仰','2018','数码微喷','25x30cm','2120','./body-img/tj5.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'版画','张占占','一点温暖','2018','丝网版画','79x98cm','4800','./body-img/tj6.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'版画','李欣蔚','蓝⾊是最温暖的颜色','2018','博物馆收藏级美术纸','70x42cm','1099','./body-img/tj7.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'版画','张鑫','月中行','2018','专业博物馆级艺术微喷','38x50cm','699','./body-img/tj8.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水墨','杨志刚','幽居','2013','纸本设色','69x70cm','1260','./body-img/tj9.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水墨','韩健','江山平远入新秋','2018','纸本水墨','180x70cm','4950','./body-img/tj10.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水墨','左群','仁山智水-1','2018','纸本设色','240x69cm','7000','./body-img/tj11.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水墨','凌贵元','众香曼妙－29','2018','纸本水墨','46x19cm','1120','./body-img/tj12.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水彩','毛丽玲','如鱼得水','2018','纸本水彩','55x35cm','3520','./body-img/tj13.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水彩','周峰','华灯初上之一','2017','纸本水彩','54x72cm','6260','./body-img/tj14.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水彩','吴祥','城市之间','2018','纸本水彩','28x38cm','2520','./body-img/tj15.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,'水彩','杨虎','MO（四）2','2017','纸本水彩','54x76cm','8260','./body-img/tj16.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'刘海轮','寄居蟹','2017','纸本设色','33x33cm','2120','./new-img/new1.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'Cariueu Fena','菲格雷斯的白墙','2017','版画','46x66cm','1920','./new-img/new2.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'高波涛','萤火系','2016',NULL,NULL,'24350','./new-img/new3.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'RAMON TRIAS TIORRES','失去的芭蕉','不详',NULL,NULL,'2860','./new-img/new4.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'乔治-亨利-曼扎纳·毕沙罗','冬日街景','1950',NULL,NULL,'615070','./new-img/new5.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'孙榕宁','丝绸之路','2017',NULL,NULL,'10260','./new-img/new6.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'吕妹','塘','2017',NULL,NULL,'6260','./new-img/new7.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'丛培波','汉字艺术作品2013112833释文 叶','2013',NULL,NULL,'8400','./new-img/new8.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'徐昕','巴黎圣母院','2017',NULL,NULL,'5720','./new-img/new9.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'钟凌','遇见过去的自己','2015',NULL,NULL,'2100','./new-img/new10.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'段晓刚','无题','2015','布面丙烯','100x130cm','40350','./new-img/new11.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'葛雅静','书-2','2015','布面油画','65x85cm','11550','./new-img/new12.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'栗金阳','符号·江南小品之五','2017',NULL,NULL,'2120','./new-img/new13.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'魏盼盼','威尼斯水城','2017',NULL,NULL,'6120','./new-img/new14.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'房徽','涟漪','2016',NULL,NULL,'8120','./new-img/new15.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'王玲云','桃花五','2015',NULL,NULL,'2520','./new-img/new16.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'吴伟林','情人','2017',NULL,NULL,'12350','./new-img/new17.png',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'刘国义','意外怀孕生下银河','2017',NULL,NULL,'2370','./new-img/new18.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'李倩','玫瑰','2018',NULL,NULL,'2120','./new-img/new19.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,'林剑峰','迷景之二','2016',NULL,NULL,'2280','./new-img/new20.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'洞·蓝调','2015','布面油画','60✕45cm','6520','./img/like1.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'地中海','2013','布面油画','168✕120cm','120500','./img/like2.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'须臾之二十三','2015','综合材料','80✕40cm','3860','./img/like3.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'海滩2','2012','纸本水彩','75✕110cm','12400','./img/like4.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'21克','2016','布面丙烯 ','100✕80cm','40350','./img/like5.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'格里芬兽刻赤','2013','布面油画','70✕50cm','19260','./img/like6.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'无题4','2016','纸面丙烯','24.50✕34.50cm','4120','./img/like7.jpg',NULL,NULL,NULL,NULL,NULL,NULL),
+(NULL,NULL,NULL,NULL,NULL,'印象欧洲系列作品No.2','2015','布面油画','40✕30cm','10120','./img/like8.jpg',NULL,NULL,NULL,NULL,NULL,NULL);
 
 /**专题信息数据库**/
 INSERT INTO yw_special VALUES
@@ -115,7 +128,15 @@ INSERT INTO yw_special VALUES
 (NULL,'城事 | 霓虹初上的都市情结','在都市森林里穿行而过之后，不管是否选择回归宁静，对都市都有一种放不下忘不掉的感情，这种都市情结，或许可以靠画作治愈。','./special-img/24.jpg'),
 (NULL,'少女之心馆','少女心是女人的自我取悦，是放下一切身份和角色，专心致志的做一件属于自己的事情。','./special-img/25.jpg');
 
-
+INSERT INTO yw_border VALUES('无框','./img/border1pic.png'),
+('黑色细框','./img/border2pic.jpg'),
+('白色细框','./img/border3pic.jpg'),
+('原木细框','./img/border4pic.jpg'),
+('金色现代','./img/border5pic.jpg'),
+('碳木简约','./img/border6pic.jpg'),
+('金色简约','./img/border7pic.jpg'),
+('黑色古典','./img/border8pic.jpg'),
+('金色古典','./img/border1pic.png')
 
 
 

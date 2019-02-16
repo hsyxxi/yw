@@ -16,5 +16,19 @@ router.get('/details', (req, res) => {
         }
     });
 })
+
+router.get('/detailsBorder', (req, res) => {
+    var sql = "select * from yw_border";
+    pool.query(sql, (err, result) => {
+        if (err) console.log(err);
+        if (result.length != 0) {
+            res.writeHead(200,{
+                "Access-Control-Allow-Origin":"*"
+            });
+            res.write(JSON.stringify(result))
+            res.end();
+        }
+    });
+})
 module.exports = router;
 

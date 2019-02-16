@@ -25,31 +25,31 @@ function foot(){
 						'</thead>'+
 						'<tbody>'+
 							'<tr>'+
-								'<td><a href="#">精选</a></td>'+
-								'<td><a href="#">关于我们</a></td>'+
-								'<td><a href="#">如何购买</a></td>'+
-								'<td><a href="#">作品征集</a></td>'+
+								'<td><a href="javascript:void(0)">精选</a></td>'+
+								'<td><a href="javascript:void(0)">关于我们</a></td>'+
+								'<td><a href="javascript:void(0)">如何购买</a></td>'+
+								'<td><a href="javascript:void(0)">作品征集</a></td>'+
 							'</tr>'+
 							'<tr>'+
-								'<td><a href="#">原创艺术</a></td>'+
-								'<td><a href="#">工作机会</a></td>'+
-								'<td><a href="#">物流说明</a></td>'+
-								'<td><a href="#">合作伙伴入驻</a></td>'+
+								'<td><a href="javascript:void(0)">原创艺术</a></td>'+
+								'<td><a href="javascript:void(0)">工作机会</a></td>'+
+								'<td><a href="javascript:void(0)">物流说明</a></td>'+
+								'<td><a href="javascript:void(0)">合作伙伴入驻</a></td>'+
 							'</tr>'+
 							'<tr>'+
-								'<td><a href="#">造艺</a></td>'+
-								'<td><a href="#">网站地图</a></td>'+
-								'<td><a href="#">联系我们</a></td>'+
+								'<td><a href="javascript:void(0)">造艺</a></td>'+
+								'<td><a href="javascript:void(0)">网站地图</a></td>'+
+								'<td><a href="javascript:void(0)">联系我们</a></td>'+
 								'<td></td>'+
 							'</tr>'+
 							'<tr>'+
-								'<td><a href="#">藏艺术</a></td>'+
+								'<td><a href="javascript:void(0)">藏艺术</a></td>'+
 							'</tr>'+
 							'<tr>'+
-								'<td><a href="#">艺居生活</a></td>'+
+								'<td><a href="javascript:void(0)">艺居生活</a></td>'+
 							'</tr>'+
 							'<tr>'+
-								'<td><a href="#">我的珍藏</a></td>'+
+								'<td><a href="javascript:void(0)">我的珍藏</a></td>'+
 							'</tr>'+
 						'</tbody>'+
 					'</table>'+
@@ -69,25 +69,25 @@ function foot(){
 					'</div>'+
 					'<ul class="friendLink">'+
 						'<li>友情链接</li>'+
-						'<li><a href="">上海论坛</a></li>'+
-						'<li><a href="">中华丹青网</a></li>'+
-						'<li><a href="">书法交易网</a></li>'+
-						'<li><a href="">艺术资讯</a></li>'+
-						'<li><a href="">中华收藏网</a></li>'+
-						'<li><a href="">主题酒店设计</a></li>'+
-						'<li><a href="">室内设计</a></li>'+
-						'<li><a href="">艺缘网</a></li>'+
-						'<li><a href="">中国华人书画网</a></li>'+
-						'<li><a href="">买购网</a></li>'+
-						'<li><a href="">字画批发</a></li>'+
-						'<li><a href="">中国书画百强网</a></li>'+
-						'<li><a href="">集雅斋字画网</a></li>'+
-						'<li><a href="">画美世界</a></li>'+
-						'<li><a href="">淘宝网</a></li>'+
-						'<li><a href="">雅风书画网</a></li>'+
-						'<li><a href="">艺术品收藏</a></li>'+
-						'<li><a href="">广州玻璃钢雕塑</a></li>'+
-						'<li><a href="">国际快递查询</a></li>'+
+						'<li><a href="javascript:void(0)">上海论坛</a></li>'+
+						'<li><a href="javascript:void(0)">中华丹青网</a></li>'+
+						'<li><a href="javascript:void(0)">书法交易网</a></li>'+
+						'<li><a href="javascript:void(0)">艺术资讯</a></li>'+
+						'<li><a href="javascript:void(0)">中华收藏网</a></li>'+
+						'<li><a href="javascript:void(0)">主题酒店设计</a></li>'+
+						'<li><a href="javascript:void(0)">室内设计</a></li>'+
+						'<li><a href="javascript:void(0)">艺缘网</a></li>'+
+						'<li><a href="javascript:void(0)">中国华人书画网</a></li>'+
+						'<li><a href="javascript:void(0)">买购网</a></li>'+
+						'<li><a href="javascript:void(0)">字画批发</a></li>'+
+						'<li><a href="javascript:void(0)">中国书画百强网</a></li>'+
+						'<li><a href="javascript:void(0)">集雅斋字画网</a></li>'+
+						'<li><a href="javascript:void(0)">画美世界</a></li>'+
+						'<li><a href="javascript:void(0)">淘宝网</a></li>'+
+						'<li><a href="javascript:void(0)">雅风书画网</a></li>'+
+						'<li><a href="javascript:void(0)">艺术品收藏</a></li>'+
+						'<li><a href="javascript:void(0)">广州玻璃钢雕塑</a></li>'+
+						'<li><a href="javascript:void(0)">国际快递查询</a></li>'+
 					'</ul>'+
 				'</div>'+
 			'</div>'+
