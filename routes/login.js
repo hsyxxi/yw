@@ -2,31 +2,31 @@ const pool=require('../pool.js');
 const express=require('express');
 var router=express.Router();
 //1.用户登录路由
-//127.0.0.1:3000/user/resLogin/resLogin
-router.post('/resLogin/resLogin',(req,res)=>{
-  var obj=req.body;
-  var $phone=obj.phone;
-  var $upwd=obj.upwd;
+//127.0.0.1:3000/login/login
+router.post('/login',(req,res)=>{
+  var $phone=req.body.phone;
+  var $upwd=req.body.upwd;
   if(!$phone){
-    res.send({code:401,msg:'您输入的不是一个手机号或邮箱'});
-	return;
+    res.send("您输入您的手机号或邮箱");
+	  return;
   }
   if(!$upwd){
-    res.send({code:402,msg:'登录密码不能为空'});//数据发送到前端页面
-	return;
+    res.send("登录密码不能为空");//数据发送到前端页面
+	  return;
   }
-  pool.query('SELECT * FROM yw_user WHERE phone=? AND upwd=? ',[$phone,$upwd],(err,result)=>{
+  var sql="select * from yw_user where phone=? and upwd=?";
+  pool.query(sql,[$phone,$upwd],(err,result)=>{
     if(err) throw err;
-	if(result.length>0){
-	  res.send('登录成功');
-	}else{
-	  res.send('登陆失败');
-	}
+		if(result.length>0){
+			res.send("登录成功");
+		}else{
+			res.send("用户名或者密码错误");
+		}
   });
 });
 
 //2.用户注册路由
-router.post('/resLogin/resLogin',(req,res)=>{
+router.post('/register',(req,res)=>{
   var obj=req.body;
   var $phone=obj.phone;
   if(!$phone){

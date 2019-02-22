@@ -1,7 +1,7 @@
 function head(){
 	document.write('<header>'+
 		'<div class="header">'+
-			'<img src="./head-img/logo.png" src="https://www.ywart.com/" class="logo2">'+
+			'<img src="../img/index/head-img/logo.png" src="https://www.ywart.com/" class="logo2">'+
 			'<span class="wenzi">'+
 				'<b>— 原创艺术品电商</b>'+
 			'</span>'+
@@ -12,22 +12,22 @@ function head(){
 				'</select>'+
 				'<input class="header-3" placeholder="  搜索感兴趣的关键字">'+
 				'<button class="header-4" href="">'+
-					'<img src="./head-img/sc.svg" alt="">'+
+					'<img src="../img/index/head-img/sc.svg" alt="">'+
 				'</button>'+
 			'</div>'+
 			'<div class="headerRight">'+
 				'<ul class="header-5">'+
 					'<li class="blockImg">'+
 						'<a>'+
-							'<img src="./head-img/app.png" id="a2">'+
+							'<img src="../img/index/head-img/app.png" id="a2">'+
 						'</a>'+
 					'</li>'+
 					'<li class="codeShow">'+
 						'<p id="headDown">下载APP</p>'+
 					'</li>'+
 					'<li class="headResLogImg">'+
-						'<a href="../regLogin/regLogin.html" target="_blank">'+
-						    '<img src="./head-img/login.png" id="a3">'+
+						'<a href="login.html" target="_blank">'+
+						    '<img src="../img/index/head-img/login.png" id="a3">'+
 						'</a>'+
 					'</li>'+
 					'<li class="headResLog">'+
@@ -35,7 +35,7 @@ function head(){
 					'</li>'+
 					'<li class="headCarImg">'+
 						'<a>'+
-						    '<img src="./head-img/car.png" id="a4">'+
+						    '<img src="../img/index/head-img/car.png" id="a4">'+
 						'</a>'+
 					'</li>'+
 					'<li class="headCar">'+
@@ -47,7 +47,7 @@ function head(){
 	'</header>'+
 	'<div class="headHover">'+
 		'<p>使用手机扫一扫</p>'+
-		'<img src="./head-img/iosDownQRcode.png" alt=""/>'+
+		'<img src="../img/index/head-img/iosDownQRcode.png" alt=""/>'+
 		'<span>购买咨询：400-605-7033</span>'+
 	'</div>'+
 	'<nav>'+

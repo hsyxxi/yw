@@ -113,7 +113,8 @@
     left:0px;
     right:0px;
     margin: auto;
-    cursor: url(./img/big.cur),auto;
+    cursor: url(../img/details/big.cur),auto;
+    filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.5));
 }
 .productBodyPicSmall{
     width: 104px;
@@ -299,28 +300,28 @@ display: inline-block;
     margin:auto;
 }
 .choice2>span{
-    background:url(./img/border2.png) no-repeat;
+    background:url(../img/details/border2.png) no-repeat;
 }
 .choice3>span{
-    background:url(./img/border3.png) no-repeat;
+    background:url(../img/details/border3.png) no-repeat;
 }
 .choice4>span{
-    background:url(./img/border4.png) no-repeat;
+    background:url(../img/details/border4.png) no-repeat;
 }
 .choice5>span{
-    background:url(./img/border5.png) no-repeat;
+    background:url(../img/details/border5.png) no-repeat;
 }
 .choice6>span{
-    background:url(./img/border6.png) no-repeat;
+    background:url(../img/details/border6.png) no-repeat;
 }
 .choice7>span{
-    background:url(./img/border7.png) no-repeat;
+    background:url(../img/details/border7.png) no-repeat;
 }
 .choice8>span{
-    background:url(./img/border8.png) no-repeat;
+    background:url(../img/details/border8.png) no-repeat;
 }
 .choice9>span{
-    background:url(./img/border9.png) no-repeat;
+    background:url(../img/details/border9.png) no-repeat;
 }
 .cardBoard{
     width: 100%;
@@ -502,8 +503,7 @@ display: inline-block;
 }
 .leftQuotes,.rightQuotes{
     width: 70px;
-    height: 242px;
-    
+    height: 242px;  
     font-family:Arial !important;
     font-size: 210px;
     color: #eeee;

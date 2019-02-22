@@ -1,6 +1,6 @@
 //点击跳转到登录注册页
 $(".headResLog").click(function () {
-   window.open("../regLogin/regLogin.html");
+   window.open("login.html");
 });
 
 //轮播图
@@ -51,20 +51,15 @@ getDownPic("#footDownDarkAnd", "#codeAndroid");
 
 //页面加载后即执行
 window.onload = function () {
-   //点击跳转至产品页
-   $("#hrefProduct").click(function () {
-      window.open("../product/details.html");
-   });
-
    //推荐鼠标移入放大效果
    $(".tj").mouseover(function () {
-      var $x = $(this);
-      $x.children("img.tjImg").css(
+      var $tj= $(this);
+      $tj.children().children("img.tjImg").css(
          "transform", "scale(1.06,1.06)"
       )
    }).mouseout(function () {
-      var $x = $(this);
-      $x.children("img.tjImg").css(
+      var $tj= $(this);
+      $tj.children().children("img.tjImg").css(
          "transform", "scale(1,1)"
       )
    })
@@ -108,18 +103,14 @@ window.onload = function () {
          }), $x.children(m).css("opacity", "0")
       })
    }
-   //getDiv(".front", ".newImgP");
-   //getDiv(".front", ".newImgPs");
-   //getDiv(".back", ".newImgP");
-   //getDiv(".back", ".newImgPs");
+   getDiv(".front", ".newImgP");
+   getDiv(".front", ".newImgPs");
+   getDiv(".back", ".newImgP");
+   getDiv(".back", ".newImgPs");
    
-   a=0;
    //最新上架点击按钮翻转切换图片效果
    function getRotate(n) {
-      
       $(".tjChange").click(function () {
-         a=1;
-         console.log(a);
          $(n).children(".front").css({
                "transform": "rotate3D(0,1,0,-180deg)"
             })
@@ -128,23 +119,9 @@ window.onload = function () {
             })
             .removeClass("back").addClass("front");
       })
-      setTimeout(function(){
-         a=0;
-         console.log(123);
-      },2000)
    }
-   //getRotate(".newImg1");
-   //getRotate(".newImg2");
-  
-   if(a=0){
-      getDiv(".front", ".newImgP");
-      getDiv(".front", ".newImgPs");
-      getDiv(".back", ".newImgP");
-      getDiv(".back", ".newImgPs");
-   }else{
-      getRotate(".newImg1");
-      getRotate(".newImg2");
-   }
+   getRotate(".newImg1");
+   getRotate(".newImg2");
 
 
    //专题左右移动效果
@@ -253,7 +230,9 @@ $(function () {
          var html = `<div id="tjPart1">
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[0].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[0].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[0].partist}</h3>
@@ -262,18 +241,22 @@ $(function () {
             </div>
          </div>
          <div class="tjDiv">
-            <div class="tj" id="hrefProduct">
-               <img src=${p[1].purl} alt="" class="tjImg">
+            <div class="tj">
+               <a href="details.html?pid=2" target="_blank">
+                  <img src=${p[1].purl} alt="" class="tjImg">
+               </a>   
             </div>
             <div class="tjText">
                <h3>${p[1].partist}</h3>
-               <a href="../product/product.html" target="_blank">${p[1].ptitle}，${p[1].pyear}<br>${p[1] .papar} ${p[1].psize}</a>
+               <a href="details.html?pid=1" target="_blank">${p[1].ptitle}，${p[1].pyear}<br>${p[1] .papar} ${p[1].psize}</a>
                <p>￥${p[1].price}</p>
             </div>
          </div>
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[2].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[2].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[2].partist}</h3>
@@ -283,7 +266,9 @@ $(function () {
          </div>
          <div class="tjDiv1">
             <div class="tj">
-               <img src=${p[3].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[3].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[3].partist}</h3>
@@ -295,7 +280,9 @@ $(function () {
       <div id="tjPart2">
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[4].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[4].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[4].partist}</h3>
@@ -305,7 +292,9 @@ $(function () {
          </div>
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[5].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[5].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[5].partist}</h3>
@@ -315,7 +304,9 @@ $(function () {
          </div>
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[6].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[6].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[6].partist}</h3>
@@ -326,7 +317,9 @@ $(function () {
          </div>
          <div class="tjDiv1">
             <div class="tj">
-               <img src=${p[7].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[7].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[7].partist}</h3>
@@ -339,7 +332,9 @@ $(function () {
       <div id="tjPart3">
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[8].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[8].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
             </div>
             <div class="tjText">
                <h3>${p[8].partist}</h3>
@@ -349,7 +344,9 @@ $(function () {
          </div>
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[9].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[9].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[9].partist}</h3>
@@ -359,7 +356,9 @@ $(function () {
          </div>
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[10].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[10].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[10].partist}</h3>
@@ -369,7 +368,9 @@ $(function () {
          </div>
          <div class="tjDiv1">
             <div class="tj">
-               <img src=${p[11].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[11].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[11].partist}</h3>
@@ -381,7 +382,9 @@ $(function () {
       <div id="tjPart4">
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[12].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[12].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[12].partist}</h3>
@@ -391,7 +394,9 @@ $(function () {
          </div>
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[13].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[13].purl} alt="" class="tjImg">
+               </a>   
             </div>
             <div class="tjText">
                <h3>${p[13].partist}</h3>
@@ -401,7 +406,9 @@ $(function () {
          </div>
          <div class="tjDiv">
             <div class="tj">
-               <img src=${p[14].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[14].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[14].partist}</h3>
@@ -411,7 +418,9 @@ $(function () {
          </div>
          <div class="tjDiv1">
             <div class="tj">
-               <img src=${p[15].purl} alt="" class="tjImg">
+               <a href="javascript:void(0)">
+                  <img src=${p[15].purl} alt="" class="tjImg">
+               </a>
             </div>
             <div class="tjText">
                <h3>${p[15].partist}</h3>
@@ -424,6 +433,7 @@ $(function () {
          var div = document.querySelector("#ajaxPart1");
          div.innerHTML = html;
 
+
          //最新上架部分传参
          var html = `<div class="newImg1" id="nImg1">
          <div class="front move">
@@ -431,140 +441,77 @@ $(function () {
             <div class="newImgP">
                <p>${p[16].partist}<br>
                   ${p[16].ptitle}<br>
-                  ${p[16].papar} ${p[16].psize}<br>
-                  <b>￥${p[16].price}</b>
+                  ${p[16].papar} ${p[16].pyear}<br>
+                  <b>¥${p[16].price}</b>
                </p>
             </div>
          </div>
          <div class="back move">
+            <img src=${p[26].purl} alt="" class="newImgBig">
+            <div class="newImgP">
+               <p>${p[26].partist}<br>
+                  ${p[26].ptitle}<br>
+                  ${p[26].papar} ${p[26].pyear}<br>
+                  <b>¥${p[26].price}</b>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="newImg1" id="nImg2">
+         <div class="front">
             <img src=${p[17].purl} alt="" class="newImgBig">
             <div class="newImgP">
                <p>${p[17].partist}<br>
                   ${p[17].ptitle}<br>
-                  ${p[17].papar} ${p[17].psize}<br>
-                  <b>￥${p[17].price}</b>
-               </p>
-            </div>
-         </div>
-      </div>
-      <div class="newImg1" id="nImg2">
-         <div class="front">
-            <img src=${p[18].purl} alt="" class="newImgBig">
-            <div class="newImgP">
-               <p>${p[18].partist}<br>
-                  ${p[18].ptitle}<br>
-                  ${p[18].papar} ${p[18].psize}<br>
-                  <b>￥${p[18].price}</b>
+                  ${p[17].papar} ${p[17].pyear}<br>
+                  <b>¥${p[17].price}</b>
                </p>
             </div>
          </div>
          <div class="back">
-            <img src=${p[19].purl} alt="" class="newImgBig">
+            <img src=${p[27].purl} alt="" class="newImgBig">
             <div class="newImgP">
-               <p>${p[19].partist}<br>
-                  ${p[19].ptitle}<br>
-                  ${p[19].papar} ${p[19].psize}<br>
-                  <b>￥${p[19].price}</b>
+               <p>${p[27].partist}<br>
+                  ${p[27].ptitle}<br>
+                  ${p[27].papar} ${p[27].pyear}<br>
+                  <b>¥${p[27].price}</b>
                </p>
             </div>	
          </div>
       </div>
+
       <div class="newImg2 nis" id="nImg3">
          <div class="front">
-            <img src=${p[20].purl} alt="" class="newImgSmall" >
+            <img src=${p[18].purl} alt="" class="newImgSmall" >
             <div class="newImgPs">
-               <p>${p[20].partist}<br>
-                  ${p[20].ptitle}<br>
-                  ${p[20].papar} ${p[20].psize}<br>
-                  <b>￥${p[20].price}</b>
+               <p>${p[18].partist}<br>
+                  ${p[18].ptitle}<br>
+                  ${p[18].pyear}<br>
+                  <b>¥${p[18].price}</b>
                </p>
             </div>
          </div>
          <div class="back">
-            <img src=${p[21].purl} alt="" class="newImgSmall">
-            <div class="newImgPs">
-               <p>${p[21].partist}<br>
-                  ${p[21].ptitle}<br>
-                  ${p[21].papar} ${p[21].psize}<br>
-                  <b>￥${p[21].price}</b>
-               </p>
-            </div>
-         </div>
-      </div>
-      <div class="newImg2 nis" id="nImg4">
-         <div class="front">
-            <img src=${p[22].purl} alt="" class="newImgSmall" >
-            <div class="newImgPs">
-               <p>${p[22].partist}<br>
-                  ${p[22].ptitle}<br>
-                  ${p[22].papar} ${p[22].psize}<br>
-                  <b>￥${p[22].price}</b>
-               </p>
-            </div>
-         </div>
-         <div class="back">
-            <img src=${p[23].purl} alt="" class="newImgSmall">
-            <div class="newImgPs">
-               <p>${p[23].partist}<br>
-                  ${p[23].ptitle}<br>
-                  ${p[23].papar} ${p[23].psize}<br>
-                  <b>￥${p[23].price}</b>
-               </p>
-            </div>
-         </div>
-      </div>
-      <div class="newImg2 nis" id="nImg5">
-         <div class="front">
-            <img src=${p[24].purl} alt="" class="newImgSmall">
-            <div class="newImgPs">
-               <p>${p[24].partist}<br>
-                  ${p[24].ptitle}<br>
-                  ${p[24].papar} ${p[24].psize}<br>
-                  <b>￥${p[24].price}</b>
-               </p>
-            </div>
-         </div>
-         <div class="back">
-            <img src=${p[25].purl} alt="" class="newImgSmall">
-            <div class="newImgPs">
-               <p>${p[25].partist}<br>
-                  ${p[25].ptitle}<br>
-                  ${p[25].papar} ${p[25].psize}<br>
-                  <b>￥${p[25].price}</b>
-               </p>
-            </div>
-         </div>
-      </div>
-      <div class="newImg2 nis1" id="nImg6">
-         <div class="front">
-            <img src=${p[26].purl} alt="" class="newImgSmall">
-            <div class="newImgPs">
-               <p>${p[26].partist}<br>
-                  ${p[26].ptitle}<br>
-                  ${p[26].papar} ${p[26].psize}<br>
-                  <b>￥${p[26].price}</b>
-               </p>
-            </div>
-         </div>
-         <div class="back">
-            <img src=${p[27].purl} alt="" class="newImgSmall">
-            <div class="newImgPs">
-               <p>${p[27].partist}<br>
-                  ${p[27].ptitle}<br>
-                  ${p[27].papar} ${p[27].psize}<br>
-                  <b>￥${p[27].price}</b>
-               </p>
-            </div>
-         </div>
-      </div>
-      <div class="newImg2 nis2" id="nImg7">
-         <div class="front">
             <img src=${p[28].purl} alt="" class="newImgSmall">
             <div class="newImgPs">
                <p>${p[28].partist}<br>
                   ${p[28].ptitle}<br>
-                  ${p[28].papar} ${p[28].psize}<br>
-                  <b>￥${p[28].price}</b>
+                  ${p[28].pyear}<br>
+                  <b>¥${p[28].price}</b>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="newImg2 nis" id="nImg4">
+         <div class="front">
+            <img src=${p[19].purl} alt="" class="newImgSmall" >
+            <div class="newImgPs">
+               <p>${p[19].partist}<br>
+                  ${p[19].ptitle}<br>
+                  ${p[19].pyear}<br>
+                  <b>¥${p[19].price}</b>
                </p>
             </div>
          </div>
@@ -573,20 +520,44 @@ $(function () {
             <div class="newImgPs">
                <p>${p[29].partist}<br>
                   ${p[29].ptitle}<br>
-                  ${p[29].papar} ${p[29].psize}<br>
-                  <b>￥${p[29].price}</b>
+                  ${p[29].pyear}<br>
+                  <b>¥${p[29].price}</b>
                </p>
             </div>
          </div>
       </div>
-      <div class="newImg2 nis2" id="nImg8">
+
+      <div class="newImg2 nis" id="nImg5">
          <div class="front">
+            <img src=${p[20].purl} alt="" class="newImgSmall">
+            <div class="newImgPs">
+               <p>${p[20].partist}<br>
+                  ${p[20].ptitle}<br>
+                  ${p[20].pyear}<br>
+                  <b>¥${p[20].price}</b>
+               </p>
+            </div>
+         </div>
+         <div class="back">
             <img src=${p[30].purl} alt="" class="newImgSmall">
             <div class="newImgPs">
                <p>${p[30].partist}<br>
                   ${p[30].ptitle}<br>
-                  ${p[30].papar} ${p[30].psize}<br>
-                  <b>￥${p[30].price}</b>
+                  ${p[30].pyear}<br>
+                  <b>¥${p[30].price}</b>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="newImg2 nis1" id="nImg6">
+         <div class="front">
+            <img src=${p[21].purl} alt="" class="newImgSmall">
+            <div class="newImgPs">
+               <p>${p[21].partist}<br>
+                  ${p[21].ptitle}<br>
+                  ${p[21].pyear}<br>
+                  <b>¥${p[21].price}</b>
                </p>
             </div>
          </div>
@@ -595,20 +566,44 @@ $(function () {
             <div class="newImgPs">
                <p>${p[31].partist}<br>
                   ${p[31].ptitle}<br>
-                  ${p[31].papar} ${p[31].psize}<br>
-                  <b>￥${p[31].price}</b>
+                  ${p[31].pyear}<br>
+                  <b>¥${p[31].price}</b>
                </p>
             </div>
          </div>
       </div>
-      <div class="newImg2 nis2" id="nImg9">
+
+      <div class="newImg2 nis2" id="nImg7">
          <div class="front">
+            <img src=${p[22].purl} alt="" class="newImgSmall">
+            <div class="newImgPs">
+               <p>${p[22].partist}<br>
+                  ${p[22].ptitle}<br>
+                  ${p[22].pyear}<br>
+                  <b>¥${p[22].price}</b>
+               </p>
+            </div>
+         </div>
+         <div class="back">
             <img src=${p[32].purl} alt="" class="newImgSmall">
             <div class="newImgPs">
                <p>${p[32].partist}<br>
                   ${p[32].ptitle}<br>
-                  ${p[32].papar} ${p[32].psize}<br>
-                  <b>￥${p[32].price}</b>
+                  ${p[32].pyear}<br>
+                  <b>¥${p[32].price}</b>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="newImg2 nis2" id="nImg8">
+         <div class="front">
+            <img src=${p[23].purl} alt="" class="newImgSmall">
+            <div class="newImgPs">
+               <p>${p[23].partist}<br>
+                  ${p[23].ptitle}<br>
+                  ${p[23].pyear}<br>
+                  <b>¥${p[23].price}</b>
                </p>
             </div>
          </div>
@@ -617,20 +612,44 @@ $(function () {
             <div class="newImgPs">
                <p>${p[33].partist}<br>
                   ${p[33].ptitle}<br>
-                  ${p[33].papar} ${p[33].psize}<br>
-                  <b>￥${p[33].price}</b>
+                  ${p[33].pyear}<br>
+                  <b>¥${p[33].price}</b>
                </p>
             </div>
          </div>
       </div>
-      <div class="newImg2" id="nImg10">
+
+      <div class="newImg2 nis2" id="nImg9">
          <div class="front">
+            <img src=${p[24].purl} alt="" class="newImgSmall">
+            <div class="newImgPs">
+               <p>${p[24].partist}<br>
+                  ${p[24].ptitle}<br>
+                  ${p[24].pyear}<br>
+                  <b>¥${p[24].price}</b>
+               </p>
+            </div>
+         </div>
+         <div class="back">
             <img src=${p[34].purl} alt="" class="newImgSmall">
             <div class="newImgPs">
                <p>${p[34].partist}<br>
                   ${p[34].ptitle}<br>
-                  ${p[34].papar} ${p[34].psize}<br>
-                  <b>￥${p[34].price}</b>
+                  ${p[34].pyear}<br>
+                  <b>¥${p[34].price}</b>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="newImg2" id="nImg10">
+         <div class="front">
+            <img src=${p[25].purl} alt="" class="newImgSmall">
+            <div class="newImgPs">
+               <p>${p[25].partist}<br>
+                  ${p[25].ptitle}<br>
+                  ${p[25].pyear}<br>
+                  <b>¥${p[25].price}</b>
                </p>
             </div>
          </div>
@@ -639,15 +658,15 @@ $(function () {
             <div class="newImgPs">
                <p>${p[35].partist}<br>
                   ${p[35].ptitle}<br>
-                  ${p[35].papar} ${p[35].psize}<br>
-                  <b>￥${p[35].price}</b>
+                  ${p[35].pyear}<br>
+                  <b>¥${p[35].price}</b>
                </p>
             </div>
-         </div>
+         </div> 
       </div>`;
          var div = document.querySelector("#ajaxPart2");
          div.innerHTML = html;
-
+         
       }
    })
 })

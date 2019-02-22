@@ -40,7 +40,7 @@
 function roll(){
 var bgImgPic=document.getElementById("bgImgPic");
 var rnd=Math.floor(Math.random()*6)+1;
-bgImgPic.style.background="url('loginbg"+rnd+".jpg') no-repeat fixed center center";
+bgImgPic.style.background="url('../img/login/loginbg"+rnd+".jpg') no-repeat fixed center center";
 bgImgPic.style.backgroundSize="cover";
 }
 window.onload=roll;
@@ -99,8 +99,8 @@ function post_Msg(){
       alert(result);
 	  }
     } 
-	xhr.open('post','/user/resLogin/resLogin',true);
-	var formdata='$phone='+phone.value+'&upwd='+upwd.value;
+	xhr.open('post','login/login',true);
+	var formdata='phone='+phone1.value+'&upwd='+upwd.value;
     xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	xhr.send(formdata);
 	}
@@ -114,8 +114,8 @@ function resUserId(){
       alert(result);
 	  }
   }
-  xhr.open('post','/user/resLogin/resLogin',true);
-  var formdata='$phone='+phone.value+'&upwd='+upwd.value;
+  xhr.open('post','/login/register',true);
+  var formdata='$phone='+phone1.value+'&upwd='+upwd.value;
   xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
   xhr.send(formdata);
 }

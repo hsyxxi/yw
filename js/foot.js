@@ -3,14 +3,14 @@ function foot(){
 		'<div class="foot">'+
 			'<div class="footDiv">'+
 				'<div class="footLogo">'+
-					'<img src="./foot-img/footLogo.svg" alt="">'+
+					'<img src="../img/index/foot-img/footLogo.svg" alt="">'+
 					'<div class="footLogo1">'+
 						'<div>'+
-							'<img class="footLogoWb" src="./foot-img/weibo.svg" alt="">'+
-							'<img class="footLogoWx" src="./foot-img/weixin.svg" alt="">'+
+							'<img class="footLogoWb" src="../img/index/foot-img/weibo.svg" alt="">'+
+							'<img class="footLogoWx" src="../img/index/foot-img/weixin.svg" alt="">'+
 						'</div>'+
-						'<img class="footLogoWxDown" src="./foot-img/weixinQRcode.jpg" alt="">'+
-						'<p class="footLogoTelLogo"><img src="./foot-img/tel.svg" +alt="">400-605-7033</p>'+
+						'<img class="footLogoWxDown" src="../img/index/foot-img/weixinQRcode.jpg" alt="">'+
+						'<p class="footLogoTelLogo"><img src="../img/index/foot-img/tel.svg" +alt="">400-605-7033</p>'+
 					'</div>'+
 				'</div>'+
 				'<div class="footLink">'+
@@ -54,13 +54,13 @@ function foot(){
 						'</tbody>'+
 					'</table>'+
 					'<div class="downCode">'+
-					    '<img id="codeIos" src="./foot-img/iosDownQRcode.png" alt="">'+
-						'<img id="codeAndroid" src="./foot-img/AndroidDownQRcode.png" alt="">'+
+					    '<img id="codeIos" src="../img/index/foot-img/iosDownQRcode.png" alt="">'+
+						'<img id="codeAndroid" src="../img/index/foot-img/AndroidDownQRcode.png" alt="">'+
 						'<p id="textDown">扫一扫，下载APP</p>'+
 					'</div>'+
 					'<span class="footDownDark">'+
-						'<img id="footDownDarkIos" src="./foot-img/iosDowndark.png" alt="">'+
-						'<img id="footDownDarkAnd" src="./foot-img/AndroidDowndark.png" alt="">'+
+						'<img id="footDownDarkIos" src="../img/index/foot-img/iosDowndark.png" alt="">'+
+						'<img id="footDownDarkAnd" src="../img/index/foot-img/AndroidDowndark.png" alt="">'+
 					'</span>'+
 				'</div>'+
 				'<div class="friendLinkDiv">'+

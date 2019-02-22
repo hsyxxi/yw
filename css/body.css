@@ -575,7 +575,7 @@ body {
 }
 .artistLeft{
 	overflow: hidden;
-	background:url(../artist-img/1.jpg) center;
+	background:url(../img/index/artist-img/1.jpg) center;
 	background-size:450px 320px;
 	transition: all 0.5s ease-out;
 	position: relative;
@@ -600,7 +600,7 @@ body {
 	color:#fff;
 }
 .artistLeft>p{
-	font-size: 12px;
+	font-size: 13px;
 	position: absolute;
 	bottom: 65px;
 	padding: 0 20px;
@@ -744,7 +744,7 @@ body {
 .insightBodyDiv1,.insightBodyDiv3{
     width:580px;
 	height:300px;
-	background-image: url(../insight-img/1.jpg);
+	background-image: url(../img/index/insight-img/1.jpg);
 	background-size: 580px 300px;
 	background-position:center;
 	position: relative;
@@ -756,7 +756,7 @@ body {
 	background-size: 608px 312px;
 }
 .insightBodyDiv3{
-	background-image: url(../insight-img/2.jpg);
+	background-image: url(../img/index/insight-img/2.jpg);
 }
 .insightBodyDiv2P1{
 	width:580px;
@@ -901,7 +901,7 @@ body {
 	left: 0px;
 	margin:auto;
 	background-color: #000;
-	background-image: url("../insight-img/logo_notext.svg");
+	background-image: url("../img/index/insight-img/logo_notext.svg");
 	background-size: 40px 40px;
 	background-position: center;
 	background-repeat: no-repeat;
