@@ -40,7 +40,14 @@ $(function () {
         data:{pid},
         success: function (result) {
             var p = result;
-            console.log(p);
+
+            var html=`<li>艺网</li>
+            <li>${p[0].ptype}</li>
+            <li>${p[0].partist}</li>
+            <li>${p[0].ptitle}</li>`;
+            var div=document.querySelector("#ajaxPart10");
+            div.innerHTML=html;
+
             var html=`<div class="productBodyPicBig">
                 <img src=${p[0].picdetbig} alt="">
             </div>

@@ -26,9 +26,8 @@ router.get('/indexSpecial', (req, res) => {
             res.writeHead(200,{
                 "Access-Control-Allow-Origin":"*"
                 });
-                res.write(JSON.stringify(result))
-                res.end();
-            //res.send(result);
+            res.write(JSON.stringify(result))
+            res.end();
         }
     });
 })

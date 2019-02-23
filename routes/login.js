@@ -2,7 +2,7 @@ const pool=require('../pool.js');
 const express=require('express');
 var router=express.Router();
 //1.用户登录路由
-//127.0.0.1:3000/login/login
+//127.0.0.1:3000/login
 router.post('/login',(req,res)=>{
   var $phone=req.body.phone;
   var $upwd=req.body.upwd;

@@ -97,12 +97,13 @@ function post_Msg(){
     if(xhr.readyState==4 && xhr.status==200){
       var result=xhr.responseText;
       alert(result);
+      
 	  }
-    } 
-	xhr.open('post','login/login',true);
+  } 
+	xhr.open('post','http://127.0.0.1:3000/login/login',true);
 	var formdata='phone='+phone1.value+'&upwd='+upwd.value;
-    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xhr.send(formdata);
+  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  xhr.send(formdata);
 	}
 
 //注册交互
@@ -114,8 +115,8 @@ function resUserId(){
       alert(result);
 	  }
   }
-  xhr.open('post','/login/register',true);
-  var formdata='$phone='+phone1.value+'&upwd='+upwd.value;
+  xhr.open('post','http://127.0.0.1:3000/login/register',true);
+  var formdata='phone='+phone4.value+'&upwd='+upwd.value;
   xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
   xhr.send(formdata);
 }
