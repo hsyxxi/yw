@@ -21,3 +21,4 @@ server.use('/login',loginRouter);//127.0.0.1:3000/login
 server.use('/',indexRouter);
 server.use('/details',detailsRouter);
 
+
